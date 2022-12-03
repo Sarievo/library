@@ -1,0 +1,1 @@
+[![Actions Status](https://github.com/Sarievo/library/workflows/verify/badge.svg)](https://github.com/Sarievo/library/actions)
