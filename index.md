@@ -2,10 +2,10 @@
 data:
   libraryCategories: []
   verificationCategories:
-  - name: .
+  - name: example
     pages:
     - icon: ':heavy_check_mark:'
-      path: example.test.cpp
-      title: example.test.cpp
+      path: example/example.test.cpp
+      title: example/example.test.cpp
 layout: toppage
 ---
