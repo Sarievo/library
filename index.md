@@ -1,11 +1,16 @@
 ---
 data:
-  libraryCategories: []
-  verificationCategories:
-  - name: example
+  libraryCategories:
+  - name: template
     pages:
     - icon: ':heavy_check_mark:'
-      path: example/example.test.cpp
-      title: example/example.test.cpp
+      path: template/template.hpp
+      title: Template
+  verificationCategories:
+  - name: verify/verify-aoj-alds
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/verify-aoj-alds/example.test.cpp
+      title: verify/verify-aoj-alds/example.test.cpp
 layout: toppage
 ---
