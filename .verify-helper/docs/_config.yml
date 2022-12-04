@@ -1,0 +1,3 @@
+exclude: ['atcoder', 'bundle.py','compress.py', 'auto_submit.py']
+title: Sarievo's Library
+theme: jekyll-theme-hacker
