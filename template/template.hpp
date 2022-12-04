@@ -1,6 +1,6 @@
 #pragma once
-#pragma GCC target("avx2")
-//#pragma GCC optimize("O3","unroll-loops")
+// #pragma GCC target("avx2")
+// #pragma GCC optimize("O3","unroll-loops")
 #include <bits/stdc++.h>
 #define overload4(a,b,c,d,e,...) e
 #define overload3(a,b,c,d,...) d
@@ -31,8 +31,8 @@
 #if __has_include(<atcoder/all>)
 #include <atcoder/all>
 using namespace atcoder;
+// using mint=modint1000000007;
 // using mint=modint998244353;
-using mint=modint1000000007;
 #endif
 using namespace std;
 using ll =long long;
@@ -49,7 +49,6 @@ using vvc=vector<vc>;
 using vd =vector<double>;
 using vp =vector<pl>;
 using vb =vector<bool>;
-//                  R  D  L  U DR DL UL UR
 constexpr int dx[]{+0,+1,+0,-1,+1,+1,-1,-1};
 constexpr int dy[]{+1,+0,-1,+0,+1,-1,-1,+1};
 template<typename T,typename U>
