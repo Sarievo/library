@@ -103,6 +103,4 @@ layout: document
 title: Template
 ---
 
-## Description
-
 This is my template file
