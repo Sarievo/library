@@ -26,7 +26,8 @@ int heuristic(int x, int y, int goal_x, int goal_y) {
 vector<pair<int, int>> AStar(vector<vector<int>> &grid, int start_x, int start_y, int goal_x, int goal_y) {
   // Sanity check: make sure the start and goal coordinates are valid
   if (start_x < 0 || start_x >= grid.size() || start_y < 0 || start_y >= grid[0].size() ||
-      goal_x < 0 || goal_x >= grid.size() || goal_y < 0 || goal_y >= grid[0].size()) {
+      goal_x < 0 || goal_x >= grid.size() || goal_y < 0 || goal_y >= grid[0].size() ||
+      grid[start_x][start_y] == 1 || grid[goal_x][goal_y] == 1) {
     return {};
   }
 
@@ -75,12 +76,10 @@ vector<pair<int, int>> AStar(vector<vector<int>> &grid, int start_x, int start_y
       // Check if the coordinates are valid and not visited
       int x = current.x + NYAN::dx[i];
       int y = current.y + NYAN::dy[i];
-      if (x < 0 || x >= grid.size() || y < 0 || y >= grid[0].size() || closed_set[x][y]) {
+      if (x < 0 || x >= grid.size() || y < 0 || y >= grid[0].size()
+          || grid[x][y] == 1 || closed_set[x][y]) {
         continue;
       }
-
-      // Check if the coordinates are obstacles
-      if (grid[x][y] == 1) continue;
 
       // Calculate the new f, g, and h values
       int g = current.g + 1;
