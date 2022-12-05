@@ -98,8 +98,7 @@ title: Template
 ---
 
 - [x] 'rep' and 'rrep' overloading
-  - this substitutes the need of classical 'ascending for-loops' and 'descending for-loops', and support step-by-x
-  - use one statement for end-only, start-and-end, and step-by-x in ascending for-loops
+  - this substitutes the need of classical 'ascending for-loops' and 'descending for-loops', and support step-by-x in 'ascending for-loops'
   - may not help in cases such as 2-pointers and prime factorization
 ```c++
 #define overload4(a, b, c, d, e, ...) e
