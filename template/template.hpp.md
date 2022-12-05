@@ -46,34 +46,35 @@ data:
     \ ld = long double;\nusing vl = vector<ll>;\nusing vi = vector<int>;\nusing vs\
     \ = vector<string>;\nusing vc = vector<char>;\nusing vvl= vector<vl>;\nusing pi\
     \ = pair<int, int>;\nusing pl = pair<ll, ll>;\nusing vvc= vector<vc>;\nusing vd\
-    \ = vector<double>;\nusing vp = vector<pl>;\nusing vb = vector<bool>;\nconstexpr\
-    \ int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};\nconstexpr int dy[]{+1, +0, -1, +0,\
-    \ +1, -1, -1, +1};\ntemplate<typename T, typename U>\ninline bool chmax(T &a,\
-    \ U b) { return a < b && (a = b, true); }\ntemplate<typename T, typename U>\n\
-    inline bool chmin(T &a, U b) { return a > b && (a = b, true); }\ntemplate<class\
-    \ T> using maxheap = priority_queue<T, vector<T>, less<T>>;\ntemplate<class T>\
-    \ using minheap = priority_queue<T, vector<T>, greater<T>>;\nvoid yes(bool x)\
-    \ { std::cout << (x ? \"yes\" : \"no\") << endl; }\nvoid Yes(bool x) { std::cout\
-    \ << (x ? \"Yes\" : \"No\") << endl; }\nvoid YES(bool x) { std::cout << (x ? \"\
-    YES\" : \"NO\") << endl; }\n\n}  // namespace NYAN\n#line 12 \"template/template.hpp\"\
-    \n\n// input/output\n#line 1 \"template/IO.hpp\"\nnamespace NYAN {\ntemplate<typename\
-    \ T, typename U>\nostream &operator<<(ostream &os, pair<T, U> &p) {\n  os << p.first\
-    \ << \" \" << p.second;\n  return os;\n}\ntemplate<typename T, typename U>\nistream\
-    \ &operator>>(istream &is, pair<T, U> &p) {\n  is >> p.first >> p.second;\n  return\
-    \ is;\n}\ntemplate<typename T>\nostream &operator<<(ostream &os, vector<T> &v)\
-    \ {\n  for (auto it = v.begin(); it != v.end();) {\n    os << *it << ((++it) !=\
-    \ v.end() ? \" \" : \"\");\n  }\n  return os;\n}\ntemplate<typename T>\nistream\
-    \ &operator>>(istream &is, vector<T> &v) {\n  for (T &e : v)is >> e;\n  return\
-    \ is;\n}\nvoid scan() {}\ntemplate<class T, class...U>\nvoid scan(T &t, U &...u)\
-    \ {\n  cin >> t;\n  scan(u...);\n}\ntemplate<class T>\nvoid print(const T &t)\
-    \ { cout << t << '\\n'; }\ntemplate<class T, class...U>\nvoid print(const T &t,\
-    \ const U &...u) {\n  cout << t << ' ';\n  print(u...);\n}\ntemplate<class...T>\n\
-    void fin(const T &...a) {\n  print(a...);\n  exit(0);\n}\nstruct Nyan {\n  Nyan()\
-    \ {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
-    \    cout << fixed << setprecision(12);\n    cerr << fixed << setprecision(12);\n\
-    \  }\n} nyan;\n\n}  // namespace NYAN\n#line 15 \"template/template.hpp\"\n\n\
-    namespace NYAN {\nvoid solve();\n}\nsigned main() { NYAN::solve(); }\n/**\n *\
-    \ @brief Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n"
+    \ = vector<double>;\nusing vp = vector<pl>;\nusing vb = vector<bool>;\ntemplate<class\
+    \ T>\nauto max(const T &a) { return *max_element(all(a)); }\ntemplate<class T>\n\
+    auto min(const T &a) { return *min_element(all(a)); }\ntemplate<typename T, typename\
+    \ U>\ninline bool chmax(T &a, U b) { return a < b && (a = b, true); }\ntemplate<typename\
+    \ T, typename U>\ninline bool chmin(T &a, U b) { return a > b && (a = b, true);\
+    \ }\ntemplate<class T> using maxheap = priority_queue<T, vector<T>, less<T>>;\n\
+    template<class T> using minheap = priority_queue<T, vector<T>, greater<T>>;\n\
+    void yes(bool x) { std::cout << (x ? \"yes\" : \"no\") << endl; }\nvoid Yes(bool\
+    \ x) { std::cout << (x ? \"Yes\" : \"No\") << endl; }\nvoid YES(bool x) { std::cout\
+    \ << (x ? \"YES\" : \"NO\") << endl; }\nconstexpr int dx[]{+0, +1, +0, -1, +1,\
+    \ +1, -1, -1};\nconstexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};\n\n}  // namespace\
+    \ NYAN\n#line 12 \"template/template.hpp\"\n\n// input/output\n#line 1 \"template/IO.hpp\"\
+    \nnamespace NYAN {\ntemplate<typename T, typename U>\nostream &operator<<(ostream\
+    \ &os, pair<T, U> &p) {\n  os << p.first << \" \" << p.second;\n  return os;\n\
+    }\ntemplate<typename T, typename U>\nistream &operator>>(istream &is, pair<T,\
+    \ U> &p) {\n  is >> p.first >> p.second;\n  return is;\n}\ntemplate<typename T>\n\
+    ostream &operator<<(ostream &os, vector<T> &v) {\n  for (auto it = v.begin();\
+    \ it != v.end();) {\n    os << *it << ((++it) != v.end() ? \" \" : \"\");\n  }\n\
+    \  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream &is, vector<T>\
+    \ &v) {\n  for (T &e : v)is >> e;\n  return is;\n}\nvoid scan() {}\ntemplate<class\
+    \ T, class...U>\nvoid scan(T &t, U &...u) {\n  cin >> t;\n  scan(u...);\n}\ntemplate<class\
+    \ T>\nvoid print(const T &t) { cout << t << '\\n'; }\ntemplate<class T, class...U>\n\
+    void print(const T &t, const U &...u) {\n  cout << t << ' ';\n  print(u...);\n\
+    }\ntemplate<class...T>\nvoid fin(const T &...a) {\n  print(a...);\n  exit(0);\n\
+    }\nstruct Nyan {\n  Nyan() {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n\
+    \    cout.tie(nullptr);\n    cout << fixed << setprecision(12);\n    cerr << fixed\
+    \ << setprecision(12);\n  }\n} nyan;\n\n}  // namespace NYAN\n#line 15 \"template/template.hpp\"\
+    \n\nnamespace NYAN {\nvoid solve();\n}\nsigned main() { NYAN::solve(); }\n/**\n\
+    \ * @brief Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n"
   code: "#pragma once\n// #pragma GCC target(\"avx2\")\n// #pragma GCC optimize(\"\
     O3\",\"unroll-loops\")\n#include <bits/stdc++.h>\nusing namespace std;\n\n// macro\n\
     #include \"macro.hpp\"\n\n// utilities\n#include \"util.hpp\"\n\n// input/output\n\
@@ -87,7 +88,7 @@ data:
   path: template/template.hpp
   requiredBy:
   - magic/astar.hpp
-  timestamp: '2022-12-05 21:00:34+08:00'
+  timestamp: '2022-12-05 21:39:03+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

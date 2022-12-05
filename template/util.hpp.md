@@ -49,9 +49,13 @@ data:
 
     using vb = vector<bool>;
 
-    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+    template<class T>
 
-    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
+    auto max(const T &a) { return *max_element(all(a)); }
+
+    template<class T>
+
+    auto min(const T &a) { return *min_element(all(a)); }
 
     template<typename T, typename U>
 
@@ -70,6 +74,10 @@ data:
     void Yes(bool x) { std::cout << (x ? "Yes" : "No") << endl; }
 
     void YES(bool x) { std::cout << (x ? "YES" : "NO") << endl; }
+
+    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+
+    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
 
 
     }  // namespace NYAN
@@ -105,9 +113,13 @@ data:
 
     using vb = vector<bool>;
 
-    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+    template<class T>
 
-    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
+    auto max(const T &a) { return *max_element(all(a)); }
+
+    template<class T>
+
+    auto min(const T &a) { return *min_element(all(a)); }
 
     template<typename T, typename U>
 
@@ -127,6 +139,10 @@ data:
 
     void YES(bool x) { std::cout << (x ? "YES" : "NO") << endl; }
 
+    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+
+    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
+
 
     }  // namespace NYAN
 
@@ -137,7 +153,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-05 21:00:34+08:00'
+  timestamp: '2022-12-05 21:39:03+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
