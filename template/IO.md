@@ -1,6 +1,6 @@
 ---
 title: Template
-documentation_of: ./template.hpp
+documentation_of: ./IO.hpp
 ---
 
 - [x] in-stream and out-stream overloading
