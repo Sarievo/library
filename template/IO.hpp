@@ -1,13 +1,3 @@
-#pragma once
-#include <bits/stdc++.h>
-#define INT(...) int __VA_ARGS__;scan(__VA_ARGS__)
-#define LL(...) long long __VA_ARGS__;scan(__VA_ARGS__)
-#define STR(...) string __VA_ARGS__;scan(__VA_ARGS__)
-#define CHR(...) char __VA_ARGS__;scan(__VA_ARGS__)
-#define DBL(...) double __VA_ARGS__;scan(__VA_ARGS__)
-#define LD(...) long double __VA_ARGS__;scan(__VA_ARGS__)
-#define END(...) {print(__VA_ARGS__);return;}
-using namespace std;
 template<typename T, typename U>
 ostream &operator<<(ostream &os, pair<T, U> &p) {
   os << p.first << " " << p.second;
@@ -56,7 +46,4 @@ struct Nyan {
     cout << fixed << setprecision(12);
     cerr << fixed << setprecision(12);
   }
-};
-/**
- * @brief IO
-*/
+} nyan;
