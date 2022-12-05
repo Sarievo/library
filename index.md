@@ -5,7 +5,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: template/IO.hpp
-      title: IO
+      title: Template
     - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: Template

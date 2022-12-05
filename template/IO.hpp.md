@@ -66,8 +66,10 @@ data:
   - verify/verify-aoj-alds/example.test.cpp
 documentation_of: template/IO.hpp
 layout: document
-redirect_from:
-- /library/template/IO.hpp
-- /library/template/IO.hpp.html
-title: IO
+title: Template
 ---
+
+- [x] in-stream and out-stream overloading
+- [x] variable initialization
+
+credits: [MtSaka](https://github.com/MtSaka/library)
