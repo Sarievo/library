@@ -1,3 +1,4 @@
+namespace NYAN {
 template<typename T, typename U>
 ostream &operator<<(ostream &os, pair<T, U> &p) {
   os << p.first << " " << p.second;
@@ -47,3 +48,5 @@ struct Nyan {
     cerr << fixed << setprecision(12);
   }
 } nyan;
+
+}  // namespace NYAN

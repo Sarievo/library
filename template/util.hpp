@@ -1,3 +1,4 @@
+namespace NYAN {
 using ll = long long;
 using ull= unsigned long long;
 using ld = long double;
@@ -23,3 +24,5 @@ template<class T> using minheap = priority_queue<T, vector<T>, greater<T>>;
 void yes(bool x) { std::cout << (x ? "yes" : "no") << endl; }
 void Yes(bool x) { std::cout << (x ? "Yes" : "No") << endl; }
 void YES(bool x) { std::cout << (x ? "YES" : "NO") << endl; }
+
+}  // namespace NYAN
