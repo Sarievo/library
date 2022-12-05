@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
-    title: Template
+    title: template/template.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/verify-aoj-alds/example.test.cpp
@@ -133,7 +133,6 @@ data:
   - verify/verify-aoj-alds/example.test.cpp
 documentation_of: template/macro.hpp
 layout: document
-title: Macro
 ---
 
 - [x] 'rep' and 'rrep' overloading

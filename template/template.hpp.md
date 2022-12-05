@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: template/IO.hpp
-    title: IO
+    title: template/IO.hpp
   - icon: ':heavy_check_mark:'
     path: template/macro.hpp
-    title: Macro
+    title: template/macro.hpp
   - icon: ':heavy_check_mark:'
     path: template/util.hpp
     title: template/util.hpp
@@ -88,7 +88,6 @@ data:
   - verify/verify-aoj-alds/example.test.cpp
 documentation_of: template/template.hpp
 layout: document
-title: Template
 ---
 
 This is my template file.

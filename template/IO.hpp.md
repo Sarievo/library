@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
-    title: Template
+    title: template/template.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/verify-aoj-alds/example.test.cpp
@@ -55,7 +55,6 @@ data:
   - verify/verify-aoj-alds/example.test.cpp
 documentation_of: template/IO.hpp
 layout: document
-title: IO
 ---
 
 - [x] in-stream and out-stream overloading

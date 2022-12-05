@@ -3,13 +3,13 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: template/IO.hpp
-    title: IO
+    title: template/IO.hpp
   - icon: ':heavy_check_mark:'
     path: template/macro.hpp
-    title: Macro
+    title: template/macro.hpp
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
-    title: Template
+    title: template/template.hpp
   - icon: ':heavy_check_mark:'
     path: template/util.hpp
     title: template/util.hpp
