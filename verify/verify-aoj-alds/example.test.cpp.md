@@ -43,22 +43,23 @@ data:
     #define all(...) overload3(__VA_ARGS__,all3,all2,all1)(__VA_ARGS__)\n#define rall(n)\
     \ (n).rbegin(),(n).rend()\n#define pb push_back\n#define eb emplace_back\n#line\
     \ 9 \"template/template.hpp\"\n\n// utilities\n#line 1 \"template/util.hpp\"\n\
-    using ll = long long;\nusing ull= unsigned long long;\nusing ld = long double;\n\
-    using vl = vector<ll>;\nusing vi = vector<int>;\nusing vs = vector<string>;\n\
-    using vc = vector<char>;\nusing vvl= vector<vl>;\nusing pi = pair<int, int>;\n\
-    using pl = pair<ll, ll>;\nusing vvc= vector<vc>;\nusing vd = vector<double>;\n\
-    using vp = vector<pl>;\nusing vb = vector<bool>;\nconstexpr int dx[]{+0, +1, +0,\
-    \ -1, +1, +1, -1, -1};\nconstexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};\n\
-    template<typename T, typename U>\ninline bool chmax(T &a, U b) { return a < b\
-    \ && (a = b, true); }\ntemplate<typename T, typename U>\ninline bool chmin(T &a,\
-    \ U b) { return a > b && (a = b, true); }\ntemplate<class T> using maxheap = priority_queue<T,\
-    \ vector<T>, less<T>>;\ntemplate<class T> using minheap = priority_queue<T, vector<T>,\
-    \ greater<T>>;\nvoid yes(bool x) { std::cout << (x ? \"yes\" : \"no\") << endl;\
-    \ }\nvoid Yes(bool x) { std::cout << (x ? \"Yes\" : \"No\") << endl; }\nvoid YES(bool\
-    \ x) { std::cout << (x ? \"YES\" : \"NO\") << endl; }\n#line 12 \"template/template.hpp\"\
-    \n\n// input/output\n#line 1 \"template/IO.hpp\"\ntemplate<typename T, typename\
-    \ U>\nostream &operator<<(ostream &os, pair<T, U> &p) {\n  os << p.first << \"\
-    \ \" << p.second;\n  return os;\n}\ntemplate<typename T, typename U>\nistream\
+    namespace NYAN {\nusing ll = long long;\nusing ull= unsigned long long;\nusing\
+    \ ld = long double;\nusing vl = vector<ll>;\nusing vi = vector<int>;\nusing vs\
+    \ = vector<string>;\nusing vc = vector<char>;\nusing vvl= vector<vl>;\nusing pi\
+    \ = pair<int, int>;\nusing pl = pair<ll, ll>;\nusing vvc= vector<vc>;\nusing vd\
+    \ = vector<double>;\nusing vp = vector<pl>;\nusing vb = vector<bool>;\nconstexpr\
+    \ int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};\nconstexpr int dy[]{+1, +0, -1, +0,\
+    \ +1, -1, -1, +1};\ntemplate<typename T, typename U>\ninline bool chmax(T &a,\
+    \ U b) { return a < b && (a = b, true); }\ntemplate<typename T, typename U>\n\
+    inline bool chmin(T &a, U b) { return a > b && (a = b, true); }\ntemplate<class\
+    \ T> using maxheap = priority_queue<T, vector<T>, less<T>>;\ntemplate<class T>\
+    \ using minheap = priority_queue<T, vector<T>, greater<T>>;\nvoid yes(bool x)\
+    \ { std::cout << (x ? \"yes\" : \"no\") << endl; }\nvoid Yes(bool x) { std::cout\
+    \ << (x ? \"Yes\" : \"No\") << endl; }\nvoid YES(bool x) { std::cout << (x ? \"\
+    YES\" : \"NO\") << endl; }\n\n}  // namespace NYAN\n#line 12 \"template/template.hpp\"\
+    \n\n// input/output\n#line 1 \"template/IO.hpp\"\nnamespace NYAN {\ntemplate<typename\
+    \ T, typename U>\nostream &operator<<(ostream &os, pair<T, U> &p) {\n  os << p.first\
+    \ << \" \" << p.second;\n  return os;\n}\ntemplate<typename T, typename U>\nistream\
     \ &operator>>(istream &is, pair<T, U> &p) {\n  is >> p.first >> p.second;\n  return\
     \ is;\n}\ntemplate<typename T>\nostream &operator<<(ostream &os, vector<T> &v)\
     \ {\n  for (auto it = v.begin(); it != v.end();) {\n    os << *it << ((++it) !=\
@@ -71,10 +72,10 @@ data:
     void fin(const T &...a) {\n  print(a...);\n  exit(0);\n}\nstruct Nyan {\n  Nyan()\
     \ {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
     \    cout << fixed << setprecision(12);\n    cerr << fixed << setprecision(12);\n\
-    \  }\n} nyan;\n#line 15 \"template/template.hpp\"\n\nnamespace NYAN {\nvoid solve();\n\
-    }\nsigned main() { NYAN::solve(); }\n/**\n * @brief Template(\u30C6\u30F3\u30D7\
-    \u30EC\u30FC\u30C8)\n*/\n#line 3 \"verify/verify-aoj-alds/example.test.cpp\"\n\
-    \nvoid NYAN::solve() {\n  INT(n);\n  vi s(n);\n  cin >> s;\n\n  INT(q);\n  int\
+    \  }\n} nyan;\n\n}  // namespace NYAN\n#line 15 \"template/template.hpp\"\n\n\
+    namespace NYAN {\nvoid solve();\n}\nsigned main() { NYAN::solve(); }\n/**\n *\
+    \ @brief Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n#line 3 \"verify/verify-aoj-alds/example.test.cpp\"\
+    \n\nvoid NYAN::solve() {\n  INT(n);\n  vi s(n);\n  cin >> s;\n\n  INT(q);\n  int\
     \ cnt = 0;\n  rep(_, q) {\n    INT(x);\n    cnt += binary_search(all(s), x);\n\
     \  }\n  print(cnt);\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_B\"\
@@ -89,7 +90,7 @@ data:
   isVerificationFile: true
   path: verify/verify-aoj-alds/example.test.cpp
   requiredBy: []
-  timestamp: '2022-12-05 17:54:53+08:00'
+  timestamp: '2022-12-05 21:00:34+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/verify-aoj-alds/example.test.cpp

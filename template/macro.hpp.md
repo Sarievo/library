@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':warning:'
+    path: magic/astar.hpp
+    title: A Star (A*) Path-Finding
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
@@ -126,6 +129,7 @@ data:
   isVerificationFile: false
   path: template/macro.hpp
   requiredBy:
+  - magic/astar.hpp
   - template/template.hpp
   timestamp: '2022-12-05 17:44:29+08:00'
   verificationStatus: LIBRARY_ALL_AC

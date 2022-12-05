@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':warning:'
+    path: magic/astar.hpp
+    title: A Star (A*) Path-Finding
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
@@ -15,6 +18,8 @@ data:
   attributes:
     links: []
   bundledCode: '#line 1 "template/util.hpp"
+
+    namespace NYAN {
 
     using ll = long long;
 
@@ -66,8 +71,13 @@ data:
 
     void YES(bool x) { std::cout << (x ? "YES" : "NO") << endl; }
 
+
+    }  // namespace NYAN
+
     '
-  code: 'using ll = long long;
+  code: 'namespace NYAN {
+
+    using ll = long long;
 
     using ull= unsigned long long;
 
@@ -117,13 +127,17 @@ data:
 
     void YES(bool x) { std::cout << (x ? "YES" : "NO") << endl; }
 
+
+    }  // namespace NYAN
+
     '
   dependsOn: []
   isVerificationFile: false
   path: template/util.hpp
   requiredBy:
+  - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-05 17:44:29+08:00'
+  timestamp: '2022-12-05 21:00:34+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

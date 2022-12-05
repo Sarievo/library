@@ -1,6 +1,11 @@
 ---
 data:
   libraryCategories:
+  - name: magic
+    pages:
+    - icon: ':warning:'
+      path: magic/astar.hpp
+      title: A Star (A*) Path-Finding
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
