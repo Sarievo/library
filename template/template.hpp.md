@@ -93,6 +93,8 @@ data:
   - verify/verify-aoj-alds/example.test.cpp
 documentation_of: template/template.hpp
 layout: document
+redirect_from:
+- /library/template/template.hpp
+- /library/template/template.hpp.html
+title: "Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
 ---
-
-This is my template file.
