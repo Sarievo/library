@@ -1,5 +1,4 @@
 ---
-title: IO
 documentation_of: ./IO.hpp
 ---
 

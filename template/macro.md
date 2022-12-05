@@ -1,5 +1,4 @@
 ---
-title: Macro
 documentation_of: ./macro.hpp
 ---
 
