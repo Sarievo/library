@@ -12,7 +12,7 @@ data:
     title: template/util.hpp
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: path-finding/astar.hpp
+    path: magic/astar.hpp
     title: A Star (A*) Path-Finding
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -81,7 +81,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy:
-  - path-finding/astar.hpp
+  - magic/astar.hpp
   timestamp: '2022-12-06 17:12:26+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

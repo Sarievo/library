@@ -66,19 +66,19 @@ data:
     \    cerr<<fixed<<setprecision(12);\n  }\n}nyan;\n\n}  // namespace Nyan\n#line\
     \ 15 \"template/template.hpp\"\nnamespace Nyan{void solve();}\nsigned main(){Nyan::solve();}\n\
     /**\n * @brief Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n#line 3 \"\
-    path-finding/astar.hpp\"\nstruct Node {\n  // (x, y) coordinate of the node\n\
-    \  int x, y;\n  /*\n   * f = g + h, where g is the cost of the path from the start\
-    \ node to the current node\n   * and h is the estimated cost of the path from\
-    \ the current node to the goal node\n   */\n  int f, g, h;\n\n  // Overloading\
-    \ the \"<\" operator for the priority queue\n  bool operator<(const Node &n) const\
-    \ {\n    return f > n.f;\n  }\n};\n\n// Helper function to calculate the heuristic\
-    \ (h) value for a given node\n// In this case, the heuristic is the Manhattan\
-    \ distance between the current node and the goal node\nint heuristic(int x, int\
-    \ y, int goal_x, int goal_y) {\n  return abs(goal_x - x) + abs(goal_y - y);\n\
-    }\n\n// Returns the list of coordinates for the path from the start node to the\
-    \ goal node,\n// using the A* algorithm\nvector<pair<int, int>> AStar(vector<vector<int>>\
-    \ &grid, int start_x, int start_y, int goal_x, int goal_y) {\n  // Sanity check:\
-    \ make sure the start and goal coordinates are valid\n  if (start_x < 0 || start_x\
+    magic/astar.hpp\"\nstruct Node {\n  // (x, y) coordinate of the node\n  int x,\
+    \ y;\n  /*\n   * f = g + h, where g is the cost of the path from the start node\
+    \ to the current node\n   * and h is the estimated cost of the path from the current\
+    \ node to the goal node\n   */\n  int f, g, h;\n\n  // Overloading the \"<\" operator\
+    \ for the priority queue\n  bool operator<(const Node &n) const {\n    return\
+    \ f > n.f;\n  }\n};\n\n// Helper function to calculate the heuristic (h) value\
+    \ for a given node\n// In this case, the heuristic is the Manhattan distance between\
+    \ the current node and the goal node\nint heuristic(int x, int y, int goal_x,\
+    \ int goal_y) {\n  return abs(goal_x - x) + abs(goal_y - y);\n}\n\n// Returns\
+    \ the list of coordinates for the path from the start node to the goal node,\n\
+    // using the A* algorithm\nvector<pair<int, int>> AStar(vector<vector<int>> &grid,\
+    \ int start_x, int start_y, int goal_x, int goal_y) {\n  // Sanity check: make\
+    \ sure the start and goal coordinates are valid\n  if (start_x < 0 || start_x\
     \ >= grid.size() || start_y < 0 || start_y >= grid[0].size() ||\n      goal_x\
     \ < 0 || goal_x >= grid.size() || goal_y < 0 || goal_y >= grid[0].size() ||\n\
     \      grid[start_x][start_y] == 1 || grid[goal_x][goal_y] == 1) {\n    return\
@@ -167,15 +167,15 @@ data:
   - template/util.hpp
   - template/io.hpp
   isVerificationFile: false
-  path: path-finding/astar.hpp
+  path: magic/astar.hpp
   requiredBy: []
-  timestamp: '2022-12-06 17:12:26+08:00'
+  timestamp: '2022-12-06 17:23:45+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: path-finding/astar.hpp
+documentation_of: magic/astar.hpp
 layout: document
 redirect_from:
-- /library/path-finding/astar.hpp
-- /library/path-finding/astar.hpp.html
+- /library/magic/astar.hpp
+- /library/magic/astar.hpp.html
 title: A Star (A*) Path-Finding
 ---
