@@ -12,8 +12,8 @@ using namespace std;
 
 // input/output
 #include "io.hpp"
-namespace Nyan{void solve();}
-signed main(){Nyan::solve();}
+namespace Nyan { void solve(); }
+signed main() { Nyan::solve(); }
 /**
  * @brief Template(テンプレート)
 */
