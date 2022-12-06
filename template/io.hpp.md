@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':warning:'
+    path: magic/astar.hpp
+    title: A* Pathfinding
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
@@ -14,35 +17,44 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"template/io.hpp\"\nnamespace Nyan{\ntemplate<typename T,typename\
-    \ U>\nostream&operator<<(ostream&os,pair<T,U>&p){os<<p.first<<\" \"<<p.second;return\
-    \ os;}\ntemplate<typename T,typename U>\nistream&operator>>(istream&is,pair<T,U>&p){is>>p.first>>p.second;return\
-    \ is;}\ntemplate<typename T>\nostream&operator<<(ostream&os,vector<T>&v){for(auto\
-    \ it=v.begin();it!=v.end();){os<<*it<<((++it)!=v.end()?\" \":\"\");}return os;}\n\
-    template<typename T>\nistream&operator>>(istream&is,vector<T>&v){for(T&e:v)is>>e;return\
-    \ is;}\nvoid scan(){}\ntemplate<class T,class...U>\nvoid scan(T&t,U&...u){cin>>t;scan(u...);}\n\
-    template<class T>\nvoid print(const T&t){cout<<t<<'\\n';}\ntemplate<class T,class...U>\n\
-    void print(const T&t,const U&...u){cout<<t<<' ';print(u...);}\ntemplate<class...T>\n\
-    void fin(const T&...a){print(a...);exit(0);}\nstruct Nyan{\n  Nyan(){\n    cin.tie(nullptr);\n\
-    \    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n    cout<<fixed<<setprecision(12);\n\
-    \    cerr<<fixed<<setprecision(12);\n  }\n}nyan;\n\n}  // namespace Nyan\n"
-  code: "namespace Nyan{\ntemplate<typename T,typename U>\nostream&operator<<(ostream&os,pair<T,U>&p){os<<p.first<<\"\
-    \ \"<<p.second;return os;}\ntemplate<typename T,typename U>\nistream&operator>>(istream&is,pair<T,U>&p){is>>p.first>>p.second;return\
-    \ is;}\ntemplate<typename T>\nostream&operator<<(ostream&os,vector<T>&v){for(auto\
-    \ it=v.begin();it!=v.end();){os<<*it<<((++it)!=v.end()?\" \":\"\");}return os;}\n\
-    template<typename T>\nistream&operator>>(istream&is,vector<T>&v){for(T&e:v)is>>e;return\
-    \ is;}\nvoid scan(){}\ntemplate<class T,class...U>\nvoid scan(T&t,U&...u){cin>>t;scan(u...);}\n\
-    template<class T>\nvoid print(const T&t){cout<<t<<'\\n';}\ntemplate<class T,class...U>\n\
-    void print(const T&t,const U&...u){cout<<t<<' ';print(u...);}\ntemplate<class...T>\n\
-    void fin(const T&...a){print(a...);exit(0);}\nstruct Nyan{\n  Nyan(){\n    cin.tie(nullptr);\n\
-    \    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n    cout<<fixed<<setprecision(12);\n\
-    \    cerr<<fixed<<setprecision(12);\n  }\n}nyan;\n\n}  // namespace Nyan\n"
+  bundledCode: "#line 1 \"template/io.hpp\"\nnamespace Nyan {\ntemplate<typename T,\
+    \ typename U>\nostream &operator<<(ostream &os, pair<T, U> &p) {\n  os << p.first\
+    \ << \" \" << p.second;\n  return os;\n}\ntemplate<typename T, typename U>\nistream\
+    \ &operator>>(istream &is, pair<T, U> &p) {\n  is >> p.first >> p.second;\n  return\
+    \ is;\n}\ntemplate<typename T>\nostream &operator<<(ostream &os, vector<T> &v)\
+    \ {\n  for (auto it = v.begin(); it != v.end();) {\n    os << *it << ((++it) !=\
+    \ v.end() ? \" \" : \"\");\n  }\n  return os;\n}\ntemplate<typename T>\nistream\
+    \ &operator>>(istream &is, vector<T> &v) {\n  for (T &e : v)is >> e;\n  return\
+    \ is;\n}\nvoid scan() {}\ntemplate<class T, class...U>\nvoid scan(T &t, U &...u)\
+    \ {\n  cin >> t;\n  scan(u...);\n}\ntemplate<class T>\nvoid print(const T &t)\
+    \ { cout << t << '\\n'; }\ntemplate<class T, class...U>\nvoid print(const T &t,\
+    \ const U &...u) {\n  cout << t << ' ';\n  print(u...);\n}\ntemplate<class...T>\n\
+    void fin(const T &...a) {\n  print(a...);\n  exit(0);\n}\nstruct Nyan {\n  Nyan()\
+    \ {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
+    \    cout << fixed << setprecision(12);\n    cerr << fixed << setprecision(12);\n\
+    \  }\n} nyan;\n}  // namespace Nyan\n"
+  code: "namespace Nyan {\ntemplate<typename T, typename U>\nostream &operator<<(ostream\
+    \ &os, pair<T, U> &p) {\n  os << p.first << \" \" << p.second;\n  return os;\n\
+    }\ntemplate<typename T, typename U>\nistream &operator>>(istream &is, pair<T,\
+    \ U> &p) {\n  is >> p.first >> p.second;\n  return is;\n}\ntemplate<typename T>\n\
+    ostream &operator<<(ostream &os, vector<T> &v) {\n  for (auto it = v.begin();\
+    \ it != v.end();) {\n    os << *it << ((++it) != v.end() ? \" \" : \"\");\n  }\n\
+    \  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream &is, vector<T>\
+    \ &v) {\n  for (T &e : v)is >> e;\n  return is;\n}\nvoid scan() {}\ntemplate<class\
+    \ T, class...U>\nvoid scan(T &t, U &...u) {\n  cin >> t;\n  scan(u...);\n}\ntemplate<class\
+    \ T>\nvoid print(const T &t) { cout << t << '\\n'; }\ntemplate<class T, class...U>\n\
+    void print(const T &t, const U &...u) {\n  cout << t << ' ';\n  print(u...);\n\
+    }\ntemplate<class...T>\nvoid fin(const T &...a) {\n  print(a...);\n  exit(0);\n\
+    }\nstruct Nyan {\n  Nyan() {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n\
+    \    cout.tie(nullptr);\n    cout << fixed << setprecision(12);\n    cerr << fixed\
+    \ << setprecision(12);\n  }\n} nyan;\n}  // namespace Nyan\n"
   dependsOn: []
   isVerificationFile: false
   path: template/io.hpp
   requiredBy:
+  - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-06 17:12:26+08:00'
+  timestamp: '2022-12-06 19:56:18+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

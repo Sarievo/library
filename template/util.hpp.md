@@ -19,141 +19,141 @@ data:
     links: []
   bundledCode: '#line 1 "template/util.hpp"
 
-    namespace Nyan{
+    namespace Nyan {
 
-    using ll=long long;
+    using ll = long long;
 
-    using ull=unsigned long long;
+    using ull = unsigned long long;
 
-    using ld=long double;
+    using ld = long double;
 
-    using vl=vector<ll>;
+    using vl = vector<ll>;
 
-    using vi=vector<int>;
+    using vi = vector<int>;
 
-    using vs=vector<string>;
+    using vs = vector<string>;
 
-    using vc=vector<char>;
+    using vc = vector<char>;
 
-    using vvl=vector<vl>;
+    using vvl = vector<vl>;
 
-    using vvi=vector<vi>;
+    using vvi = vector<vi>;
 
-    using pl=pair<ll,ll>;
+    using pl = pair<ll, ll>;
 
-    using pi=pair<int,int>;
+    using pi = pair<int, int>;
 
-    using vvc=vector<vc>;
+    using vvc = vector<vc>;
 
-    using vd=vector<double>;
+    using vd = vector<double>;
 
-    using vp=vector<pl>;
+    using vp = vector<pl>;
 
-    using vb=vector<bool>;
-
-    template<class T>
-
-    auto max(const T&a){return *max_element(all(a));}
+    using vb = vector<bool>;
 
     template<class T>
 
-    auto min(const T&a){return *min_element(all(a));}
+    auto max(const T &a) { return *max_element(all(a)); }
 
-    template<typename T,typename U>
+    template<class T>
 
-    inline bool chmax(T&a,U b){return a<b&&(a=b,true);}
+    auto min(const T &a) { return *min_element(all(a)); }
 
-    template<typename T,typename U>
+    template<typename T, typename U>
 
-    inline bool chmin(T&a,U b){return a>b&&(a=b,true);}
+    inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
 
-    template<class T> using maxheap=priority_queue<T,vector<T>,less<T>>;
+    template<typename T, typename U>
 
-    template<class T> using minheap=priority_queue<T,vector<T>,greater<T>>;
+    inline bool chmin(T &a, U b) { return a > b && (a = b, true); }
 
-    constexpr ll MOD=1000000007;
+    template<class T> using maxheap = priority_queue<T, vector<T>, less<T>>;
 
-    constexpr ll mod=998244353;
+    template<class T> using minheap = priority_queue<T, vector<T>, greater<T>>;
 
-    constexpr int dx[]{+0,+1,+0,-1,+1,+1,-1,-1};
+    constexpr ll MOD = 1000000007;
 
-    constexpr int dy[]{+1,+0,-1,+0,+1,-1,-1,+1};
+    constexpr ll mod = 998244353;
 
-    void yes(bool x){cout<<(x?"yes":"no")<<endl;}
+    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
 
-    void Yes(bool x){cout<<(x?"Yes":"No")<<endl;}
+    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
 
-    void YES(bool x){cout<<(x?"YES":"NO")<<endl;}
+    void yes(bool x) { cout << (x ? "yes" : "no") << endl; }
+
+    void Yes(bool x) { cout << (x ? "Yes" : "No") << endl; }
+
+    void YES(bool x) { cout << (x ? "YES" : "NO") << endl; }
 
 
     }  // namespace Nyan
 
     '
-  code: 'namespace Nyan{
+  code: 'namespace Nyan {
 
-    using ll=long long;
+    using ll = long long;
 
-    using ull=unsigned long long;
+    using ull = unsigned long long;
 
-    using ld=long double;
+    using ld = long double;
 
-    using vl=vector<ll>;
+    using vl = vector<ll>;
 
-    using vi=vector<int>;
+    using vi = vector<int>;
 
-    using vs=vector<string>;
+    using vs = vector<string>;
 
-    using vc=vector<char>;
+    using vc = vector<char>;
 
-    using vvl=vector<vl>;
+    using vvl = vector<vl>;
 
-    using vvi=vector<vi>;
+    using vvi = vector<vi>;
 
-    using pl=pair<ll,ll>;
+    using pl = pair<ll, ll>;
 
-    using pi=pair<int,int>;
+    using pi = pair<int, int>;
 
-    using vvc=vector<vc>;
+    using vvc = vector<vc>;
 
-    using vd=vector<double>;
+    using vd = vector<double>;
 
-    using vp=vector<pl>;
+    using vp = vector<pl>;
 
-    using vb=vector<bool>;
-
-    template<class T>
-
-    auto max(const T&a){return *max_element(all(a));}
+    using vb = vector<bool>;
 
     template<class T>
 
-    auto min(const T&a){return *min_element(all(a));}
+    auto max(const T &a) { return *max_element(all(a)); }
 
-    template<typename T,typename U>
+    template<class T>
 
-    inline bool chmax(T&a,U b){return a<b&&(a=b,true);}
+    auto min(const T &a) { return *min_element(all(a)); }
 
-    template<typename T,typename U>
+    template<typename T, typename U>
 
-    inline bool chmin(T&a,U b){return a>b&&(a=b,true);}
+    inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
 
-    template<class T> using maxheap=priority_queue<T,vector<T>,less<T>>;
+    template<typename T, typename U>
 
-    template<class T> using minheap=priority_queue<T,vector<T>,greater<T>>;
+    inline bool chmin(T &a, U b) { return a > b && (a = b, true); }
 
-    constexpr ll MOD=1000000007;
+    template<class T> using maxheap = priority_queue<T, vector<T>, less<T>>;
 
-    constexpr ll mod=998244353;
+    template<class T> using minheap = priority_queue<T, vector<T>, greater<T>>;
 
-    constexpr int dx[]{+0,+1,+0,-1,+1,+1,-1,-1};
+    constexpr ll MOD = 1000000007;
 
-    constexpr int dy[]{+1,+0,-1,+0,+1,-1,-1,+1};
+    constexpr ll mod = 998244353;
 
-    void yes(bool x){cout<<(x?"yes":"no")<<endl;}
+    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
 
-    void Yes(bool x){cout<<(x?"Yes":"No")<<endl;}
+    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
 
-    void YES(bool x){cout<<(x?"YES":"NO")<<endl;}
+    void yes(bool x) { cout << (x ? "yes" : "no") << endl; }
+
+    void Yes(bool x) { cout << (x ? "Yes" : "No") << endl; }
+
+    void YES(bool x) { cout << (x ? "YES" : "NO") << endl; }
 
 
     }  // namespace Nyan
@@ -165,7 +165,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-06 17:12:26+08:00'
+  timestamp: '2022-12-06 19:56:18+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
