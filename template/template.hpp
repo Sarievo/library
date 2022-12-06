@@ -4,13 +4,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// macro
+// macros
 #include "macro.hpp"
 
-// util
+// utilities
 #include "util.hpp"
 
-// io
+// input/output
 #include "io.hpp"
 namespace Nyan{void solve();}
 signed main(){Nyan::solve();}
