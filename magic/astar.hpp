@@ -1,5 +1,5 @@
 #pragma once
-#include "../template/template.hpp"
+#include "../template/util.hpp"
 struct Node{
   // (x, y) coordinate of the node
   int x,y;
