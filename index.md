@@ -1,16 +1,21 @@
 ---
 data:
   libraryCategories:
-  - name: magic
+  - name: math
     pages:
     - icon: ':warning:'
-      path: magic/astar.hpp
+      path: math/modint.hpp
+      title: math/modint.hpp
+  - name: path-finding
+    pages:
+    - icon: ':warning:'
+      path: path-finding/astar.hpp
       title: A Star (A*) Path-Finding
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
-      path: template/IO.hpp
-      title: template/IO.hpp
+      path: template/io.hpp
+      title: template/io.hpp
     - icon: ':heavy_check_mark:'
       path: template/macro.hpp
       title: template/macro.hpp

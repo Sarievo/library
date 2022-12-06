@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: template/IO.hpp
-    title: template/IO.hpp
+    path: template/io.hpp
+    title: template/io.hpp
   - icon: ':heavy_check_mark:'
     path: template/macro.hpp
     title: template/macro.hpp
@@ -28,63 +28,57 @@ data:
     #define STR(...) string __VA_ARGS__;scan(__VA_ARGS__)\n#define CHR(...) char __VA_ARGS__;scan(__VA_ARGS__)\n\
     #define DBL(...) double __VA_ARGS__;scan(__VA_ARGS__)\n#define LD(...) long double\
     \ __VA_ARGS__;scan(__VA_ARGS__)\n#define END(...) {print(__VA_ARGS__);return;}\n\
-    #define overload4(a, b, c, d, e, ...) e\n#define overload3(a, b, c, d, ...) d\n\
-    #define rep1(a) for(ll i=0;i<(ll)(a);i++)\n#define rep2(i, a) for(ll i=0;i<(ll)(a);i++)\n\
-    #define rep3(i, a, b) for(ll i=(ll)(a);i<(ll)(b);i++)\n#define rep4(i, a, b, c)\
-    \ for(ll i=(ll)(a);i<(ll)(b);i+=(ll)(c))\n#define rep(...) overload4(__VA_ARGS__,rep4,rep3,rep2,rep1)(__VA_ARGS__)\n\
-    #define rrep1(a) for(ll i=(ll)(a)-1;i>=0;i--)\n#define rrep2(i, a) for(ll i=(ll)(a)-1;i>=0;i--)\n\
-    #define rrep3(i, a, b) for(ll i=(ll)(b)-1;i>=(ll)(a);i--)\n#define rrep(...) overload3(__VA_ARGS__,rrep3,rrep2,rrep1)(__VA_ARGS__)\n\
+    #define overload4(a,b,c,d,e,...) e\n#define overload3(a,b,c,d,...) d\n#define\
+    \ rep1(a) for(ll i=0;i<(ll)(a);i++)\n#define rep2(i,a) for(ll i=0;i<(ll)(a);i++)\n\
+    #define rep3(i,a,b) for(ll i=(ll)(a);i<(ll)(b);i++)\n#define rep4(i,a,b,c) for(ll\
+    \ i=(ll)(a);i<(ll)(b);i+=(ll)(c))\n#define rep(...) overload4(__VA_ARGS__,rep4,rep3,rep2,rep1)(__VA_ARGS__)\n\
+    #define rrep1(a) for(ll i=(ll)(a)-1;i>=0;i--)\n#define rrep2(i,a) for(ll i=(ll)(a)-1;i>=0;i--)\n\
+    #define rrep3(i,a,b) for(ll i=(ll)(b)-1;i>=(ll)(a);i--)\n#define rrep(...) overload3(__VA_ARGS__,rrep3,rrep2,rrep1)(__VA_ARGS__)\n\
     #define fore(...) for(auto&&__VA_ARGS__)\n#define all1(i) begin(i),end(i)\n#define\
-    \ all2(i, a) begin(i),begin(i)+a\n#define all3(i, a, b) begin(i)+a,begin(i)+b\n\
-    #define all(...) overload3(__VA_ARGS__,all3,all2,all1)(__VA_ARGS__)\n#define rall(n)\
+    \ all2(i,a) begin(i),begin(i)+a\n#define all3(i,a,b) begin(i)+a,begin(i)+b\n#define\
+    \ all(...) overload3(__VA_ARGS__,all3,all2,all1)(__VA_ARGS__)\n#define rall(n)\
     \ (n).rbegin(),(n).rend()\n#define pb push_back\n#define eb emplace_back\n#line\
-    \ 9 \"template/template.hpp\"\n\n// utilities\n#line 1 \"template/util.hpp\"\n\
-    namespace NYAN {\nusing ll = long long;\nusing ull= unsigned long long;\nusing\
-    \ ld = long double;\nusing vl = vector<ll>;\nusing vi = vector<int>;\nusing vs\
-    \ = vector<string>;\nusing vc = vector<char>;\nusing vvl= vector<vl>;\nusing pi\
-    \ = pair<int, int>;\nusing pl = pair<ll, ll>;\nusing vvc= vector<vc>;\nusing vd\
-    \ = vector<double>;\nusing vp = vector<pl>;\nusing vb = vector<bool>;\ntemplate<class\
-    \ T>\nauto max(const T &a) { return *max_element(all(a)); }\ntemplate<class T>\n\
-    auto min(const T &a) { return *min_element(all(a)); }\ntemplate<typename T, typename\
-    \ U>\ninline bool chmax(T &a, U b) { return a < b && (a = b, true); }\ntemplate<typename\
-    \ T, typename U>\ninline bool chmin(T &a, U b) { return a > b && (a = b, true);\
-    \ }\ntemplate<class T> using maxheap = priority_queue<T, vector<T>, less<T>>;\n\
-    template<class T> using minheap = priority_queue<T, vector<T>, greater<T>>;\n\
-    void yes(bool x) { std::cout << (x ? \"yes\" : \"no\") << endl; }\nvoid Yes(bool\
-    \ x) { std::cout << (x ? \"Yes\" : \"No\") << endl; }\nvoid YES(bool x) { std::cout\
-    \ << (x ? \"YES\" : \"NO\") << endl; }\nconstexpr int dx[]{+0, +1, +0, -1, +1,\
-    \ +1, -1, -1};\nconstexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};\n\n}  // namespace\
-    \ NYAN\n#line 12 \"template/template.hpp\"\n\n// input/output\n#line 1 \"template/IO.hpp\"\
-    \nnamespace NYAN {\ntemplate<typename T, typename U>\nostream &operator<<(ostream\
-    \ &os, pair<T, U> &p) {\n  os << p.first << \" \" << p.second;\n  return os;\n\
-    }\ntemplate<typename T, typename U>\nistream &operator>>(istream &is, pair<T,\
-    \ U> &p) {\n  is >> p.first >> p.second;\n  return is;\n}\ntemplate<typename T>\n\
-    ostream &operator<<(ostream &os, vector<T> &v) {\n  for (auto it = v.begin();\
-    \ it != v.end();) {\n    os << *it << ((++it) != v.end() ? \" \" : \"\");\n  }\n\
-    \  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream &is, vector<T>\
-    \ &v) {\n  for (T &e : v)is >> e;\n  return is;\n}\nvoid scan() {}\ntemplate<class\
-    \ T, class...U>\nvoid scan(T &t, U &...u) {\n  cin >> t;\n  scan(u...);\n}\ntemplate<class\
-    \ T>\nvoid print(const T &t) { cout << t << '\\n'; }\ntemplate<class T, class...U>\n\
-    void print(const T &t, const U &...u) {\n  cout << t << ' ';\n  print(u...);\n\
-    }\ntemplate<class...T>\nvoid fin(const T &...a) {\n  print(a...);\n  exit(0);\n\
-    }\nstruct Nyan {\n  Nyan() {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n\
-    \    cout.tie(nullptr);\n    cout << fixed << setprecision(12);\n    cerr << fixed\
-    \ << setprecision(12);\n  }\n} nyan;\n\n}  // namespace NYAN\n#line 15 \"template/template.hpp\"\
-    \n\nnamespace NYAN {\nvoid solve();\n}\nsigned main() { NYAN::solve(); }\n/**\n\
-    \ * @brief Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n#line 3 \"magic/astar.hpp\"\
-    \nstruct Node {\n  // (x, y) coordinate of the node\n  int x, y;\n  /*\n   * f\
-    \ = g + h, where g is the cost of the path from the start node to the current\
-    \ node\n   * and h is the estimated cost of the path from the current node to\
-    \ the goal node\n   */\n  int f, g, h;\n\n  // Overloading the \"<\" operator\
-    \ for the priority queue\n  bool operator<(const Node &n) const {\n    return\
-    \ f > n.f;\n  }\n};\n\n// Helper function to calculate the heuristic (h) value\
-    \ for a given node\n// In this case, the heuristic is the Manhattan distance between\
-    \ the current node and the goal node\nint heuristic(int x, int y, int goal_x,\
-    \ int goal_y) {\n  return abs(goal_x - x) + abs(goal_y - y);\n}\n\n// Returns\
-    \ the list of coordinates for the path from the start node to the goal node,\n\
-    // using the A* algorithm\nvector<pair<int, int>> AStar(vector<vector<int>> &grid,\
-    \ int start_x, int start_y, int goal_x, int goal_y) {\n  // Sanity check: make\
-    \ sure the start and goal coordinates are valid\n  if (start_x < 0 || start_x\
+    \ 9 \"template/template.hpp\"\n\n// util\n#line 1 \"template/util.hpp\"\nnamespace\
+    \ Nyan{\nusing ll=long long;\nusing ull=unsigned long long;\nusing ld=long double;\n\
+    using vl=vector<ll>;\nusing vi=vector<int>;\nusing vs=vector<string>;\nusing vc=vector<char>;\n\
+    using vvl=vector<vl>;\nusing vvi=vector<vi>;\nusing pl=pair<ll,ll>;\nusing pi=pair<int,int>;\n\
+    using vvc=vector<vc>;\nusing vd=vector<double>;\nusing vp=vector<pl>;\nusing vb=vector<bool>;\n\
+    template<class T>\nauto max(const T&a){return *max_element(all(a));}\ntemplate<class\
+    \ T>\nauto min(const T&a){return *min_element(all(a));}\ntemplate<typename T,typename\
+    \ U>\ninline bool chmax(T&a,U b){return a<b&&(a=b,true);}\ntemplate<typename T,typename\
+    \ U>\ninline bool chmin(T&a,U b){return a>b&&(a=b,true);}\ntemplate<class T> using\
+    \ maxheap=priority_queue<T,vector<T>,less<T>>;\ntemplate<class T> using minheap=priority_queue<T,vector<T>,greater<T>>;\n\
+    constexpr ll MOD=1000000007;\nconstexpr ll mod=998244353;\nconstexpr int dx[]{+0,+1,+0,-1,+1,+1,-1,-1};\n\
+    constexpr int dy[]{+1,+0,-1,+0,+1,-1,-1,+1};\nvoid yes(bool x){cout<<(x?\"yes\"\
+    :\"no\")<<endl;}\nvoid Yes(bool x){cout<<(x?\"Yes\":\"No\")<<endl;}\nvoid YES(bool\
+    \ x){cout<<(x?\"YES\":\"NO\")<<endl;}\n\n}  // namespace Nyan\n#line 12 \"template/template.hpp\"\
+    \n\n// io\n#line 1 \"template/io.hpp\"\nnamespace Nyan{\ntemplate<typename T,typename\
+    \ U>\nostream&operator<<(ostream&os,pair<T,U>&p){os<<p.first<<\" \"<<p.second;return\
+    \ os;}\ntemplate<typename T,typename U>\nistream&operator>>(istream&is,pair<T,U>&p){is>>p.first>>p.second;return\
+    \ is;}\ntemplate<typename T>\nostream&operator<<(ostream&os,vector<T>&v){for(auto\
+    \ it=v.begin();it!=v.end();){os<<*it<<((++it)!=v.end()?\" \":\"\");}return os;}\n\
+    template<typename T>\nistream&operator>>(istream&is,vector<T>&v){for(T&e:v)is>>e;return\
+    \ is;}\nvoid scan(){}\ntemplate<class T,class...U>\nvoid scan(T&t,U&...u){cin>>t;scan(u...);}\n\
+    template<class T>\nvoid print(const T&t){cout<<t<<'\\n';}\ntemplate<class T,class...U>\n\
+    void print(const T&t,const U&...u){cout<<t<<' ';print(u...);}\ntemplate<class...T>\n\
+    void fin(const T&...a){print(a...);exit(0);}\nstruct Nyan{\n  Nyan(){\n    cin.tie(nullptr);\n\
+    \    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n    cout<<fixed<<setprecision(12);\n\
+    \    cerr<<fixed<<setprecision(12);\n  }\n}nyan;\n\n}  // namespace Nyan\n#line\
+    \ 15 \"template/template.hpp\"\nnamespace Nyan{void solve();}\nsigned main(){Nyan::solve();}\n\
+    /**\n * @brief Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n#line 3 \"\
+    path-finding/astar.hpp\"\nstruct Node {\n  // (x, y) coordinate of the node\n\
+    \  int x, y;\n  /*\n   * f = g + h, where g is the cost of the path from the start\
+    \ node to the current node\n   * and h is the estimated cost of the path from\
+    \ the current node to the goal node\n   */\n  int f, g, h;\n\n  // Overloading\
+    \ the \"<\" operator for the priority queue\n  bool operator<(const Node &n) const\
+    \ {\n    return f > n.f;\n  }\n};\n\n// Helper function to calculate the heuristic\
+    \ (h) value for a given node\n// In this case, the heuristic is the Manhattan\
+    \ distance between the current node and the goal node\nint heuristic(int x, int\
+    \ y, int goal_x, int goal_y) {\n  return abs(goal_x - x) + abs(goal_y - y);\n\
+    }\n\n// Returns the list of coordinates for the path from the start node to the\
+    \ goal node,\n// using the A* algorithm\nvector<pair<int, int>> AStar(vector<vector<int>>\
+    \ &grid, int start_x, int start_y, int goal_x, int goal_y) {\n  // Sanity check:\
+    \ make sure the start and goal coordinates are valid\n  if (start_x < 0 || start_x\
     \ >= grid.size() || start_y < 0 || start_y >= grid[0].size() ||\n      goal_x\
     \ < 0 || goal_x >= grid.size() || goal_y < 0 || goal_y >= grid[0].size() ||\n\
     \      grid[start_x][start_y] == 1 || grid[goal_x][goal_y] == 1) {\n    return\
@@ -171,17 +165,17 @@ data:
   - template/template.hpp
   - template/macro.hpp
   - template/util.hpp
-  - template/IO.hpp
+  - template/io.hpp
   isVerificationFile: false
-  path: magic/astar.hpp
+  path: path-finding/astar.hpp
   requiredBy: []
-  timestamp: '2022-12-05 23:21:05+08:00'
+  timestamp: '2022-12-06 17:12:26+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: magic/astar.hpp
+documentation_of: path-finding/astar.hpp
 layout: document
 redirect_from:
-- /library/magic/astar.hpp
-- /library/magic/astar.hpp.html
+- /library/path-finding/astar.hpp
+- /library/path-finding/astar.hpp.html
 title: A Star (A*) Path-Finding
 ---

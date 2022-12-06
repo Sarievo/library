@@ -3,7 +3,7 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: magic/astar.hpp
+    path: path-finding/astar.hpp
     title: A Star (A*) Path-Finding
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
@@ -19,141 +19,153 @@ data:
     links: []
   bundledCode: '#line 1 "template/util.hpp"
 
-    namespace NYAN {
+    namespace Nyan{
 
-    using ll = long long;
+    using ll=long long;
 
-    using ull= unsigned long long;
+    using ull=unsigned long long;
 
-    using ld = long double;
+    using ld=long double;
 
-    using vl = vector<ll>;
+    using vl=vector<ll>;
 
-    using vi = vector<int>;
+    using vi=vector<int>;
 
-    using vs = vector<string>;
+    using vs=vector<string>;
 
-    using vc = vector<char>;
+    using vc=vector<char>;
 
-    using vvl= vector<vl>;
+    using vvl=vector<vl>;
 
-    using pi = pair<int, int>;
+    using vvi=vector<vi>;
 
-    using pl = pair<ll, ll>;
+    using pl=pair<ll,ll>;
 
-    using vvc= vector<vc>;
+    using pi=pair<int,int>;
 
-    using vd = vector<double>;
+    using vvc=vector<vc>;
 
-    using vp = vector<pl>;
+    using vd=vector<double>;
 
-    using vb = vector<bool>;
+    using vp=vector<pl>;
 
-    template<class T>
-
-    auto max(const T &a) { return *max_element(all(a)); }
+    using vb=vector<bool>;
 
     template<class T>
 
-    auto min(const T &a) { return *min_element(all(a)); }
+    auto max(const T&a){return *max_element(all(a));}
 
-    template<typename T, typename U>
+    template<class T>
 
-    inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
+    auto min(const T&a){return *min_element(all(a));}
 
-    template<typename T, typename U>
+    template<typename T,typename U>
 
-    inline bool chmin(T &a, U b) { return a > b && (a = b, true); }
+    inline bool chmax(T&a,U b){return a<b&&(a=b,true);}
 
-    template<class T> using maxheap = priority_queue<T, vector<T>, less<T>>;
+    template<typename T,typename U>
 
-    template<class T> using minheap = priority_queue<T, vector<T>, greater<T>>;
+    inline bool chmin(T&a,U b){return a>b&&(a=b,true);}
 
-    void yes(bool x) { std::cout << (x ? "yes" : "no") << endl; }
+    template<class T> using maxheap=priority_queue<T,vector<T>,less<T>>;
 
-    void Yes(bool x) { std::cout << (x ? "Yes" : "No") << endl; }
+    template<class T> using minheap=priority_queue<T,vector<T>,greater<T>>;
 
-    void YES(bool x) { std::cout << (x ? "YES" : "NO") << endl; }
+    constexpr ll MOD=1000000007;
 
-    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+    constexpr ll mod=998244353;
 
-    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
+    constexpr int dx[]{+0,+1,+0,-1,+1,+1,-1,-1};
+
+    constexpr int dy[]{+1,+0,-1,+0,+1,-1,-1,+1};
+
+    void yes(bool x){cout<<(x?"yes":"no")<<endl;}
+
+    void Yes(bool x){cout<<(x?"Yes":"No")<<endl;}
+
+    void YES(bool x){cout<<(x?"YES":"NO")<<endl;}
 
 
-    }  // namespace NYAN
+    }  // namespace Nyan
 
     '
-  code: 'namespace NYAN {
+  code: 'namespace Nyan{
 
-    using ll = long long;
+    using ll=long long;
 
-    using ull= unsigned long long;
+    using ull=unsigned long long;
 
-    using ld = long double;
+    using ld=long double;
 
-    using vl = vector<ll>;
+    using vl=vector<ll>;
 
-    using vi = vector<int>;
+    using vi=vector<int>;
 
-    using vs = vector<string>;
+    using vs=vector<string>;
 
-    using vc = vector<char>;
+    using vc=vector<char>;
 
-    using vvl= vector<vl>;
+    using vvl=vector<vl>;
 
-    using pi = pair<int, int>;
+    using vvi=vector<vi>;
 
-    using pl = pair<ll, ll>;
+    using pl=pair<ll,ll>;
 
-    using vvc= vector<vc>;
+    using pi=pair<int,int>;
 
-    using vd = vector<double>;
+    using vvc=vector<vc>;
 
-    using vp = vector<pl>;
+    using vd=vector<double>;
 
-    using vb = vector<bool>;
+    using vp=vector<pl>;
 
-    template<class T>
-
-    auto max(const T &a) { return *max_element(all(a)); }
+    using vb=vector<bool>;
 
     template<class T>
 
-    auto min(const T &a) { return *min_element(all(a)); }
+    auto max(const T&a){return *max_element(all(a));}
 
-    template<typename T, typename U>
+    template<class T>
 
-    inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
+    auto min(const T&a){return *min_element(all(a));}
 
-    template<typename T, typename U>
+    template<typename T,typename U>
 
-    inline bool chmin(T &a, U b) { return a > b && (a = b, true); }
+    inline bool chmax(T&a,U b){return a<b&&(a=b,true);}
 
-    template<class T> using maxheap = priority_queue<T, vector<T>, less<T>>;
+    template<typename T,typename U>
 
-    template<class T> using minheap = priority_queue<T, vector<T>, greater<T>>;
+    inline bool chmin(T&a,U b){return a>b&&(a=b,true);}
 
-    void yes(bool x) { std::cout << (x ? "yes" : "no") << endl; }
+    template<class T> using maxheap=priority_queue<T,vector<T>,less<T>>;
 
-    void Yes(bool x) { std::cout << (x ? "Yes" : "No") << endl; }
+    template<class T> using minheap=priority_queue<T,vector<T>,greater<T>>;
 
-    void YES(bool x) { std::cout << (x ? "YES" : "NO") << endl; }
+    constexpr ll MOD=1000000007;
 
-    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+    constexpr ll mod=998244353;
 
-    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
+    constexpr int dx[]{+0,+1,+0,-1,+1,+1,-1,-1};
+
+    constexpr int dy[]{+1,+0,-1,+0,+1,-1,-1,+1};
+
+    void yes(bool x){cout<<(x?"yes":"no")<<endl;}
+
+    void Yes(bool x){cout<<(x?"Yes":"No")<<endl;}
+
+    void YES(bool x){cout<<(x?"YES":"NO")<<endl;}
 
 
-    }  // namespace NYAN
+    }  // namespace Nyan
 
     '
   dependsOn: []
   isVerificationFile: false
   path: template/util.hpp
   requiredBy:
-  - magic/astar.hpp
+  - path-finding/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-05 21:39:03+08:00'
+  timestamp: '2022-12-06 17:12:26+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
