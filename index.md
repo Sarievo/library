@@ -5,7 +5,7 @@ data:
     pages:
     - icon: ':warning:'
       path: magic/astar.hpp
-      title: A Star (A*) Path-Finding
+      title: A* Pathfinding
   - name: math
     pages:
     - icon: ':warning:'

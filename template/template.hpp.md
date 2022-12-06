@@ -13,7 +13,7 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: magic/astar.hpp
-    title: A Star (A*) Path-Finding
+    title: A* Pathfinding
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/verify-aoj-alds/example.test.cpp
