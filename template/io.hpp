@@ -21,24 +21,28 @@ istream &operator>>(istream &is, vector<T> &v) {
   for (T &e : v)is >> e;
   return is;
 }
-void scan() {}
+
+void in() {}
 template<class T, class...U>
-void scan(T &t, U &...u) {
+void in(T &t, U &...u) {
   cin >> t;
-  scan(u...);
+  in(u...);
 }
-template<class T>
-void print(const T &t) { cout << t << '\n'; }
-template<class T, class...U>
-void print(const T &t, const U &...u) {
-  cout << t << ' ';
-  print(u...);
+
+void out() { cout << "\n"; }
+template<typename T, class... U, char sep = ' '>
+void out(const T &t, const U &... u) {
+  cout << t;
+  if (sizeof...(u)) cout << sep;
+  out(u...);
 }
+
 template<class...T>
 void fin(const T &...a) {
-  print(a...);
+  out(a...);
   exit(0);
 }
+
 struct Nyan {
   Nyan() {
     cin.tie(nullptr);

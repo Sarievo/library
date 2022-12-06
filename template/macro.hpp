@@ -1,10 +1,9 @@
-#define INT(...) int __VA_ARGS__;scan(__VA_ARGS__)
-#define LL(...) long long __VA_ARGS__;scan(__VA_ARGS__)
-#define STR(...) string __VA_ARGS__;scan(__VA_ARGS__)
-#define CHR(...) char __VA_ARGS__;scan(__VA_ARGS__)
-#define DBL(...) double __VA_ARGS__;scan(__VA_ARGS__)
-#define LD(...) long double __VA_ARGS__;scan(__VA_ARGS__)
-#define END(...) {print(__VA_ARGS__);return;}
+#define ini(...) int __VA_ARGS__;in(__VA_ARGS__)
+#define inl(...) long long __VA_ARGS__;in(__VA_ARGS__)
+#define ins(...) string __VA_ARGS__;in(__VA_ARGS__)
+#define inc(...) char __VA_ARGS__;in(__VA_ARGS__)
+#define ind(...) double __VA_ARGS__;in(__VA_ARGS__)
+#define aus(...) {print(__VA_ARGS__);return;}
 #define overload4(a, b, c, d, e, ...) e
 #define overload3(a, b, c, d, ...) d
 #define rep1(a) for(ll i=0;i<(ll)(a);i++)

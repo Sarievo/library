@@ -2,15 +2,15 @@
 #include "../../template/template.hpp"
 
 void Nyan::solve() {
-  INT(n);
+  ini(n);
   vi s(n);
   cin >> s;
 
-  INT(q);
+  ini(q);
   int cnt = 0;
   rep(_, q) {
-    INT(x);
+    ini(x);
     cnt += binary_search(all(s), x);
   }
-  print(cnt);
+  out(cnt);
 }
