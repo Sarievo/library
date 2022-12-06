@@ -1,7 +1,7 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_B"
 #include "../../template/template.hpp"
 
-void NYAN::solve() {
+void Nyan::solve() {
   INT(n);
   vi s(n);
   cin >> s;

@@ -3,8 +3,9 @@ documentation_of: ./macro.hpp
 ---
 
 - [x] 'rep' and 'rrep' overloading
-    - this substitutes the need of classical 'ascending for-loops' and 'descending for-loops', and support step-by-x in 'ascending for-loops'
-    - may not help in cases such as 2-pointers and prime factorization
+    - this substitutes the need of classical 'ascending for-loops' and 'descending for-loops', and support step-by-x
+      in 'ascending for-loops'
+
 ```c++
 #define overload4(a, b, c, d, e, ...) e
 #define overload3(a, b, c, d, ...) d

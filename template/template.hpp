@@ -7,16 +7,13 @@ using namespace std;
 // macro
 #include "macro.hpp"
 
-// utilities
+// util
 #include "util.hpp"
 
-// input/output
-#include "IO.hpp"
-
-namespace NYAN {
-void solve();
-}
-signed main() { NYAN::solve(); }
+// io
+#include "io.hpp"
+namespace Nyan{void solve();}
+signed main(){Nyan::solve();}
 /**
  * @brief Template(テンプレート)
 */
