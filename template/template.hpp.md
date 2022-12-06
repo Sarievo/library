@@ -10,10 +10,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: template/util.hpp
     title: template/util.hpp
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: magic/astar.hpp
-    title: A* Pathfinding
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/verify-aoj-alds/example.test.cpp
@@ -80,8 +77,7 @@ data:
   - template/io.hpp
   isVerificationFile: false
   path: template/template.hpp
-  requiredBy:
-  - magic/astar.hpp
+  requiredBy: []
   timestamp: '2022-12-06 17:12:26+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
