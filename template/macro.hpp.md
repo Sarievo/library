@@ -19,19 +19,17 @@ data:
     links: []
   bundledCode: '#line 1 "template/macro.hpp"
 
-    #define INT(...) int __VA_ARGS__;scan(__VA_ARGS__)
+    #define ini(...) int __VA_ARGS__;in(__VA_ARGS__)
 
-    #define LL(...) long long __VA_ARGS__;scan(__VA_ARGS__)
+    #define inl(...) long long __VA_ARGS__;in(__VA_ARGS__)
 
-    #define STR(...) string __VA_ARGS__;scan(__VA_ARGS__)
+    #define ins(...) string __VA_ARGS__;in(__VA_ARGS__)
 
-    #define CHR(...) char __VA_ARGS__;scan(__VA_ARGS__)
+    #define inc(...) char __VA_ARGS__;in(__VA_ARGS__)
 
-    #define DBL(...) double __VA_ARGS__;scan(__VA_ARGS__)
+    #define ind(...) double __VA_ARGS__;in(__VA_ARGS__)
 
-    #define LD(...) long double __VA_ARGS__;scan(__VA_ARGS__)
-
-    #define END(...) {print(__VA_ARGS__);return;}
+    #define aus(...) {print(__VA_ARGS__);return;}
 
     #define overload4(a, b, c, d, e, ...) e
 
@@ -72,19 +70,17 @@ data:
     #define eb emplace_back
 
     '
-  code: '#define INT(...) int __VA_ARGS__;scan(__VA_ARGS__)
+  code: '#define ini(...) int __VA_ARGS__;in(__VA_ARGS__)
 
-    #define LL(...) long long __VA_ARGS__;scan(__VA_ARGS__)
+    #define inl(...) long long __VA_ARGS__;in(__VA_ARGS__)
 
-    #define STR(...) string __VA_ARGS__;scan(__VA_ARGS__)
+    #define ins(...) string __VA_ARGS__;in(__VA_ARGS__)
 
-    #define CHR(...) char __VA_ARGS__;scan(__VA_ARGS__)
+    #define inc(...) char __VA_ARGS__;in(__VA_ARGS__)
 
-    #define DBL(...) double __VA_ARGS__;scan(__VA_ARGS__)
+    #define ind(...) double __VA_ARGS__;in(__VA_ARGS__)
 
-    #define LD(...) long double __VA_ARGS__;scan(__VA_ARGS__)
-
-    #define END(...) {print(__VA_ARGS__);return;}
+    #define aus(...) {print(__VA_ARGS__);return;}
 
     #define overload4(a, b, c, d, e, ...) e
 
@@ -131,7 +127,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-06 19:56:18+08:00'
+  timestamp: '2022-12-06 23:02:51+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

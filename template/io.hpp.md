@@ -25,11 +25,11 @@ data:
     \ {\n  for (auto it = v.begin(); it != v.end();) {\n    os << *it << ((++it) !=\
     \ v.end() ? \" \" : \"\");\n  }\n  return os;\n}\ntemplate<typename T>\nistream\
     \ &operator>>(istream &is, vector<T> &v) {\n  for (T &e : v)is >> e;\n  return\
-    \ is;\n}\nvoid scan() {}\ntemplate<class T, class...U>\nvoid scan(T &t, U &...u)\
-    \ {\n  cin >> t;\n  scan(u...);\n}\ntemplate<class T>\nvoid print(const T &t)\
-    \ { cout << t << '\\n'; }\ntemplate<class T, class...U>\nvoid print(const T &t,\
-    \ const U &...u) {\n  cout << t << ' ';\n  print(u...);\n}\ntemplate<class...T>\n\
-    void fin(const T &...a) {\n  print(a...);\n  exit(0);\n}\nstruct Nyan {\n  Nyan()\
+    \ is;\n}\n\nvoid in() {}\ntemplate<class T, class...U>\nvoid in(T &t, U &...u)\
+    \ {\n  cin >> t;\n  in(u...);\n}\n\nvoid out() { cout << \"\\n\"; }\ntemplate<typename\
+    \ T, class... U, char sep = ' '>\nvoid out(const T &t, const U &... u) {\n  cout\
+    \ << t;\n  if (sizeof...(u)) cout << sep;\n  out(u...);\n}\n\ntemplate<class...T>\n\
+    void fin(const T &...a) {\n  out(a...);\n  exit(0);\n}\n\nstruct Nyan {\n  Nyan()\
     \ {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
     \    cout << fixed << setprecision(12);\n    cerr << fixed << setprecision(12);\n\
     \  }\n} nyan;\n}  // namespace Nyan\n"
@@ -40,21 +40,22 @@ data:
     ostream &operator<<(ostream &os, vector<T> &v) {\n  for (auto it = v.begin();\
     \ it != v.end();) {\n    os << *it << ((++it) != v.end() ? \" \" : \"\");\n  }\n\
     \  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream &is, vector<T>\
-    \ &v) {\n  for (T &e : v)is >> e;\n  return is;\n}\nvoid scan() {}\ntemplate<class\
-    \ T, class...U>\nvoid scan(T &t, U &...u) {\n  cin >> t;\n  scan(u...);\n}\ntemplate<class\
-    \ T>\nvoid print(const T &t) { cout << t << '\\n'; }\ntemplate<class T, class...U>\n\
-    void print(const T &t, const U &...u) {\n  cout << t << ' ';\n  print(u...);\n\
-    }\ntemplate<class...T>\nvoid fin(const T &...a) {\n  print(a...);\n  exit(0);\n\
-    }\nstruct Nyan {\n  Nyan() {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n\
-    \    cout.tie(nullptr);\n    cout << fixed << setprecision(12);\n    cerr << fixed\
-    \ << setprecision(12);\n  }\n} nyan;\n}  // namespace Nyan\n"
+    \ &v) {\n  for (T &e : v)is >> e;\n  return is;\n}\n\nvoid in() {}\ntemplate<class\
+    \ T, class...U>\nvoid in(T &t, U &...u) {\n  cin >> t;\n  in(u...);\n}\n\nvoid\
+    \ out() { cout << \"\\n\"; }\ntemplate<typename T, class... U, char sep = ' '>\n\
+    void out(const T &t, const U &... u) {\n  cout << t;\n  if (sizeof...(u)) cout\
+    \ << sep;\n  out(u...);\n}\n\ntemplate<class...T>\nvoid fin(const T &...a) {\n\
+    \  out(a...);\n  exit(0);\n}\n\nstruct Nyan {\n  Nyan() {\n    cin.tie(nullptr);\n\
+    \    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n    cout << fixed <<\
+    \ setprecision(12);\n    cerr << fixed << setprecision(12);\n  }\n} nyan;\n} \
+    \ // namespace Nyan\n"
   dependsOn: []
   isVerificationFile: false
   path: template/io.hpp
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-06 19:56:18+08:00'
+  timestamp: '2022-12-06 23:02:51+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

@@ -23,7 +23,7 @@ data:
 
     using ll = long long;
 
-    using ull = unsigned long long;
+    using ull= unsigned long long;
 
     using ld = long double;
 
@@ -35,15 +35,15 @@ data:
 
     using vc = vector<char>;
 
-    using vvl = vector<vl>;
+    using vvl= vector<vl>;
 
-    using vvi = vector<vi>;
+    using vvi= vector<vi>;
 
     using pl = pair<ll, ll>;
 
     using pi = pair<int, int>;
 
-    using vvc = vector<vc>;
+    using vvc= vector<vc>;
 
     using vd = vector<double>;
 
@@ -67,7 +67,7 @@ data:
 
     inline bool chmin(T &a, U b) { return a > b && (a = b, true); }
 
-    template<class T> using maxheap = priority_queue<T, vector<T>, less<T>>;
+    template<class T> using maxheap = priority_queue<T>;
 
     template<class T> using minheap = priority_queue<T, vector<T>, greater<T>>;
 
@@ -93,7 +93,7 @@ data:
 
     using ll = long long;
 
-    using ull = unsigned long long;
+    using ull= unsigned long long;
 
     using ld = long double;
 
@@ -105,15 +105,15 @@ data:
 
     using vc = vector<char>;
 
-    using vvl = vector<vl>;
+    using vvl= vector<vl>;
 
-    using vvi = vector<vi>;
+    using vvi= vector<vi>;
 
     using pl = pair<ll, ll>;
 
     using pi = pair<int, int>;
 
-    using vvc = vector<vc>;
+    using vvc= vector<vc>;
 
     using vd = vector<double>;
 
@@ -137,7 +137,7 @@ data:
 
     inline bool chmin(T &a, U b) { return a > b && (a = b, true); }
 
-    template<class T> using maxheap = priority_queue<T, vector<T>, less<T>>;
+    template<class T> using maxheap = priority_queue<T>;
 
     template<class T> using minheap = priority_queue<T, vector<T>, greater<T>>;
 
@@ -165,7 +165,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-06 19:56:18+08:00'
+  timestamp: '2022-12-06 23:02:51+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
