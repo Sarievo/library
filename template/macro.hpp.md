@@ -29,7 +29,7 @@ data:
 
     #define ind(...) double __VA_ARGS__;in(__VA_ARGS__)
 
-    #define aus(...) {print(__VA_ARGS__);return;}
+    #define fin(...) {out(__VA_ARGS__);return;}
 
     #define overload4(a, b, c, d, e, ...) e
 
@@ -80,7 +80,7 @@ data:
 
     #define ind(...) double __VA_ARGS__;in(__VA_ARGS__)
 
-    #define aus(...) {print(__VA_ARGS__);return;}
+    #define fin(...) {out(__VA_ARGS__);return;}
 
     #define overload4(a, b, c, d, e, ...) e
 
@@ -127,7 +127,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-06 23:02:51+08:00'
+  timestamp: '2022-12-07 17:54:35+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

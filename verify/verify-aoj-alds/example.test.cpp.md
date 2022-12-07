@@ -30,7 +30,7 @@ data:
     \ std;\n\n// macros\n#line 1 \"template/macro.hpp\"\n#define ini(...) int __VA_ARGS__;in(__VA_ARGS__)\n\
     #define inl(...) long long __VA_ARGS__;in(__VA_ARGS__)\n#define ins(...) string\
     \ __VA_ARGS__;in(__VA_ARGS__)\n#define inc(...) char __VA_ARGS__;in(__VA_ARGS__)\n\
-    #define ind(...) double __VA_ARGS__;in(__VA_ARGS__)\n#define aus(...) {print(__VA_ARGS__);return;}\n\
+    #define ind(...) double __VA_ARGS__;in(__VA_ARGS__)\n#define fin(...) {out(__VA_ARGS__);return;}\n\
     #define overload4(a, b, c, d, e, ...) e\n#define overload3(a, b, c, d, ...) d\n\
     #define rep1(a) for(ll i=0;i<(ll)(a);i++)\n#define rep2(i, a) for(ll i=0;i<(ll)(a);i++)\n\
     #define rep3(i, a, b) for(ll i=(ll)(a);i<(ll)(b);i++)\n#define rep4(i, a, b, c)\
@@ -47,34 +47,32 @@ data:
     \ = vector<string>;\nusing vc = vector<char>;\nusing vvl= vector<vl>;\nusing vvi=\
     \ vector<vi>;\nusing pl = pair<ll, ll>;\nusing pi = pair<int, int>;\nusing vvc=\
     \ vector<vc>;\nusing vd = vector<double>;\nusing vp = vector<pl>;\nusing vb =\
-    \ vector<bool>;\ntemplate<class T>\nauto max(const T &a) { return *max_element(all(a));\
-    \ }\ntemplate<class T>\nauto min(const T &a) { return *min_element(all(a)); }\n\
-    template<typename T, typename U>\ninline bool chmax(T &a, U b) { return a < b\
-    \ && (a = b, true); }\ntemplate<typename T, typename U>\ninline bool chmin(T &a,\
-    \ U b) { return a > b && (a = b, true); }\ntemplate<class T> using maxheap = priority_queue<T>;\n\
-    template<class T> using minheap = priority_queue<T, vector<T>, greater<T>>;\n\
-    constexpr ll MOD = 1000000007;\nconstexpr ll mod = 998244353;\nconstexpr int dx[]{+0,\
-    \ +1, +0, -1, +1, +1, -1, -1};\nconstexpr int dy[]{+1, +0, -1, +0, +1, -1, -1,\
-    \ +1};\nvoid yes(bool x) { cout << (x ? \"yes\" : \"no\") << endl; }\nvoid Yes(bool\
-    \ x) { cout << (x ? \"Yes\" : \"No\") << endl; }\nvoid YES(bool x) { cout << (x\
-    \ ? \"YES\" : \"NO\") << endl; }\n\n}  // namespace Nyan\n#line 12 \"template/template.hpp\"\
-    \n\n// input/output\n#line 1 \"template/io.hpp\"\nnamespace Nyan {\ntemplate<typename\
-    \ T, typename U>\nostream &operator<<(ostream &os, pair<T, U> &p) {\n  os << p.first\
-    \ << \" \" << p.second;\n  return os;\n}\ntemplate<typename T, typename U>\nistream\
-    \ &operator>>(istream &is, pair<T, U> &p) {\n  is >> p.first >> p.second;\n  return\
-    \ is;\n}\ntemplate<typename T>\nostream &operator<<(ostream &os, vector<T> &v)\
-    \ {\n  for (auto it = v.begin(); it != v.end();) {\n    os << *it << ((++it) !=\
-    \ v.end() ? \" \" : \"\");\n  }\n  return os;\n}\ntemplate<typename T>\nistream\
-    \ &operator>>(istream &is, vector<T> &v) {\n  for (T &e : v)is >> e;\n  return\
-    \ is;\n}\n\nvoid in() {}\ntemplate<class T, class...U>\nvoid in(T &t, U &...u)\
-    \ {\n  cin >> t;\n  in(u...);\n}\n\nvoid out() { cout << \"\\n\"; }\ntemplate<typename\
-    \ T, class... U, char sep = ' '>\nvoid out(const T &t, const U &... u) {\n  cout\
-    \ << t;\n  if (sizeof...(u)) cout << sep;\n  out(u...);\n}\n\ntemplate<class...T>\n\
-    void fin(const T &...a) {\n  out(a...);\n  exit(0);\n}\n\nstruct Nyan {\n  Nyan()\
-    \ {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
-    \    cout << fixed << setprecision(12);\n    cerr << fixed << setprecision(12);\n\
-    \  }\n} nyan;\n}  // namespace Nyan\n#line 15 \"template/template.hpp\"\nnamespace\
-    \ Nyan { void solve(); }\nsigned main() { Nyan::solve(); }\n/**\n * @brief Template(\u30C6\
+    \ vector<bool>;\ntemplate<typename T, typename U>\ninline bool chmax(T &a, U b)\
+    \ { return a < b && (a = b, true); }\ntemplate<typename T, typename U>\ninline\
+    \ bool chmin(T &a, U b) { return a > b && (a = b, true); }\ntemplate<class T>\
+    \ using maxheap = priority_queue<T>;\ntemplate<class T> using minheap = priority_queue<T,\
+    \ vector<T>, greater<T>>;\nconstexpr ll MOD = 1000000007;\nconstexpr ll mod =\
+    \ 998244353;\nconstexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};\nconstexpr int\
+    \ dy[]{+1, +0, -1, +0, +1, -1, -1, +1};\nvoid yes(bool x) { cout << (x ? \"yes\"\
+    \ : \"no\") << endl; }\nvoid Yes(bool x) { cout << (x ? \"Yes\" : \"No\") << endl;\
+    \ }\nvoid YES(bool x) { cout << (x ? \"YES\" : \"NO\") << endl; }\n\n}  // namespace\
+    \ Nyan\n#line 12 \"template/template.hpp\"\n\n// input/output\n#line 1 \"template/io.hpp\"\
+    \nnamespace Nyan {\ntemplate<typename T, typename U>\nostream &operator<<(ostream\
+    \ &os, pair<T, U> &p) {\n  os << p.first << \" \" << p.second;\n  return os;\n\
+    }\ntemplate<typename T, typename U>\nistream &operator>>(istream &is, pair<T,\
+    \ U> &p) {\n  is >> p.first >> p.second;\n  return is;\n}\ntemplate<typename T>\n\
+    ostream &operator<<(ostream &os, vector<T> &v) {\n  for (auto it = v.begin();\
+    \ it != v.end();) {\n    os << *it << ((++it) != v.end() ? \" \" : \"\");\n  }\n\
+    \  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream &is, vector<T>\
+    \ &v) {\n  for (T &e : v)is >> e;\n  return is;\n}\n\nvoid in() {}\ntemplate<class\
+    \ T, class...U>\nvoid in(T &t, U &...u) {\n  cin >> t;\n  in(u...);\n}\n\nvoid\
+    \ out() { cout << \"\\n\"; }\ntemplate<typename T, class... U, char sep = ' '>\n\
+    void out(const T &t, const U &... u) {\n  cout << t;\n  if (sizeof...(u)) cout\
+    \ << sep;\n  out(u...);\n}\n\nstruct Nyan {\n  Nyan() {\n    cin.tie(nullptr);\n\
+    \    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n    cout << fixed <<\
+    \ setprecision(12);\n    cerr << fixed << setprecision(12);\n  }\n} nyan;\n\n\
+    }  // namespace Nyan\n#line 15 \"template/template.hpp\"\nnamespace Nyan { void\
+    \ solve(); }\nsigned main() { Nyan::solve(); }\n/**\n * @brief Template(\u30C6\
     \u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n#line 3 \"verify/verify-aoj-alds/example.test.cpp\"\
     \n\nvoid Nyan::solve() {\n  ini(n);\n  vi s(n);\n  cin >> s;\n\n  ini(q);\n  int\
     \ cnt = 0;\n  rep(_, q) {\n    ini(x);\n    cnt += binary_search(all(s), x);\n\
@@ -91,7 +89,7 @@ data:
   isVerificationFile: true
   path: verify/verify-aoj-alds/example.test.cpp
   requiredBy: []
-  timestamp: '2022-12-06 23:02:51+08:00'
+  timestamp: '2022-12-07 17:54:35+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/verify-aoj-alds/example.test.cpp
