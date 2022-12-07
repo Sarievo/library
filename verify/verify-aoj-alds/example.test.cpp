@@ -4,7 +4,7 @@
 void Nyan::solve() {
   ini(n);
   vi s(n);
-  cin >> s;
+  in(s);
 
   ini(q);
   int cnt = 0;
