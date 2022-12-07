@@ -74,8 +74,8 @@ vector<pair<int, int>> AStar(vector<vector<int>> &grid, int start_x, int start_y
     // Explore the neighbors of the current node
     for (int i = 0; i < 4; ++i) {
       // Check if the coordinates are valid and not visited
-      int x = current.x + NYAN::dx[i];
-      int y = current.y + NYAN::dy[i];
+      int x = current.x + Nyan::dx[i];
+      int y = current.y + Nyan::dy[i];
       if (x < 0 || x >= grid.size() || y < 0 || y >= grid[0].size()
           || grid[x][y] == 1 || closed_set[x][y]) {
         continue;
