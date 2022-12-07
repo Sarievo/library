@@ -106,7 +106,7 @@ data:
     \  }\n\n    // Mark the current node as visited\n    closed_set[current.x][current.y]\
     \ = true;\n\n    // Explore the neighbors of the current node\n    for (int i\
     \ = 0; i < 4; ++i) {\n      // Check if the coordinates are valid and not visited\n\
-    \      int x = current.x + NYAN::dx[i];\n      int y = current.y + NYAN::dy[i];\n\
+    \      int x = current.x + Nyan::dx[i];\n      int y = current.y + Nyan::dy[i];\n\
     \      if (x < 0 || x >= grid.size() || y < 0 || y >= grid[0].size()\n       \
     \   || grid[x][y] == 1 || closed_set[x][y]) {\n        continue;\n      }\n\n\
     \      // Calculate the new f, g, and h values\n      int g = current.g + 1;\n\
@@ -154,7 +154,7 @@ data:
     \  }\n\n    // Mark the current node as visited\n    closed_set[current.x][current.y]\
     \ = true;\n\n    // Explore the neighbors of the current node\n    for (int i\
     \ = 0; i < 4; ++i) {\n      // Check if the coordinates are valid and not visited\n\
-    \      int x = current.x + NYAN::dx[i];\n      int y = current.y + NYAN::dy[i];\n\
+    \      int x = current.x + Nyan::dx[i];\n      int y = current.y + Nyan::dy[i];\n\
     \      if (x < 0 || x >= grid.size() || y < 0 || y >= grid[0].size()\n       \
     \   || grid[x][y] == 1 || closed_set[x][y]) {\n        continue;\n      }\n\n\
     \      // Calculate the new f, g, and h values\n      int g = current.g + 1;\n\
@@ -173,7 +173,7 @@ data:
   isVerificationFile: false
   path: magic/astar.hpp
   requiredBy: []
-  timestamp: '2022-12-07 18:54:26+08:00'
+  timestamp: '2022-12-07 18:55:51+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: magic/astar.hpp
