@@ -14,10 +14,6 @@ using vvc= vector<vc>;
 using vd = vector<double>;
 using vp = vector<pl>;
 using vb = vector<bool>;
-template<class T>
-auto max(const T &a) { return *max_element(all(a)); }
-template<class T>
-auto min(const T &a) { return *min_element(all(a)); }
 template<typename T, typename U>
 inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
 template<typename T, typename U>

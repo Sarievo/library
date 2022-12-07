@@ -37,12 +37,6 @@ void out(const T &t, const U &... u) {
   out(u...);
 }
 
-template<class...T>
-void fin(const T &...a) {
-  out(a...);
-  exit(0);
-}
-
 struct Nyan {
   Nyan() {
     cin.tie(nullptr);
@@ -52,4 +46,5 @@ struct Nyan {
     cerr << fixed << setprecision(12);
   }
 } nyan;
+
 }  // namespace Nyan
