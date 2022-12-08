@@ -25,27 +25,25 @@ data:
 
     using ld = long double;
 
-    using vl = vector<ll>;
-
     using vi = vector<int>;
 
-    using vs = vector<string>;
+    using vl = vector<ll>;
 
     using vc = vector<char>;
 
-    using vvl= vector<vl>;
+    using vs = vector<string>;
+
+    using vb = vector<bool>;
 
     using vvi= vector<vi>;
 
-    using pl = pair<ll, ll>;
-
-    using pi = pair<int, int>;
+    using vvl= vector<vl>;
 
     using vvc= vector<vc>;
 
-    using pl = pair<ll, ll>;
-
     using pi = pair<int, int>;
+
+    using pl = pair<ll, ll>;
 
     using vp = vector<pl>;
 
@@ -96,27 +94,25 @@ data:
 
     using ld = long double;
 
-    using vl = vector<ll>;
-
     using vi = vector<int>;
 
-    using vs = vector<string>;
+    using vl = vector<ll>;
 
     using vc = vector<char>;
 
-    using vvl= vector<vl>;
+    using vs = vector<string>;
+
+    using vb = vector<bool>;
 
     using vvi= vector<vi>;
 
-    using pl = pair<ll, ll>;
-
-    using pi = pair<int, int>;
+    using vvl= vector<vl>;
 
     using vvc= vector<vc>;
 
-    using pl = pair<ll, ll>;
-
     using pi = pair<int, int>;
+
+    using pl = pair<ll, ll>;
 
     using vp = vector<pl>;
 
@@ -167,7 +163,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-08 18:41:17+08:00'
+  timestamp: '2022-12-08 21:08:39+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
