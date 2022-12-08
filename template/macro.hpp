@@ -1,5 +1,5 @@
-#define a first
-#define b second
+#define fi first
+#define se second
 #define overload4(a, b, c, d, e, ...) e
 #define overload3(a, b, c, d, ...) d
 #define rep1(a) for(ll i=0;i<(ll)(a);i++)
