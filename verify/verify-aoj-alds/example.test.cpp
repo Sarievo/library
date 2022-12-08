@@ -2,14 +2,12 @@
 #include "../../template/template.hpp"
 
 void Nyan::solve() {
-  ini(n);
-  vi s(n);
-  in(s);
-
-  ini(q);
+  I(n);
+  V(int, s, n);
+  I(q);
   int cnt = 0;
   rep(_, q) {
-    ini(x);
+    I(x);
     cnt += binary_search(all(s), x);
   }
   out(cnt);

@@ -11,9 +11,7 @@ istream &operator>>(istream &is, pair<T, U> &p) {
 }
 template<typename T>
 ostream &operator<<(ostream &os, vector<T> &v) {
-  for (auto it = v.begin(); it != v.end();) {
-    os << *it << ((++it) != v.end() ? " " : "");
-  }
+  for (auto it = v.begin(); it != v.end();) os << *it << ((++it) != v.end() ? " " : "");
   return os;
 }
 template<typename T>

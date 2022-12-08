@@ -1,8 +1,10 @@
-#define ini(...) int __VA_ARGS__;in(__VA_ARGS__)
-#define inl(...) long long __VA_ARGS__;in(__VA_ARGS__)
-#define ins(...) string __VA_ARGS__;in(__VA_ARGS__)
-#define inc(...) char __VA_ARGS__;in(__VA_ARGS__)
-#define ind(...) double __VA_ARGS__;in(__VA_ARGS__)
+#define I(...) int __VA_ARGS__;in(__VA_ARGS__)
+#define L(...) long long __VA_ARGS__;in(__VA_ARGS__)
+#define S(...) string __VA_ARGS__;in(__VA_ARGS__)
+#define C(...) char __VA_ARGS__;in(__VA_ARGS__)
+#define D(...) double __VA_ARGS__;in(__VA_ARGS__)
+#define V(T, name, n) vector<T> name(n); in(name)
+#define VV(T, name, n, m) vector<vector<T>> name(n, vector<type>(m)); in(name)
 #define fin(...) {out(__VA_ARGS__);return;}
 #define overload4(a, b, c, d, e, ...) e
 #define overload3(a, b, c, d, ...) d
