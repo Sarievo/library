@@ -13,7 +13,7 @@ using pi = pair<int, int>;
 using pl = pair<ll, ll>;
 using vp = vector<pl>;
 template<typename T> using V = vector<T>;
-template<typename T> using VV = vector<vector<T>>;
+template<typename T> using VV= vector<vector<T>>;
 template<typename T, typename U>
 inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
 template<typename T, typename U>
