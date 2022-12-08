@@ -1,17 +1,16 @@
 namespace Nyan {
 using ll = long long;
 using ld = long double;
-using vl = vector<ll>;
 using vi = vector<int>;
-using vs = vector<string>;
+using vl = vector<ll>;
 using vc = vector<char>;
-using vvl= vector<vl>;
+using vs = vector<string>;
+using vb = vector<bool>;
 using vvi= vector<vi>;
-using pl = pair<ll, ll>;
-using pi = pair<int, int>;
+using vvl= vector<vl>;
 using vvc= vector<vc>;
-using pl = pair<ll, ll>;
 using pi = pair<int, int>;
+using pl = pair<ll, ll>;
 using vp = vector<pl>;
 template<typename T> using V = vector<T>;
 template<typename T> using VV = vector<vector<T>>;
