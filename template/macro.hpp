@@ -1,3 +1,5 @@
+#define a first
+#define b second
 #define overload4(a, b, c, d, e, ...) e
 #define overload3(a, b, c, d, ...) d
 #define rep1(a) for(ll i=0;i<(ll)(a);i++)
@@ -10,20 +12,12 @@
 #define rrep3(i, a, b) for(ll i=(ll)(b)-1;i>=(ll)(a);i--)
 #define rrep(...) overload3(__VA_ARGS__,rrep3,rrep2,rrep1)(__VA_ARGS__)
 #define fore(...) for(auto&&__VA_ARGS__)
-#define all1(i) begin(i),end(i)
-#define all2(i, a) begin(i),begin(i)+a
-#define all3(i, a, b) begin(i)+a,begin(i)+b
-#define all(...) overload3(__VA_ARGS__,all3,all2,all1)(__VA_ARGS__)
+#define all(i) begin(i),end(i)
 #define rall(n) (n).rbegin(),(n).rend()
-#define a first
-#define b second
-#define pb push_back
-#define eb emplace_back
-#define I(...) int __VA_ARGS__;in(__VA_ARGS__)
-#define L(...) long long __VA_ARGS__;in(__VA_ARGS__)
-#define S(...) string __VA_ARGS__;in(__VA_ARGS__)
-#define C(...) char __VA_ARGS__;in(__VA_ARGS__)
-#define D(...) double __VA_ARGS__;in(__VA_ARGS__)
-#define V(T, name, n) vector<T> name(n); in(name)
-#define VV(T, name, n, m) vector<vector<T>> name(n, vector<type>(m)); in(name)
-#define fin(...) {out(__VA_ARGS__);return;}
+#define ini(...) int __VA_ARGS__;in(__VA_ARGS__)
+#define inl(...) long long __VA_ARGS__;in(__VA_ARGS__)
+#define ins(...) string __VA_ARGS__;in(__VA_ARGS__)
+#define in2(s, t) for (int i = 0; i < (int)s.size(); i++) { in(s[i], t[i]); }
+#define in3(s, t, u) for (int i = 0; i < (int)s.size(); i++) { in(s[i], t[i], u[i]); }
+#define in4(s, t, u, v) for (int i = 0; i < (int)s.size(); i++) { in(s[i], t[i], u[i], v[i]); }
+#define fin(...) { out(__VA_ARGS__);return; }
