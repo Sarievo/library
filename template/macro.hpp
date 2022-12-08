@@ -23,3 +23,5 @@
 #define rall(n) (n).rbegin(),(n).rend()
 #define pb push_back
 #define eb emplace_back
+#define a first
+#define b second
