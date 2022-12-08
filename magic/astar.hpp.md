@@ -23,15 +23,17 @@ data:
     links: []
   bundledCode: "#line 2 \"template/template.hpp\"\n// #pragma GCC target(\"avx2\"\
     )\n// #pragma GCC optimize(\"O3\",\"unroll-loops\")\n#include <bits/stdc++.h>\n\
-    using namespace std;\n\n// macros\n#line 1 \"template/macro.hpp\"\n#define ini(...)\
-    \ int __VA_ARGS__;in(__VA_ARGS__)\n#define inl(...) long long __VA_ARGS__;in(__VA_ARGS__)\n\
-    #define ins(...) string __VA_ARGS__;in(__VA_ARGS__)\n#define inc(...) char __VA_ARGS__;in(__VA_ARGS__)\n\
-    #define ind(...) double __VA_ARGS__;in(__VA_ARGS__)\n#define fin(...) {out(__VA_ARGS__);return;}\n\
-    #define overload4(a, b, c, d, e, ...) e\n#define overload3(a, b, c, d, ...) d\n\
-    #define rep1(a) for(ll i=0;i<(ll)(a);i++)\n#define rep2(i, a) for(ll i=0;i<(ll)(a);i++)\n\
-    #define rep3(i, a, b) for(ll i=(ll)(a);i<(ll)(b);i++)\n#define rep4(i, a, b, c)\
-    \ for(ll i=(ll)(a);i<(ll)(b);i+=(ll)(c))\n#define rep(...) overload4(__VA_ARGS__,rep4,rep3,rep2,rep1)(__VA_ARGS__)\n\
-    #define rrep1(a) for(ll i=(ll)(a)-1;i>=0;i--)\n#define rrep2(i, a) for(ll i=(ll)(a)-1;i>=0;i--)\n\
+    using namespace std;\n\n// macros\n#line 1 \"template/macro.hpp\"\n#define I(...)\
+    \ int __VA_ARGS__;in(__VA_ARGS__)\n#define L(...) long long __VA_ARGS__;in(__VA_ARGS__)\n\
+    #define S(...) string __VA_ARGS__;in(__VA_ARGS__)\n#define C(...) char __VA_ARGS__;in(__VA_ARGS__)\n\
+    #define D(...) double __VA_ARGS__;in(__VA_ARGS__)\n#define V(T, name, n) vector<T>\
+    \ name(n); in(name)\n#define VV(T, name, n, m) vector<vector<T>> name(n, vector<type>(m));\
+    \ in(name)\n#define fin(...) {out(__VA_ARGS__);return;}\n#define overload4(a,\
+    \ b, c, d, e, ...) e\n#define overload3(a, b, c, d, ...) d\n#define rep1(a) for(ll\
+    \ i=0;i<(ll)(a);i++)\n#define rep2(i, a) for(ll i=0;i<(ll)(a);i++)\n#define rep3(i,\
+    \ a, b) for(ll i=(ll)(a);i<(ll)(b);i++)\n#define rep4(i, a, b, c) for(ll i=(ll)(a);i<(ll)(b);i+=(ll)(c))\n\
+    #define rep(...) overload4(__VA_ARGS__,rep4,rep3,rep2,rep1)(__VA_ARGS__)\n#define\
+    \ rrep1(a) for(ll i=(ll)(a)-1;i>=0;i--)\n#define rrep2(i, a) for(ll i=(ll)(a)-1;i>=0;i--)\n\
     #define rrep3(i, a, b) for(ll i=(ll)(b)-1;i>=(ll)(a);i--)\n#define rrep(...) overload3(__VA_ARGS__,rrep3,rrep2,rrep1)(__VA_ARGS__)\n\
     #define fore(...) for(auto&&__VA_ARGS__)\n#define all1(i) begin(i),end(i)\n#define\
     \ all2(i, a) begin(i),begin(i)+a\n#define all3(i, a, b) begin(i)+a,begin(i)+b\n\
@@ -58,14 +60,14 @@ data:
     \ << \" \" << p.second;\n  return os;\n}\ntemplate<typename T, typename U>\nistream\
     \ &operator>>(istream &is, pair<T, U> &p) {\n  is >> p.first >> p.second;\n  return\
     \ is;\n}\ntemplate<typename T>\nostream &operator<<(ostream &os, vector<T> &v)\
-    \ {\n  for (auto it = v.begin(); it != v.end();) {\n    os << *it << ((++it) !=\
-    \ v.end() ? \" \" : \"\");\n  }\n  return os;\n}\ntemplate<typename T>\nistream\
-    \ &operator>>(istream &is, vector<T> &v) {\n  for (T &e : v) is >> e;\n  return\
-    \ is;\n}\nvoid in() {}\ntemplate<class T, class... U>\nvoid in(T &t, U &...u)\
-    \ {\n  cin >> t;\n  in(u...);\n}\nvoid out() { cout << \"\\n\"; }\ntemplate<typename\
-    \ T, class... U, char sep = ' '>\nvoid out(const T &t, const U &...u) {\n  cout\
-    \ << t;\n  if (sizeof...(u)) cout << sep;\n  out(u...);\n}\nstruct Nyan {\n  Nyan()\
-    \ {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
+    \ {\n  for (auto it = v.begin(); it != v.end();) os << *it << ((++it) != v.end()\
+    \ ? \" \" : \"\");\n  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
+    \ &is, vector<T> &v) {\n  for (T &e : v) is >> e;\n  return is;\n}\nvoid in()\
+    \ {}\ntemplate<class T, class... U>\nvoid in(T &t, U &...u) {\n  cin >> t;\n \
+    \ in(u...);\n}\nvoid out() { cout << \"\\n\"; }\ntemplate<typename T, class...\
+    \ U, char sep = ' '>\nvoid out(const T &t, const U &...u) {\n  cout << t;\n  if\
+    \ (sizeof...(u)) cout << sep;\n  out(u...);\n}\nstruct Nyan {\n  Nyan() {\n  \
+    \  cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
     \    cout << fixed << setprecision(12);\n    cerr << fixed << setprecision(12);\n\
     \  }\n} nyan;\n\n}  // namespace Nyan\n#line 15 \"template/template.hpp\"\nnamespace\
     \ Nyan { void solve(); }\nsigned main() { Nyan::solve(); }\n/**\n * @brief Template(\u30C6\
@@ -173,7 +175,7 @@ data:
   isVerificationFile: false
   path: magic/astar.hpp
   requiredBy: []
-  timestamp: '2022-12-08 16:39:15+08:00'
+  timestamp: '2022-12-08 17:24:45+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: magic/astar.hpp

@@ -22,14 +22,14 @@ data:
     \ << \" \" << p.second;\n  return os;\n}\ntemplate<typename T, typename U>\nistream\
     \ &operator>>(istream &is, pair<T, U> &p) {\n  is >> p.first >> p.second;\n  return\
     \ is;\n}\ntemplate<typename T>\nostream &operator<<(ostream &os, vector<T> &v)\
-    \ {\n  for (auto it = v.begin(); it != v.end();) {\n    os << *it << ((++it) !=\
-    \ v.end() ? \" \" : \"\");\n  }\n  return os;\n}\ntemplate<typename T>\nistream\
-    \ &operator>>(istream &is, vector<T> &v) {\n  for (T &e : v) is >> e;\n  return\
-    \ is;\n}\nvoid in() {}\ntemplate<class T, class... U>\nvoid in(T &t, U &...u)\
-    \ {\n  cin >> t;\n  in(u...);\n}\nvoid out() { cout << \"\\n\"; }\ntemplate<typename\
-    \ T, class... U, char sep = ' '>\nvoid out(const T &t, const U &...u) {\n  cout\
-    \ << t;\n  if (sizeof...(u)) cout << sep;\n  out(u...);\n}\nstruct Nyan {\n  Nyan()\
-    \ {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
+    \ {\n  for (auto it = v.begin(); it != v.end();) os << *it << ((++it) != v.end()\
+    \ ? \" \" : \"\");\n  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
+    \ &is, vector<T> &v) {\n  for (T &e : v) is >> e;\n  return is;\n}\nvoid in()\
+    \ {}\ntemplate<class T, class... U>\nvoid in(T &t, U &...u) {\n  cin >> t;\n \
+    \ in(u...);\n}\nvoid out() { cout << \"\\n\"; }\ntemplate<typename T, class...\
+    \ U, char sep = ' '>\nvoid out(const T &t, const U &...u) {\n  cout << t;\n  if\
+    \ (sizeof...(u)) cout << sep;\n  out(u...);\n}\nstruct Nyan {\n  Nyan() {\n  \
+    \  cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
     \    cout << fixed << setprecision(12);\n    cerr << fixed << setprecision(12);\n\
     \  }\n} nyan;\n\n}  // namespace Nyan\n"
   code: "namespace Nyan {\ntemplate<typename T, typename U>\nostream &operator<<(ostream\
@@ -37,23 +37,22 @@ data:
     }\ntemplate<typename T, typename U>\nistream &operator>>(istream &is, pair<T,\
     \ U> &p) {\n  is >> p.first >> p.second;\n  return is;\n}\ntemplate<typename T>\n\
     ostream &operator<<(ostream &os, vector<T> &v) {\n  for (auto it = v.begin();\
-    \ it != v.end();) {\n    os << *it << ((++it) != v.end() ? \" \" : \"\");\n  }\n\
-    \  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream &is, vector<T>\
-    \ &v) {\n  for (T &e : v) is >> e;\n  return is;\n}\nvoid in() {}\ntemplate<class\
-    \ T, class... U>\nvoid in(T &t, U &...u) {\n  cin >> t;\n  in(u...);\n}\nvoid\
-    \ out() { cout << \"\\n\"; }\ntemplate<typename T, class... U, char sep = ' '>\n\
-    void out(const T &t, const U &...u) {\n  cout << t;\n  if (sizeof...(u)) cout\
-    \ << sep;\n  out(u...);\n}\nstruct Nyan {\n  Nyan() {\n    cin.tie(nullptr);\n\
-    \    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n    cout << fixed <<\
-    \ setprecision(12);\n    cerr << fixed << setprecision(12);\n  }\n} nyan;\n\n\
-    }  // namespace Nyan\n"
+    \ it != v.end();) os << *it << ((++it) != v.end() ? \" \" : \"\");\n  return os;\n\
+    }\ntemplate<typename T>\nistream &operator>>(istream &is, vector<T> &v) {\n  for\
+    \ (T &e : v) is >> e;\n  return is;\n}\nvoid in() {}\ntemplate<class T, class...\
+    \ U>\nvoid in(T &t, U &...u) {\n  cin >> t;\n  in(u...);\n}\nvoid out() { cout\
+    \ << \"\\n\"; }\ntemplate<typename T, class... U, char sep = ' '>\nvoid out(const\
+    \ T &t, const U &...u) {\n  cout << t;\n  if (sizeof...(u)) cout << sep;\n  out(u...);\n\
+    }\nstruct Nyan {\n  Nyan() {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n\
+    \    cout.tie(nullptr);\n    cout << fixed << setprecision(12);\n    cerr << fixed\
+    \ << setprecision(12);\n  }\n} nyan;\n\n}  // namespace Nyan\n"
   dependsOn: []
   isVerificationFile: false
   path: template/io.hpp
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-08 16:39:15+08:00'
+  timestamp: '2022-12-08 17:24:45+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

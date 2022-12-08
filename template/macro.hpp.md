@@ -19,15 +19,19 @@ data:
     links: []
   bundledCode: '#line 1 "template/macro.hpp"
 
-    #define ini(...) int __VA_ARGS__;in(__VA_ARGS__)
+    #define I(...) int __VA_ARGS__;in(__VA_ARGS__)
 
-    #define inl(...) long long __VA_ARGS__;in(__VA_ARGS__)
+    #define L(...) long long __VA_ARGS__;in(__VA_ARGS__)
 
-    #define ins(...) string __VA_ARGS__;in(__VA_ARGS__)
+    #define S(...) string __VA_ARGS__;in(__VA_ARGS__)
 
-    #define inc(...) char __VA_ARGS__;in(__VA_ARGS__)
+    #define C(...) char __VA_ARGS__;in(__VA_ARGS__)
 
-    #define ind(...) double __VA_ARGS__;in(__VA_ARGS__)
+    #define D(...) double __VA_ARGS__;in(__VA_ARGS__)
+
+    #define V(T, name, n) vector<T> name(n); in(name)
+
+    #define VV(T, name, n, m) vector<vector<T>> name(n, vector<type>(m)); in(name)
 
     #define fin(...) {out(__VA_ARGS__);return;}
 
@@ -74,15 +78,19 @@ data:
     #define b second
 
     '
-  code: '#define ini(...) int __VA_ARGS__;in(__VA_ARGS__)
+  code: '#define I(...) int __VA_ARGS__;in(__VA_ARGS__)
 
-    #define inl(...) long long __VA_ARGS__;in(__VA_ARGS__)
+    #define L(...) long long __VA_ARGS__;in(__VA_ARGS__)
 
-    #define ins(...) string __VA_ARGS__;in(__VA_ARGS__)
+    #define S(...) string __VA_ARGS__;in(__VA_ARGS__)
 
-    #define inc(...) char __VA_ARGS__;in(__VA_ARGS__)
+    #define C(...) char __VA_ARGS__;in(__VA_ARGS__)
 
-    #define ind(...) double __VA_ARGS__;in(__VA_ARGS__)
+    #define D(...) double __VA_ARGS__;in(__VA_ARGS__)
+
+    #define V(T, name, n) vector<T> name(n); in(name)
+
+    #define VV(T, name, n, m) vector<vector<T>> name(n, vector<type>(m)); in(name)
 
     #define fin(...) {out(__VA_ARGS__);return;}
 
@@ -135,7 +143,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-08 16:39:15+08:00'
+  timestamp: '2022-12-08 17:24:45+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

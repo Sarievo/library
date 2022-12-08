@@ -27,10 +27,11 @@ data:
     \ \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_B\"\n#line\
     \ 2 \"template/template.hpp\"\n// #pragma GCC target(\"avx2\")\n// #pragma GCC\
     \ optimize(\"O3\",\"unroll-loops\")\n#include <bits/stdc++.h>\nusing namespace\
-    \ std;\n\n// macros\n#line 1 \"template/macro.hpp\"\n#define ini(...) int __VA_ARGS__;in(__VA_ARGS__)\n\
-    #define inl(...) long long __VA_ARGS__;in(__VA_ARGS__)\n#define ins(...) string\
-    \ __VA_ARGS__;in(__VA_ARGS__)\n#define inc(...) char __VA_ARGS__;in(__VA_ARGS__)\n\
-    #define ind(...) double __VA_ARGS__;in(__VA_ARGS__)\n#define fin(...) {out(__VA_ARGS__);return;}\n\
+    \ std;\n\n// macros\n#line 1 \"template/macro.hpp\"\n#define I(...) int __VA_ARGS__;in(__VA_ARGS__)\n\
+    #define L(...) long long __VA_ARGS__;in(__VA_ARGS__)\n#define S(...) string __VA_ARGS__;in(__VA_ARGS__)\n\
+    #define C(...) char __VA_ARGS__;in(__VA_ARGS__)\n#define D(...) double __VA_ARGS__;in(__VA_ARGS__)\n\
+    #define V(T, name, n) vector<T> name(n); in(name)\n#define VV(T, name, n, m) vector<vector<T>>\
+    \ name(n, vector<type>(m)); in(name)\n#define fin(...) {out(__VA_ARGS__);return;}\n\
     #define overload4(a, b, c, d, e, ...) e\n#define overload3(a, b, c, d, ...) d\n\
     #define rep1(a) for(ll i=0;i<(ll)(a);i++)\n#define rep2(i, a) for(ll i=0;i<(ll)(a);i++)\n\
     #define rep3(i, a, b) for(ll i=(ll)(a);i<(ll)(b);i++)\n#define rep4(i, a, b, c)\
@@ -62,25 +63,25 @@ data:
     \ << \" \" << p.second;\n  return os;\n}\ntemplate<typename T, typename U>\nistream\
     \ &operator>>(istream &is, pair<T, U> &p) {\n  is >> p.first >> p.second;\n  return\
     \ is;\n}\ntemplate<typename T>\nostream &operator<<(ostream &os, vector<T> &v)\
-    \ {\n  for (auto it = v.begin(); it != v.end();) {\n    os << *it << ((++it) !=\
-    \ v.end() ? \" \" : \"\");\n  }\n  return os;\n}\ntemplate<typename T>\nistream\
-    \ &operator>>(istream &is, vector<T> &v) {\n  for (T &e : v) is >> e;\n  return\
-    \ is;\n}\nvoid in() {}\ntemplate<class T, class... U>\nvoid in(T &t, U &...u)\
-    \ {\n  cin >> t;\n  in(u...);\n}\nvoid out() { cout << \"\\n\"; }\ntemplate<typename\
-    \ T, class... U, char sep = ' '>\nvoid out(const T &t, const U &...u) {\n  cout\
-    \ << t;\n  if (sizeof...(u)) cout << sep;\n  out(u...);\n}\nstruct Nyan {\n  Nyan()\
-    \ {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
+    \ {\n  for (auto it = v.begin(); it != v.end();) os << *it << ((++it) != v.end()\
+    \ ? \" \" : \"\");\n  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
+    \ &is, vector<T> &v) {\n  for (T &e : v) is >> e;\n  return is;\n}\nvoid in()\
+    \ {}\ntemplate<class T, class... U>\nvoid in(T &t, U &...u) {\n  cin >> t;\n \
+    \ in(u...);\n}\nvoid out() { cout << \"\\n\"; }\ntemplate<typename T, class...\
+    \ U, char sep = ' '>\nvoid out(const T &t, const U &...u) {\n  cout << t;\n  if\
+    \ (sizeof...(u)) cout << sep;\n  out(u...);\n}\nstruct Nyan {\n  Nyan() {\n  \
+    \  cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
     \    cout << fixed << setprecision(12);\n    cerr << fixed << setprecision(12);\n\
     \  }\n} nyan;\n\n}  // namespace Nyan\n#line 15 \"template/template.hpp\"\nnamespace\
     \ Nyan { void solve(); }\nsigned main() { Nyan::solve(); }\n/**\n * @brief Template(\u30C6\
     \u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n#line 3 \"verify/verify-aoj-alds/example.test.cpp\"\
-    \n\nvoid Nyan::solve() {\n  ini(n);\n  vi s(n);\n  in(s);\n\n  ini(q);\n  int\
-    \ cnt = 0;\n  rep(_, q) {\n    ini(x);\n    cnt += binary_search(all(s), x);\n\
-    \  }\n  out(cnt);\n}\n"
+    \n\nvoid Nyan::solve() {\n  I(n);\n  V(int, s, n);\n  I(q);\n  int cnt = 0;\n\
+    \  rep(_, q) {\n    I(x);\n    cnt += binary_search(all(s), x);\n  }\n  out(cnt);\n\
+    }\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_B\"\
-    \n#include \"../../template/template.hpp\"\n\nvoid Nyan::solve() {\n  ini(n);\n\
-    \  vi s(n);\n  in(s);\n\n  ini(q);\n  int cnt = 0;\n  rep(_, q) {\n    ini(x);\n\
-    \    cnt += binary_search(all(s), x);\n  }\n  out(cnt);\n}\n"
+    \n#include \"../../template/template.hpp\"\n\nvoid Nyan::solve() {\n  I(n);\n\
+    \  V(int, s, n);\n  I(q);\n  int cnt = 0;\n  rep(_, q) {\n    I(x);\n    cnt +=\
+    \ binary_search(all(s), x);\n  }\n  out(cnt);\n}\n"
   dependsOn:
   - template/template.hpp
   - template/macro.hpp
@@ -89,7 +90,7 @@ data:
   isVerificationFile: true
   path: verify/verify-aoj-alds/example.test.cpp
   requiredBy: []
-  timestamp: '2022-12-08 16:39:15+08:00'
+  timestamp: '2022-12-08 17:24:45+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/verify-aoj-alds/example.test.cpp
