@@ -49,22 +49,28 @@ data:
 
     template<typename T> using V = vector<T>;
 
-    template<typename T> using VV = vector<vector<T>>;
+    template<typename T> using VV= vector<vector<T>>;
 
-    template<typename T, typename U> inline bool chmax(T &a, U b) { return a < b &&
-    (a = b, true); }
+    template<typename T, typename U>
 
-    template<typename T, typename U> inline bool chmin(T &a, U b) { return a > b &&
-    (a = b, true); }
+    inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
 
-    template<typename T> inline T Max(const vector<T> &v) { return *max_element(begin(v),
-    end(v)); }
+    template<typename T, typename U>
 
-    template<typename T> inline T Min(const vector<T> &v) { return *min_element(begin(v),
-    end(v)); }
+    inline bool chmin(T &a, U b) { return a > b && (a = b, true); }
 
-    template<typename T> inline long long Sum(const vector<T> &v) { return accumulate(begin(v),
-    end(v), 0LL); }
+    template<typename T>
+
+    inline T Max(const vector<T> &v) { return *max_element(begin(v), end(v)); }
+
+    template<typename T>
+
+    inline T Min(const vector<T> &v) { return *min_element(begin(v), end(v)); }
+
+    template<typename T>
+
+    inline long long Sum(const vector<T> &v) { return accumulate(begin(v), end(v),
+    0LL); }
 
     template<class T> using maxheap = priority_queue<T>;
 
@@ -118,22 +124,28 @@ data:
 
     template<typename T> using V = vector<T>;
 
-    template<typename T> using VV = vector<vector<T>>;
+    template<typename T> using VV= vector<vector<T>>;
 
-    template<typename T, typename U> inline bool chmax(T &a, U b) { return a < b &&
-    (a = b, true); }
+    template<typename T, typename U>
 
-    template<typename T, typename U> inline bool chmin(T &a, U b) { return a > b &&
-    (a = b, true); }
+    inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
 
-    template<typename T> inline T Max(const vector<T> &v) { return *max_element(begin(v),
-    end(v)); }
+    template<typename T, typename U>
 
-    template<typename T> inline T Min(const vector<T> &v) { return *min_element(begin(v),
-    end(v)); }
+    inline bool chmin(T &a, U b) { return a > b && (a = b, true); }
 
-    template<typename T> inline long long Sum(const vector<T> &v) { return accumulate(begin(v),
-    end(v), 0LL); }
+    template<typename T>
+
+    inline T Max(const vector<T> &v) { return *max_element(begin(v), end(v)); }
+
+    template<typename T>
+
+    inline T Min(const vector<T> &v) { return *min_element(begin(v), end(v)); }
+
+    template<typename T>
+
+    inline long long Sum(const vector<T> &v) { return accumulate(begin(v), end(v),
+    0LL); }
 
     template<class T> using maxheap = priority_queue<T>;
 
@@ -163,7 +175,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-08 21:08:39+08:00'
+  timestamp: '2022-12-08 23:43:18+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

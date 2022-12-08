@@ -47,12 +47,12 @@ data:
     using vb = vector<bool>;\nusing vvi= vector<vi>;\nusing vvl= vector<vl>;\nusing\
     \ vvc= vector<vc>;\nusing pi = pair<int, int>;\nusing pl = pair<ll, ll>;\nusing\
     \ vp = vector<pl>;\ntemplate<typename T> using V = vector<T>;\ntemplate<typename\
-    \ T> using VV = vector<vector<T>>;\ntemplate<typename T, typename U> inline bool\
+    \ T> using VV= vector<vector<T>>;\ntemplate<typename T, typename U>\ninline bool\
     \ chmax(T &a, U b) { return a < b && (a = b, true); }\ntemplate<typename T, typename\
-    \ U> inline bool chmin(T &a, U b) { return a > b && (a = b, true); }\ntemplate<typename\
-    \ T> inline T Max(const vector<T> &v) { return *max_element(begin(v), end(v));\
-    \ }\ntemplate<typename T> inline T Min(const vector<T> &v) { return *min_element(begin(v),\
-    \ end(v)); }\ntemplate<typename T> inline long long Sum(const vector<T> &v) {\
+    \ U>\ninline bool chmin(T &a, U b) { return a > b && (a = b, true); }\ntemplate<typename\
+    \ T>\ninline T Max(const vector<T> &v) { return *max_element(begin(v), end(v));\
+    \ }\ntemplate<typename T>\ninline T Min(const vector<T> &v) { return *min_element(begin(v),\
+    \ end(v)); }\ntemplate<typename T>\ninline long long Sum(const vector<T> &v) {\
     \ return accumulate(begin(v), end(v), 0LL); }\ntemplate<class T> using maxheap\
     \ = priority_queue<T>;\ntemplate<class T> using minheap = priority_queue<T, vector<T>,\
     \ greater<T>>;\nconstexpr ll MOD = 1000000007;\nconstexpr ll mod = 998244353;\n\
@@ -91,7 +91,7 @@ data:
   path: template/template.hpp
   requiredBy:
   - magic/astar.hpp
-  timestamp: '2022-12-08 21:08:39+08:00'
+  timestamp: '2022-12-08 23:43:18+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
