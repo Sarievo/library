@@ -19,9 +19,9 @@ data:
     links: []
   bundledCode: '#line 1 "template/macro.hpp"
 
-    #define a first
+    #define fi first
 
-    #define b second
+    #define se second
 
     #define overload4(a, b, c, d, e, ...) e
 
@@ -68,9 +68,9 @@ data:
     #define fin(...) { out(__VA_ARGS__);return; }
 
     '
-  code: '#define a first
+  code: '#define fi first
 
-    #define b second
+    #define se second
 
     #define overload4(a, b, c, d, e, ...) e
 
@@ -123,7 +123,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-08 18:38:07+08:00'
+  timestamp: '2022-12-08 20:40:33+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

@@ -27,10 +27,10 @@ data:
     \ \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_B\"\n#line\
     \ 2 \"template/template.hpp\"\n// #pragma GCC target(\"avx2\")\n// #pragma GCC\
     \ optimize(\"O3\",\"unroll-loops\")\n#include <bits/stdc++.h>\nusing namespace\
-    \ std;\n\n// macros\n#line 1 \"template/macro.hpp\"\n#define a first\n#define\
-    \ b second\n#define overload4(a, b, c, d, e, ...) e\n#define overload3(a, b, c,\
-    \ d, ...) d\n#define rep1(a) for(ll i=0;i<(ll)(a);i++)\n#define rep2(i, a) for(ll\
-    \ i=0;i<(ll)(a);i++)\n#define rep3(i, a, b) for(ll i=(ll)(a);i<(ll)(b);i++)\n\
+    \ std;\n\n// macros\n#line 1 \"template/macro.hpp\"\n#define fi first\n#define\
+    \ se second\n#define overload4(a, b, c, d, e, ...) e\n#define overload3(a, b,\
+    \ c, d, ...) d\n#define rep1(a) for(ll i=0;i<(ll)(a);i++)\n#define rep2(i, a)\
+    \ for(ll i=0;i<(ll)(a);i++)\n#define rep3(i, a, b) for(ll i=(ll)(a);i<(ll)(b);i++)\n\
     #define rep4(i, a, b, c) for(ll i=(ll)(a);i<(ll)(b);i+=(ll)(c))\n#define rep(...)\
     \ overload4(__VA_ARGS__,rep4,rep3,rep2,rep1)(__VA_ARGS__)\n#define rrep1(a) for(ll\
     \ i=(ll)(a)-1;i>=0;i--)\n#define rrep2(i, a) for(ll i=(ll)(a)-1;i>=0;i--)\n#define\
@@ -94,7 +94,7 @@ data:
   isVerificationFile: true
   path: verify/verify-aoj-alds/example.test.cpp
   requiredBy: []
-  timestamp: '2022-12-08 18:41:17+08:00'
+  timestamp: '2022-12-08 20:40:33+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/verify-aoj-alds/example.test.cpp
