@@ -15,16 +15,11 @@ using pi = pair<int, int>;
 using vp = vector<pl>;
 template<typename T> using V = vector<T>;
 template<typename T> using VV = vector<vector<T>>;
-template<typename T, typename U>
-inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
-template<typename T, typename U>
-inline bool chmin(T &a, U b) { return a > b && (a = b, true); }
-template<typename T>
-inline T Max(const vector<T> &v) { return *max_element(begin(v), end(v)); }
-template<typename T>
-inline T Min(const vector<T> &v) { return *min_element(begin(v), end(v)); }
-template<typename T>
-inline long long Sum(const vector<T> &v) { return accumulate(begin(v), end(v), 0LL); }
+template<typename T, typename U> inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
+template<typename T, typename U> inline bool chmin(T &a, U b) { return a > b && (a = b, true); }
+template<typename T> inline T Max(const vector<T> &v) { return *max_element(begin(v), end(v)); }
+template<typename T> inline T Min(const vector<T> &v) { return *min_element(begin(v), end(v)); }
+template<typename T> inline long long Sum(const vector<T> &v) { return accumulate(begin(v), end(v), 0LL); }
 template<class T> using maxheap = priority_queue<T>;
 template<class T> using minheap = priority_queue<T, vector<T>, greater<T>>;
 constexpr ll MOD = 1000000007;
