@@ -69,6 +69,10 @@ data:
 
     #define eb emplace_back
 
+    #define a first
+
+    #define b second
+
     '
   code: '#define ini(...) int __VA_ARGS__;in(__VA_ARGS__)
 
@@ -120,6 +124,10 @@ data:
 
     #define eb emplace_back
 
+    #define a first
+
+    #define b second
+
     '
   dependsOn: []
   isVerificationFile: false
@@ -127,7 +135,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-07 17:54:35+08:00'
+  timestamp: '2022-12-08 16:39:15+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
