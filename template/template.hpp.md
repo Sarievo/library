@@ -48,12 +48,12 @@ data:
     \ ll>;\nusing pi = pair<int, int>;\nusing vvc= vector<vc>;\nusing pl = pair<ll,\
     \ ll>;\nusing pi = pair<int, int>;\nusing vp = vector<pl>;\ntemplate<typename\
     \ T> using V = vector<T>;\ntemplate<typename T> using VV = vector<vector<T>>;\n\
-    template<typename T, typename U>\ninline bool chmax(T &a, U b) { return a < b\
-    \ && (a = b, true); }\ntemplate<typename T, typename U>\ninline bool chmin(T &a,\
-    \ U b) { return a > b && (a = b, true); }\ntemplate<typename T>\ninline T Max(const\
+    template<typename T, typename U> inline bool chmax(T &a, U b) { return a < b &&\
+    \ (a = b, true); }\ntemplate<typename T, typename U> inline bool chmin(T &a, U\
+    \ b) { return a > b && (a = b, true); }\ntemplate<typename T> inline T Max(const\
     \ vector<T> &v) { return *max_element(begin(v), end(v)); }\ntemplate<typename\
-    \ T>\ninline T Min(const vector<T> &v) { return *min_element(begin(v), end(v));\
-    \ }\ntemplate<typename T>\ninline long long Sum(const vector<T> &v) { return accumulate(begin(v),\
+    \ T> inline T Min(const vector<T> &v) { return *min_element(begin(v), end(v));\
+    \ }\ntemplate<typename T> inline long long Sum(const vector<T> &v) { return accumulate(begin(v),\
     \ end(v), 0LL); }\ntemplate<class T> using maxheap = priority_queue<T>;\ntemplate<class\
     \ T> using minheap = priority_queue<T, vector<T>, greater<T>>;\nconstexpr ll MOD\
     \ = 1000000007;\nconstexpr ll mod = 998244353;\nconstexpr int dx[]{+0, +1, +0,\
@@ -66,8 +66,8 @@ data:
     \ << \" \" << p.second;\n  return os;\n}\ntemplate<typename T, typename U>\nistream\
     \ &operator>>(istream &is, pair<T, U> &p) {\n  is >> p.first >> p.second;\n  return\
     \ is;\n}\ntemplate<typename T>\nostream &operator<<(ostream &os, vector<T> &v)\
-    \ {\n  for (auto it = v.begin(); it != v.end();) os << *it << ((++it) != v.end()\
-    \ ? \" \" : \"\");\n  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
+    \ {\n  for (auto it = v.begin(); it != v.end();) { os << *it << ((++it) != v.end()\
+    \ ? \" \" : \"\"); }\n  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
     \ &is, vector<T> &v) {\n  for (T &e : v) is >> e;\n  return is;\n}\nvoid in()\
     \ {}\ntemplate<class T, class... U>\nvoid in(T &t, U &...u) {\n  cin >> t;\n \
     \ in(u...);\n}\nvoid out() { cout << \"\\n\"; }\ntemplate<typename T, class...\
@@ -91,7 +91,7 @@ data:
   path: template/template.hpp
   requiredBy:
   - magic/astar.hpp
-  timestamp: '2022-12-08 18:38:07+08:00'
+  timestamp: '2022-12-08 18:41:17+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
