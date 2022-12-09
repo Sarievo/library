@@ -6,6 +6,7 @@ using vl = vector<ll>;
 using vc = vector<char>;
 using vs = vector<string>;
 using vb = vector<bool>;
+using vd = vector<double>;
 using vvi= vector<vi>;
 using vvl= vector<vl>;
 using vvc= vector<vc>;
