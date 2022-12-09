@@ -13,22 +13,22 @@ struct modint {
   constexpr modint() : x(0) {}
   constexpr modint(int y) {
     int v = y % m;
-    if (v < 0)v += m;
+    if (v < 0) v += m;
     x = (unsigned int) v;
   }
   constexpr modint(long long y) {
     long long v = y % (long long) m;
-    if (v < 0)v += m;
+    if (v < 0) v += m;
     x = (unsigned int) v;
   }
   constexpr modint(unsigned int y) { x = (unsigned int) (y % umod()); }
   modint &operator++() {
     x++;
-    if (x == umod())x = 0;
+    if (x == umod()) x = 0;
     return *this;
   }
   modint &operator--() {
-    if (x == 0)x = umod();
+    if (x == 0) x = umod();
     x--;
     return *this;
   }
@@ -43,11 +43,11 @@ struct modint {
     return ret;
   }
   modint &operator+=(const modint &p) {
-    if ((x += p.x) >= umod())x -= umod();
+    if ((x += p.x) >= umod()) x -= umod();
     return *this;
   }
   modint &operator-=(const modint &p) {
-    if ((x -= p.x) >= umod())x += umod();
+    if ((x -= p.x) >= umod()) x += umod();
     return *this;
   }
   modint &operator*=(const modint &p) {
@@ -62,7 +62,7 @@ struct modint {
   modint pow(long long n) const {
     modint ret(1), mul = *this;
     while (n) {
-      if (n & 1)ret *= mul;
+      if (n & 1) ret *= mul;
       mul *= mul;
       n >>= 1;
     }
