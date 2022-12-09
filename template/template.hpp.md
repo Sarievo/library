@@ -44,23 +44,23 @@ data:
     \ }\n#line 9 \"template/template.hpp\"\n\n// utilities\n#line 1 \"template/util.hpp\"\
     \nnamespace Nyan {\nusing ll = long long;\nusing ld = long double;\nusing vi =\
     \ vector<int>;\nusing vl = vector<ll>;\nusing vc = vector<char>;\nusing vs = vector<string>;\n\
-    using vb = vector<bool>;\nusing vvi= vector<vi>;\nusing vvl= vector<vl>;\nusing\
-    \ vvc= vector<vc>;\nusing pi = pair<int, int>;\nusing pl = pair<ll, ll>;\nusing\
-    \ vp = vector<pl>;\ntemplate<typename T> using V = vector<T>;\ntemplate<typename\
-    \ T> using VV= vector<vector<T>>;\ntemplate<typename T, typename U>\ninline bool\
-    \ chmax(T &a, U b) { return a < b && (a = b, true); }\ntemplate<typename T, typename\
-    \ U>\ninline bool chmin(T &a, U b) { return a > b && (a = b, true); }\ntemplate<typename\
-    \ T>\ninline T Max(const vector<T> &v) { return *max_element(begin(v), end(v));\
-    \ }\ntemplate<typename T>\ninline T Min(const vector<T> &v) { return *min_element(begin(v),\
-    \ end(v)); }\ntemplate<typename T>\ninline long long Sum(const vector<T> &v) {\
-    \ return accumulate(begin(v), end(v), 0LL); }\ntemplate<class T> using maxheap\
-    \ = priority_queue<T>;\ntemplate<class T> using minheap = priority_queue<T, vector<T>,\
-    \ greater<T>>;\nconstexpr ll MOD = 1000000007;\nconstexpr ll mod = 998244353;\n\
-    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};\nconstexpr int dy[]{+1, +0,\
-    \ -1, +0, +1, -1, -1, +1};\nvoid yes(bool x) { cout << (x ? \"yes\" : \"no\")\
-    \ << endl; }\nvoid Yes(bool x) { cout << (x ? \"Yes\" : \"No\") << endl; }\nvoid\
-    \ YES(bool x) { cout << (x ? \"YES\" : \"NO\") << endl; }\n\n}  // namespace Nyan\n\
-    #line 12 \"template/template.hpp\"\n\n// input/output\n#line 1 \"template/io.hpp\"\
+    using vb = vector<bool>;\nusing vd = vector<double>;\nusing vvi= vector<vi>;\n\
+    using vvl= vector<vl>;\nusing vvc= vector<vc>;\nusing pi = pair<int, int>;\nusing\
+    \ pl = pair<ll, ll>;\nusing vp = vector<pl>;\ntemplate<typename T> using V = vector<T>;\n\
+    template<typename T> using VV= vector<vector<T>>;\ntemplate<typename T, typename\
+    \ U>\ninline bool chmax(T &a, U b) { return a < b && (a = b, true); }\ntemplate<typename\
+    \ T, typename U>\ninline bool chmin(T &a, U b) { return a > b && (a = b, true);\
+    \ }\ntemplate<typename T>\ninline T Max(const vector<T> &v) { return *max_element(begin(v),\
+    \ end(v)); }\ntemplate<typename T>\ninline T Min(const vector<T> &v) { return\
+    \ *min_element(begin(v), end(v)); }\ntemplate<typename T>\ninline long long Sum(const\
+    \ vector<T> &v) { return accumulate(begin(v), end(v), 0LL); }\ntemplate<class\
+    \ T> using maxheap = priority_queue<T>;\ntemplate<class T> using minheap = priority_queue<T,\
+    \ vector<T>, greater<T>>;\nconstexpr ll MOD = 1000000007;\nconstexpr ll mod =\
+    \ 998244353;\nconstexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};\nconstexpr int\
+    \ dy[]{+1, +0, -1, +0, +1, -1, -1, +1};\nvoid yes(bool x) { cout << (x ? \"yes\"\
+    \ : \"no\") << endl; }\nvoid Yes(bool x) { cout << (x ? \"Yes\" : \"No\") << endl;\
+    \ }\nvoid YES(bool x) { cout << (x ? \"YES\" : \"NO\") << endl; }\n\n}  // namespace\
+    \ Nyan\n#line 12 \"template/template.hpp\"\n\n// input/output\n#line 1 \"template/io.hpp\"\
     \nnamespace Nyan {\ntemplate<typename T, typename U>\nostream &operator<<(ostream\
     \ &os, pair<T, U> &p) {\n  os << p.first << \" \" << p.second;\n  return os;\n\
     }\ntemplate<typename T, typename U>\nistream &operator>>(istream &is, pair<T,\
@@ -91,7 +91,7 @@ data:
   path: template/template.hpp
   requiredBy:
   - magic/astar.hpp
-  timestamp: '2022-12-08 23:43:18+08:00'
+  timestamp: '2022-12-09 17:44:23+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

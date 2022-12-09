@@ -35,6 +35,8 @@ data:
 
     using vb = vector<bool>;
 
+    using vd = vector<double>;
+
     using vvi= vector<vi>;
 
     using vvl= vector<vl>;
@@ -110,6 +112,8 @@ data:
 
     using vb = vector<bool>;
 
+    using vd = vector<double>;
+
     using vvi= vector<vi>;
 
     using vvl= vector<vl>;
@@ -175,7 +179,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-08 23:43:18+08:00'
+  timestamp: '2022-12-09 17:44:23+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
