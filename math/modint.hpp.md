@@ -13,22 +13,22 @@ data:
     \  unsigned int x;\n  static constexpr unsigned int umod() { return m; }\n public:\n\
     \  static modint raw(int v) {\n    modint ret;\n    ret.x = v;\n    return ret;\n\
     \  }\n  constexpr modint() : x(0) {}\n  constexpr modint(int y) {\n    int v =\
-    \ y % m;\n    if (v < 0)v += m;\n    x = (unsigned int) v;\n  }\n  constexpr modint(long\
-    \ long y) {\n    long long v = y % (long long) m;\n    if (v < 0)v += m;\n   \
-    \ x = (unsigned int) v;\n  }\n  constexpr modint(unsigned int y) { x = (unsigned\
-    \ int) (y % umod()); }\n  modint &operator++() {\n    x++;\n    if (x == umod())x\
-    \ = 0;\n    return *this;\n  }\n  modint &operator--() {\n    if (x == 0)x = umod();\n\
-    \    x--;\n    return *this;\n  }\n  modint operator++(int) {\n    modint ret\
-    \ = *this;\n    ++*this;\n    return ret;\n  }\n  modint operator--(int) {\n \
-    \   modint ret = *this;\n    --*this;\n    return ret;\n  }\n  modint &operator+=(const\
-    \ modint &p) {\n    if ((x += p.x) >= umod())x -= umod();\n    return *this;\n\
-    \  }\n  modint &operator-=(const modint &p) {\n    if ((x -= p.x) >= umod())x\
+    \ y % m;\n    if (v < 0) v += m;\n    x = (unsigned int) v;\n  }\n  constexpr\
+    \ modint(long long y) {\n    long long v = y % (long long) m;\n    if (v < 0)\
+    \ v += m;\n    x = (unsigned int) v;\n  }\n  constexpr modint(unsigned int y)\
+    \ { x = (unsigned int) (y % umod()); }\n  modint &operator++() {\n    x++;\n \
+    \   if (x == umod()) x = 0;\n    return *this;\n  }\n  modint &operator--() {\n\
+    \    if (x == 0) x = umod();\n    x--;\n    return *this;\n  }\n  modint operator++(int)\
+    \ {\n    modint ret = *this;\n    ++*this;\n    return ret;\n  }\n  modint operator--(int)\
+    \ {\n    modint ret = *this;\n    --*this;\n    return ret;\n  }\n  modint &operator+=(const\
+    \ modint &p) {\n    if ((x += p.x) >= umod()) x -= umod();\n    return *this;\n\
+    \  }\n  modint &operator-=(const modint &p) {\n    if ((x -= p.x) >= umod()) x\
     \ += umod();\n    return *this;\n  }\n  modint &operator*=(const modint &p) {\n\
     \    unsigned long long y = x;\n    y *= p.x;\n    x = (unsigned int) (y % umod());\n\
     \    return *this;\n  }\n  modint &operator/=(const modint &p) { return *this\
     \ *= p.inv(); }\n  modint operator+() const { return *this; }\n  modint operator-()\
     \ const { return modint() - *this; }\n  modint pow(long long n) const {\n    modint\
-    \ ret(1), mul = *this;\n    while (n) {\n      if (n & 1)ret *= mul;\n      mul\
+    \ ret(1), mul = *this;\n    while (n) {\n      if (n & 1) ret *= mul;\n      mul\
     \ *= mul;\n      n >>= 1;\n    }\n    return ret;\n  }\n  modint inv() const {\n\
     \    long long a = x, b = m, u = 1, v = 0;\n    while (b) {\n      long long t\
     \ = a / b;\n      swap(a -= t * b, b);\n      swap(u -= t * v, v);\n    }\n  \
@@ -47,22 +47,22 @@ data:
     \ x;\n  static constexpr unsigned int umod() { return m; }\n public:\n  static\
     \ modint raw(int v) {\n    modint ret;\n    ret.x = v;\n    return ret;\n  }\n\
     \  constexpr modint() : x(0) {}\n  constexpr modint(int y) {\n    int v = y %\
-    \ m;\n    if (v < 0)v += m;\n    x = (unsigned int) v;\n  }\n  constexpr modint(long\
-    \ long y) {\n    long long v = y % (long long) m;\n    if (v < 0)v += m;\n   \
-    \ x = (unsigned int) v;\n  }\n  constexpr modint(unsigned int y) { x = (unsigned\
-    \ int) (y % umod()); }\n  modint &operator++() {\n    x++;\n    if (x == umod())x\
-    \ = 0;\n    return *this;\n  }\n  modint &operator--() {\n    if (x == 0)x = umod();\n\
-    \    x--;\n    return *this;\n  }\n  modint operator++(int) {\n    modint ret\
-    \ = *this;\n    ++*this;\n    return ret;\n  }\n  modint operator--(int) {\n \
-    \   modint ret = *this;\n    --*this;\n    return ret;\n  }\n  modint &operator+=(const\
-    \ modint &p) {\n    if ((x += p.x) >= umod())x -= umod();\n    return *this;\n\
-    \  }\n  modint &operator-=(const modint &p) {\n    if ((x -= p.x) >= umod())x\
+    \ m;\n    if (v < 0) v += m;\n    x = (unsigned int) v;\n  }\n  constexpr modint(long\
+    \ long y) {\n    long long v = y % (long long) m;\n    if (v < 0) v += m;\n  \
+    \  x = (unsigned int) v;\n  }\n  constexpr modint(unsigned int y) { x = (unsigned\
+    \ int) (y % umod()); }\n  modint &operator++() {\n    x++;\n    if (x == umod())\
+    \ x = 0;\n    return *this;\n  }\n  modint &operator--() {\n    if (x == 0) x\
+    \ = umod();\n    x--;\n    return *this;\n  }\n  modint operator++(int) {\n  \
+    \  modint ret = *this;\n    ++*this;\n    return ret;\n  }\n  modint operator--(int)\
+    \ {\n    modint ret = *this;\n    --*this;\n    return ret;\n  }\n  modint &operator+=(const\
+    \ modint &p) {\n    if ((x += p.x) >= umod()) x -= umod();\n    return *this;\n\
+    \  }\n  modint &operator-=(const modint &p) {\n    if ((x -= p.x) >= umod()) x\
     \ += umod();\n    return *this;\n  }\n  modint &operator*=(const modint &p) {\n\
     \    unsigned long long y = x;\n    y *= p.x;\n    x = (unsigned int) (y % umod());\n\
     \    return *this;\n  }\n  modint &operator/=(const modint &p) { return *this\
     \ *= p.inv(); }\n  modint operator+() const { return *this; }\n  modint operator-()\
     \ const { return modint() - *this; }\n  modint pow(long long n) const {\n    modint\
-    \ ret(1), mul = *this;\n    while (n) {\n      if (n & 1)ret *= mul;\n      mul\
+    \ ret(1), mul = *this;\n    while (n) {\n      if (n & 1) ret *= mul;\n      mul\
     \ *= mul;\n      n >>= 1;\n    }\n    return ret;\n  }\n  modint inv() const {\n\
     \    long long a = x, b = m, u = 1, v = 0;\n    while (b) {\n      long long t\
     \ = a / b;\n      swap(a -= t * b, b);\n      swap(u -= t * v, v);\n    }\n  \
@@ -81,7 +81,7 @@ data:
   isVerificationFile: false
   path: math/modint.hpp
   requiredBy: []
-  timestamp: '2022-12-06 19:56:18+08:00'
+  timestamp: '2022-12-09 16:48:55+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math/modint.hpp
