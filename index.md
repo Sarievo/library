@@ -10,7 +10,7 @@ data:
     pages:
     - icon: ':warning:'
       path: math/modint.hpp
-      title: math/modint.hpp
+      title: modint
   - name: template
     pages:
     - icon: ':heavy_check_mark:'

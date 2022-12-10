@@ -86,5 +86,8 @@ data:
   verifiedWith: []
 documentation_of: math/modint.hpp
 layout: document
+redirect_from:
+- /library/math/modint.hpp
+- /library/math/modint.hpp.html
+title: modint
 ---
-
