@@ -7,14 +7,14 @@ using vc = vector<char>;
 using vs = vector<string>;
 using vb = vector<bool>;
 using vd = vector<double>;
-using vvi= vector<vi>;
-using vvl= vector<vl>;
-using vvc= vector<vc>;
+using vvi = vector<vi>;
+using vvl = vector<vl>;
+using vvc = vector<vc>;
 using pi = pair<int, int>;
 using pl = pair<ll, ll>;
 using vp = vector<pl>;
 template<typename T> using V = vector<T>;
-template<typename T> using VV= vector<vector<T>>;
+template<typename T> using VV = vector<vector<T>>;
 template<typename T, typename U>
 inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
 template<typename T, typename U>
@@ -31,8 +31,9 @@ constexpr ll MOD = 1000000007;
 constexpr ll mod = 998244353;
 constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
 constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
-void yes(bool x) { cout << (x ? "yes" : "no") << endl; }
-void Yes(bool x) { cout << (x ? "Yes" : "No") << endl; }
-void YES(bool x) { cout << (x ? "YES" : "NO") << endl; }
+void Yes(bool b = true) { cout << (b ? "Yes" : "No") << "\n"; }
+void YES(bool b = true) { cout << (b ? "YES" : "NO") << "\n"; }
+void No(bool b = true) { cout << (b ? "No" : "Yes") << "\n"; }
+void NO(bool b = true) { cout << (b ? "NO" : "YES") << "\n"; }
 
 }  // namespace Nyan

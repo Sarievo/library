@@ -94,5 +94,5 @@ struct modint {
   [[nodiscard]] int val() const { return (int) x; }
 };
 /**
- * @brief modint
+ * @brief Modular Integer
 */
