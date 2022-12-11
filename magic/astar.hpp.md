@@ -41,73 +41,73 @@ data:
     \ }\n#line 9 \"template/template.hpp\"\n\n// utilities\n#line 1 \"template/util.hpp\"\
     \nnamespace Nyan {\nusing ll = long long;\nusing ld = long double;\nusing vi =\
     \ vector<int>;\nusing vl = vector<ll>;\nusing vc = vector<char>;\nusing vs = vector<string>;\n\
-    using vb = vector<bool>;\nusing vd = vector<double>;\nusing vvi = vector<vi>;\n\
-    using vvl = vector<vl>;\nusing vvc = vector<vc>;\nusing pi = pair<int, int>;\n\
-    using pl = pair<ll, ll>;\nusing vp = vector<pl>;\ntemplate<typename T> using V\
-    \ = vector<T>;\ntemplate<typename T> using VV = vector<vector<T>>;\ntemplate<typename\
-    \ T, typename U>\ninline bool chmax(T &a, U b) { return a < b && (a = b, true);\
-    \ }\ntemplate<typename T, typename U>\ninline bool chmin(T &a, U b) { return a\
-    \ > b && (a = b, true); }\ntemplate<typename T>\ninline T Max(const vector<T>\
-    \ &v) { return *max_element(begin(v), end(v)); }\ntemplate<typename T>\ninline\
-    \ T Min(const vector<T> &v) { return *min_element(begin(v), end(v)); }\ntemplate<typename\
-    \ T>\ninline long long Sum(const vector<T> &v) { return accumulate(begin(v), end(v),\
-    \ 0LL); }\ntemplate<class T> using maxheap = priority_queue<T>;\ntemplate<class\
-    \ T> using minheap = priority_queue<T, vector<T>, greater<T>>;\nconstexpr ll MOD\
-    \ = 1000000007;\nconstexpr ll mod = 998244353;\nconstexpr int dx[]{+0, +1, +0,\
-    \ -1, +1, +1, -1, -1};\nconstexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};\n\
-    void Yes(bool b = true) { cout << (b ? \"Yes\" : \"No\") << \"\\n\"; }\nvoid YES(bool\
-    \ b = true) { cout << (b ? \"YES\" : \"NO\") << \"\\n\"; }\nvoid No(bool b = true)\
-    \ { cout << (b ? \"No\" : \"Yes\") << \"\\n\"; }\nvoid NO(bool b = true) { cout\
-    \ << (b ? \"NO\" : \"YES\") << \"\\n\"; }\n\n}  // namespace Nyan\n#line 12 \"\
-    template/template.hpp\"\n\n// input/output\n#line 1 \"template/io.hpp\"\nnamespace\
-    \ Nyan {\ntemplate<typename T, typename U>\nostream &operator<<(ostream &os, pair<T,\
-    \ U> &p) {\n  os << p.first << \" \" << p.second;\n  return os;\n}\ntemplate<typename\
-    \ T, typename U>\nistream &operator>>(istream &is, pair<T, U> &p) {\n  is >> p.first\
-    \ >> p.second;\n  return is;\n}\ntemplate<typename T>\nostream &operator<<(ostream\
-    \ &os, vector<T> &v) {\n  for (auto it = v.begin(); it != v.end();) { os << *it\
-    \ << ((++it) != v.end() ? \" \" : \"\"); }\n  return os;\n}\ntemplate<typename\
-    \ T>\nistream &operator>>(istream &is, vector<T> &v) {\n  for (T &e : v) is >>\
-    \ e;\n  return is;\n}\nvoid in() {}\ntemplate<class T, class... U>\nvoid in(T\
-    \ &t, U &...u) {\n  cin >> t;\n  in(u...);\n}\nvoid out() { cout << \"\\n\"; }\n\
-    template<typename T, class... U, char sep = ' '>\nvoid out(const T &t, const U\
-    \ &...u) {\n  cout << t;\n  if (sizeof...(u)) cout << sep;\n  out(u...);\n}\n\
-    struct Nyan {\n  Nyan() {\n    cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n\
-    \    cout.tie(nullptr);\n    cout << fixed << setprecision(12);\n    cerr << fixed\
-    \ << setprecision(12);\n  }\n} nyan;\n\n}  // namespace Nyan\n#line 15 \"template/template.hpp\"\
-    \nnamespace Nyan { void solve(); }\nsigned main() { Nyan::solve(); }\n/**\n *\
-    \ @brief Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n#line 3 \"magic/astar.hpp\"\
-    \nstruct Node {\n  // (x, y) coordinate of the node\n  int x, y;\n  /*\n   * f\
-    \ = g + h, where g is the cost of the path from the start node to the current\
-    \ node\n   * and h is the estimated cost of the path from the current node to\
-    \ the goal node\n   */\n  int f, g, h;\n\n  // Overloading the \"<\" operator\
-    \ for the priority queue\n  bool operator<(const Node &n) const {\n    return\
-    \ f > n.f;\n  }\n};\n\n// Helper function to calculate the heuristic (h) value\
-    \ for a given node\n// In this case, the heuristic is the Manhattan distance between\
-    \ the current node and the goal node\nint heuristic(int x, int y, int goal_x,\
-    \ int goal_y) {\n  return abs(goal_x - x) + abs(goal_y - y);\n}\n\n// Returns\
-    \ the list of coordinates for the path from the start node to the goal node,\n\
-    // using the A* algorithm\nvector<pair<int, int>> AStar(vector<vector<int>> &grid,\
-    \ int start_x, int start_y, int goal_x, int goal_y) {\n  // Sanity check: make\
-    \ sure the start and goal coordinates are valid\n  if (start_x < 0 || start_x\
-    \ >= grid.size() || start_y < 0 || start_y >= grid[0].size() ||\n      goal_x\
-    \ < 0 || goal_x >= grid.size() || goal_y < 0 || goal_y >= grid[0].size() ||\n\
-    \      grid[start_x][start_y] == 1 || grid[goal_x][goal_y] == 1) {\n    return\
-    \ {};\n  }\n\n  // The set of discovered nodes that may need to be (re-)expanded\n\
-    \  // At the beginning, only the start node is in this set\n  priority_queue<Node>\
-    \ open_set;\n  open_set.push({start_x, start_y, 0, 0, 0});\n\n  // The set of\
-    \ nodes already evaluated\n  unordered_map<int, unordered_map<int, bool>> closed_set;\n\
-    \n  // The map of navigated nodes\n  unordered_map<int, unordered_map<int, pair<int,\
-    \ int>>> came_from;\n\n  // The cost of each node, including the start node\n\
-    \  unordered_map<int, unordered_map<int, int>> cost_so_far;\n  cost_so_far[start_x][start_y]\
-    \ = 0;\n\n  // The list of coordinates for the path from the start node to the\
-    \ goal node\n  vector<pair<int, int>> path;\n\n  // Loop until the open set is\
-    \ empty\n  while (!open_set.empty()) {\n    // Get the node with the lowest f\
-    \ value (i.e., the node that is closest to the goal)\n    Node current = open_set.top();\n\
-    \    open_set.pop();\n\n    // Check if we have reached the goal node\n    if\
-    \ (current.x == goal_x && current.y == goal_y) {\n      // Retrace the path from\
-    \ the goal node to the start node\n      pair<int, int> curr = {current.x, current.y};\n\
-    \      while (curr.first != start_x || curr.second != start_y) {\n        path.push_back(curr);\n\
-    \        curr = came_from[curr.first][curr.second];\n      }\n      path.emplace_back(start_x,\
+    using vb = vector<bool>;\nusing vd = vector<double>;\nusing vvi= vector<vi>;\n\
+    using vvl= vector<vl>;\nusing vvc= vector<vc>;\nusing pi = pair<int, int>;\nusing\
+    \ pl = pair<ll, ll>;\nusing vp = vector<pl>;\ntemplate<typename T> using V = vector<T>;\n\
+    template<typename T> using VV = vector<vector<T>>;\ntemplate<typename T, typename\
+    \ U>\ninline bool chmax(T &a, U b) { return a < b && (a = b, true); }\ntemplate<typename\
+    \ T, typename U>\ninline bool chmin(T &a, U b) { return a > b && (a = b, true);\
+    \ }\ntemplate<typename T>\ninline T Max(const vector<T> &v) { return *max_element(begin(v),\
+    \ end(v)); }\ntemplate<typename T>\ninline T Min(const vector<T> &v) { return\
+    \ *min_element(begin(v), end(v)); }\ntemplate<typename T>\ninline long long Sum(const\
+    \ vector<T> &v) { return accumulate(begin(v), end(v), 0LL); }\ntemplate<class\
+    \ T> using maxheap = priority_queue<T>;\ntemplate<class T> using minheap = priority_queue<T,\
+    \ vector<T>, greater<T>>;\nconstexpr ll MOD = 1000000007;\nconstexpr ll mod =\
+    \ 998244353;\nconstexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};\nconstexpr int\
+    \ dy[]{+1, +0, -1, +0, +1, -1, -1, +1};\nvoid Yes(bool b = true) { cout << (b\
+    \ ? \"Yes\" : \"No\") << \"\\n\"; }\nvoid YES(bool b = true) { cout << (b ? \"\
+    YES\" : \"NO\") << \"\\n\"; }\nvoid No(bool b = true) { cout << (b ? \"No\" :\
+    \ \"Yes\") << \"\\n\"; }\nvoid NO(bool b = true) { cout << (b ? \"NO\" : \"YES\"\
+    ) << \"\\n\"; }\n\n}  // namespace Nyan\n#line 12 \"template/template.hpp\"\n\n\
+    // input/output\n#line 1 \"template/io.hpp\"\nnamespace Nyan {\ntemplate<typename\
+    \ T, typename U>\nostream &operator<<(ostream &os, pair<T, U> &p) {\n  os << p.first\
+    \ << \" \" << p.second;\n  return os;\n}\ntemplate<typename T, typename U>\nistream\
+    \ &operator>>(istream &is, pair<T, U> &p) {\n  is >> p.first >> p.second;\n  return\
+    \ is;\n}\ntemplate<typename T>\nostream &operator<<(ostream &os, vector<T> &v)\
+    \ {\n  for (auto it = v.begin(); it != v.end();) { os << *it << ((++it) != v.end()\
+    \ ? \" \" : \"\"); }\n  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
+    \ &is, vector<T> &v) {\n  for (T &e : v) is >> e;\n  return is;\n}\nvoid in()\
+    \ {}\ntemplate<class T, class... U>\nvoid in(T &t, U &...u) {\n  cin >> t;\n \
+    \ in(u...);\n}\nvoid out() { cout << \"\\n\"; }\ntemplate<typename T, class...\
+    \ U, char sep = ' '>\nvoid out(const T &t, const U &...u) {\n  cout << t;\n  if\
+    \ (sizeof...(u)) cout << sep;\n  out(u...);\n}\nstruct Nyan {\n  Nyan() {\n  \
+    \  cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
+    \    cout << fixed << setprecision(12);\n    cerr << fixed << setprecision(12);\n\
+    \  }\n} nyan;\n\n}  // namespace Nyan\n#line 15 \"template/template.hpp\"\nnamespace\
+    \ Nyan { void solve(); }\nsigned main() { Nyan::solve(); }\n/**\n * @brief Template(\u30C6\
+    \u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n#line 3 \"magic/astar.hpp\"\nstruct Node\
+    \ {\n  // (x, y) coordinate of the node\n  int x, y;\n  /*\n   * f = g + h, where\
+    \ g is the cost of the path from the start node to the current node\n   * and\
+    \ h is the estimated cost of the path from the current node to the goal node\n\
+    \   */\n  int f, g, h;\n\n  // Overloading the \"<\" operator for the priority\
+    \ queue\n  bool operator<(const Node &n) const {\n    return f > n.f;\n  }\n};\n\
+    \n// Helper function to calculate the heuristic (h) value for a given node\n//\
+    \ In this case, the heuristic is the Manhattan distance between the current node\
+    \ and the goal node\nint heuristic(int x, int y, int goal_x, int goal_y) {\n \
+    \ return abs(goal_x - x) + abs(goal_y - y);\n}\n\n// Returns the list of coordinates\
+    \ for the path from the start node to the goal node,\n// using the A* algorithm\n\
+    vector<pair<int, int>> AStar(vector<vector<int>> &grid, int start_x, int start_y,\
+    \ int goal_x, int goal_y) {\n  // Sanity check: make sure the start and goal coordinates\
+    \ are valid\n  if (start_x < 0 || start_x >= grid.size() || start_y < 0 || start_y\
+    \ >= grid[0].size() ||\n      goal_x < 0 || goal_x >= grid.size() || goal_y <\
+    \ 0 || goal_y >= grid[0].size() ||\n      grid[start_x][start_y] == 1 || grid[goal_x][goal_y]\
+    \ == 1) {\n    return {};\n  }\n\n  // The set of discovered nodes that may need\
+    \ to be (re-)expanded\n  // At the beginning, only the start node is in this set\n\
+    \  priority_queue<Node> open_set;\n  open_set.push({start_x, start_y, 0, 0, 0});\n\
+    \n  // The set of nodes already evaluated\n  unordered_map<int, unordered_map<int,\
+    \ bool>> closed_set;\n\n  // The map of navigated nodes\n  unordered_map<int,\
+    \ unordered_map<int, pair<int, int>>> came_from;\n\n  // The cost of each node,\
+    \ including the start node\n  unordered_map<int, unordered_map<int, int>> cost_so_far;\n\
+    \  cost_so_far[start_x][start_y] = 0;\n\n  // The list of coordinates for the\
+    \ path from the start node to the goal node\n  vector<pair<int, int>> path;\n\n\
+    \  // Loop until the open set is empty\n  while (!open_set.empty()) {\n    //\
+    \ Get the node with the lowest f value (i.e., the node that is closest to the\
+    \ goal)\n    Node current = open_set.top();\n    open_set.pop();\n\n    // Check\
+    \ if we have reached the goal node\n    if (current.x == goal_x && current.y ==\
+    \ goal_y) {\n      // Retrace the path from the goal node to the start node\n\
+    \      pair<int, int> curr = {current.x, current.y};\n      while (curr.first\
+    \ != start_x || curr.second != start_y) {\n        path.push_back(curr);\n   \
+    \     curr = came_from[curr.first][curr.second];\n      }\n      path.emplace_back(start_x,\
     \ start_y);\n      reverse(path.begin(), path.end());\n      return path;\n  \
     \  }\n\n    // Mark the current node as visited\n    closed_set[current.x][current.y]\
     \ = true;\n\n    // Explore the neighbors of the current node\n    for (int i\
@@ -179,7 +179,7 @@ data:
   isVerificationFile: false
   path: magic/astar.hpp
   requiredBy: []
-  timestamp: '2022-12-11 16:58:12+08:00'
+  timestamp: '2022-12-11 18:00:49+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: magic/astar.hpp

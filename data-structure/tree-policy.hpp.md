@@ -26,10 +26,7 @@ data:
     template<class T> using indexed_set = tree<T, null_type, less<T>, rb_tree_tag,
     tree_order_statistics_node_update>;
 
-    template<class T> using indexed_multiset = tree<T, null_type, less_equal<T>,
-
-    rb_tree_tag,
-
+    template<class T> using indexed_multiset = tree<T, null_type, less_equal<T>, rb_tree_tag,
     tree_order_statistics_node_update>;
 
     /**
@@ -56,10 +53,7 @@ data:
     template<class T> using indexed_set = tree<T, null_type, less<T>, rb_tree_tag,
     tree_order_statistics_node_update>;
 
-    template<class T> using indexed_multiset = tree<T, null_type, less_equal<T>,
-
-    rb_tree_tag,
-
+    template<class T> using indexed_multiset = tree<T, null_type, less_equal<T>, rb_tree_tag,
     tree_order_statistics_node_update>;
 
     /**
@@ -71,7 +65,7 @@ data:
   isVerificationFile: false
   path: data-structure/tree-policy.hpp
   requiredBy: []
-  timestamp: '2022-12-11 16:58:12+08:00'
+  timestamp: '2022-12-11 18:01:40+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data-structure/tree-policy.hpp

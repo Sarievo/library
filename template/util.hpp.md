@@ -37,11 +37,11 @@ data:
 
     using vd = vector<double>;
 
-    using vvi = vector<vi>;
+    using vvi= vector<vi>;
 
-    using vvl = vector<vl>;
+    using vvl= vector<vl>;
 
-    using vvc = vector<vc>;
+    using vvc= vector<vc>;
 
     using pi = pair<int, int>;
 
@@ -116,11 +116,11 @@ data:
 
     using vd = vector<double>;
 
-    using vvi = vector<vi>;
+    using vvi= vector<vi>;
 
-    using vvl = vector<vl>;
+    using vvl= vector<vl>;
 
-    using vvc = vector<vc>;
+    using vvc= vector<vc>;
 
     using pi = pair<int, int>;
 
@@ -183,7 +183,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-11 16:58:12+08:00'
+  timestamp: '2022-12-11 18:00:49+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
