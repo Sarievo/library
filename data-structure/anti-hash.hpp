@@ -13,8 +13,8 @@ struct custom_hash {
     return splitmix64(x + FIXED_RANDOM);
   }
 };
-template<class t> using hashset = unordered_set<t, custom_hash>;
-template<class t, class u> using hashmap = unordered_map<t, u, custom_hash>;
+template<class T> using hashset = unordered_set<T, custom_hash>;
+template<class T, class U> using hashmap = unordered_map<T, U, custom_hash>;
 /**
 * @brief Anti-hash Hashset/Hashmap
 */
