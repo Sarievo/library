@@ -6,7 +6,7 @@ using vl = vector<ll>;
 using vc = vector<char>;
 using vs = vector<string>;
 using vb = vector<bool>;
-using vd = vector<double>;
+using vd = vector<long double>;
 using vvi= vector<vi>;
 using vvl= vector<vl>;
 using vvc= vector<vc>;
@@ -29,11 +29,13 @@ template<class T> using maxheap = priority_queue<T>;
 template<class T> using minheap = priority_queue<T, vector<T>, greater<T>>;
 constexpr ll MOD = 1000000007;
 constexpr ll mod = 998244353;
-constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
-constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
+const int inf = INT_MAX / 2;
+const ll infl = 1LL << 60;
 void Yes(bool b = true) { cout << (b ? "Yes" : "No") << "\n"; }
 void YES(bool b = true) { cout << (b ? "YES" : "NO") << "\n"; }
 void No(bool b = true) { cout << (b ? "No" : "Yes") << "\n"; }
 void NO(bool b = true) { cout << (b ? "NO" : "YES") << "\n"; }
+constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
 
 }  // namespace Nyan
