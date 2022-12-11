@@ -1,6 +1,14 @@
 ---
 data:
   libraryCategories:
+  - name: data-structure
+    pages:
+    - icon: ':warning:'
+      path: data-structure/anti-hash.hpp
+      title: Anti-hash Hashset/Hashmap
+    - icon: ':warning:'
+      path: data-structure/tree-policy.hpp
+      title: Tree Policy
   - name: magic
     pages:
     - icon: ':warning:'
@@ -10,7 +18,7 @@ data:
     pages:
     - icon: ':warning:'
       path: math/modint.hpp
-      title: modint
+      title: Modular Integer
   - name: template
     pages:
     - icon: ':heavy_check_mark:'

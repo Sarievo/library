@@ -7,7 +7,7 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    document_title: modint
+    document_title: Modular Integer
     links: []
   bundledCode: "#line 2 \"math/modint.hpp\"\ntemplate<int m>\nstruct modint {\n private:\n\
     \  unsigned int x;\n  static constexpr unsigned int umod() { return m; }\n public:\n\
@@ -42,7 +42,7 @@ data:
     \ &os, const modint &p) { return os << p.val(); }\n  friend istream &operator>>(istream\
     \ &is, modint &a) {\n    long long t;\n    is >> t;\n    a = modint(t);\n    return\
     \ (is);\n  }\n  static constexpr int get_mod() { return m; }\n  [[nodiscard]]\
-    \ int val() const { return (int) x; }\n};\n/**\n * @brief modint\n*/\n"
+    \ int val() const { return (int) x; }\n};\n/**\n * @brief Modular Integer\n*/\n"
   code: "#pragma once\ntemplate<int m>\nstruct modint {\n private:\n  unsigned int\
     \ x;\n  static constexpr unsigned int umod() { return m; }\n public:\n  static\
     \ modint raw(int v) {\n    modint ret;\n    ret.x = v;\n    return ret;\n  }\n\
@@ -76,12 +76,12 @@ data:
     \ &os, const modint &p) { return os << p.val(); }\n  friend istream &operator>>(istream\
     \ &is, modint &a) {\n    long long t;\n    is >> t;\n    a = modint(t);\n    return\
     \ (is);\n  }\n  static constexpr int get_mod() { return m; }\n  [[nodiscard]]\
-    \ int val() const { return (int) x; }\n};\n/**\n * @brief modint\n*/"
+    \ int val() const { return (int) x; }\n};\n/**\n * @brief Modular Integer\n*/"
   dependsOn: []
   isVerificationFile: false
   path: math/modint.hpp
   requiredBy: []
-  timestamp: '2022-12-09 16:48:55+08:00'
+  timestamp: '2022-12-11 16:58:12+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math/modint.hpp
@@ -89,5 +89,5 @@ layout: document
 redirect_from:
 - /library/math/modint.hpp
 - /library/math/modint.hpp.html
-title: modint
+title: Modular Integer
 ---

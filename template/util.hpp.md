@@ -37,11 +37,11 @@ data:
 
     using vd = vector<double>;
 
-    using vvi= vector<vi>;
+    using vvi = vector<vi>;
 
-    using vvl= vector<vl>;
+    using vvl = vector<vl>;
 
-    using vvc= vector<vc>;
+    using vvc = vector<vc>;
 
     using pi = pair<int, int>;
 
@@ -51,7 +51,7 @@ data:
 
     template<typename T> using V = vector<T>;
 
-    template<typename T> using VV= vector<vector<T>>;
+    template<typename T> using VV = vector<vector<T>>;
 
     template<typename T, typename U>
 
@@ -86,11 +86,13 @@ data:
 
     constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
 
-    void yes(bool x) { cout << (x ? "yes" : "no") << endl; }
+    void Yes(bool b = true) { cout << (b ? "Yes" : "No") << "\n"; }
 
-    void Yes(bool x) { cout << (x ? "Yes" : "No") << endl; }
+    void YES(bool b = true) { cout << (b ? "YES" : "NO") << "\n"; }
 
-    void YES(bool x) { cout << (x ? "YES" : "NO") << endl; }
+    void No(bool b = true) { cout << (b ? "No" : "Yes") << "\n"; }
+
+    void NO(bool b = true) { cout << (b ? "NO" : "YES") << "\n"; }
 
 
     }  // namespace Nyan
@@ -114,11 +116,11 @@ data:
 
     using vd = vector<double>;
 
-    using vvi= vector<vi>;
+    using vvi = vector<vi>;
 
-    using vvl= vector<vl>;
+    using vvl = vector<vl>;
 
-    using vvc= vector<vc>;
+    using vvc = vector<vc>;
 
     using pi = pair<int, int>;
 
@@ -128,7 +130,7 @@ data:
 
     template<typename T> using V = vector<T>;
 
-    template<typename T> using VV= vector<vector<T>>;
+    template<typename T> using VV = vector<vector<T>>;
 
     template<typename T, typename U>
 
@@ -163,11 +165,13 @@ data:
 
     constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
 
-    void yes(bool x) { cout << (x ? "yes" : "no") << endl; }
+    void Yes(bool b = true) { cout << (b ? "Yes" : "No") << "\n"; }
 
-    void Yes(bool x) { cout << (x ? "Yes" : "No") << endl; }
+    void YES(bool b = true) { cout << (b ? "YES" : "NO") << "\n"; }
 
-    void YES(bool x) { cout << (x ? "YES" : "NO") << endl; }
+    void No(bool b = true) { cout << (b ? "No" : "Yes") << "\n"; }
+
+    void NO(bool b = true) { cout << (b ? "NO" : "YES") << "\n"; }
 
 
     }  // namespace Nyan
@@ -179,7 +183,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-09 17:44:23+08:00'
+  timestamp: '2022-12-11 16:58:12+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
