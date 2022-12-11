@@ -35,7 +35,7 @@ data:
 
     using vb = vector<bool>;
 
-    using vd = vector<double>;
+    using vd = vector<long double>;
 
     using vvi= vector<vi>;
 
@@ -82,9 +82,9 @@ data:
 
     constexpr ll mod = 998244353;
 
-    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+    const int inf = INT_MAX / 2;
 
-    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
+    const ll infl = 1LL << 60;
 
     void Yes(bool b = true) { cout << (b ? "Yes" : "No") << "\n"; }
 
@@ -93,6 +93,10 @@ data:
     void No(bool b = true) { cout << (b ? "No" : "Yes") << "\n"; }
 
     void NO(bool b = true) { cout << (b ? "NO" : "YES") << "\n"; }
+
+    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+
+    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
 
 
     }  // namespace Nyan
@@ -114,7 +118,7 @@ data:
 
     using vb = vector<bool>;
 
-    using vd = vector<double>;
+    using vd = vector<long double>;
 
     using vvi= vector<vi>;
 
@@ -161,9 +165,9 @@ data:
 
     constexpr ll mod = 998244353;
 
-    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+    const int inf = INT_MAX / 2;
 
-    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
+    const ll infl = 1LL << 60;
 
     void Yes(bool b = true) { cout << (b ? "Yes" : "No") << "\n"; }
 
@@ -172,6 +176,10 @@ data:
     void No(bool b = true) { cout << (b ? "No" : "Yes") << "\n"; }
 
     void NO(bool b = true) { cout << (b ? "NO" : "YES") << "\n"; }
+
+    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+
+    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
 
 
     }  // namespace Nyan
@@ -183,7 +191,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-11 18:00:49+08:00'
+  timestamp: '2022-12-11 20:53:49+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
