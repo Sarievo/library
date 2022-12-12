@@ -21,3 +21,5 @@
 #define in3(s, t, u) for (int i = 0; i < (int)s.size(); i++) { in(s[i], t[i], u[i]); }
 #define in4(s, t, u, v) for (int i = 0; i < (int)s.size(); i++) { in(s[i], t[i], u[i], v[i]); }
 #define fin(...) { out(__VA_ARGS__);return; }
+#define dump(x) cerr << #x << ":" << x << "\n";
+#define vdump(x) rep(idx, size(x)) cerr << idx << ":" << x[idx] << "\n";
