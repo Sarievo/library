@@ -67,6 +67,10 @@ data:
 
     #define fin(...) { out(__VA_ARGS__);return; }
 
+    #define dump(x) cerr << #x << ":" << x << "\n";
+
+    #define vdump(x) rep(idx, size(x)) cerr << idx << ":" << x[idx] << "\n";
+
     '
   code: '#define fi first
 
@@ -116,14 +120,16 @@ data:
 
     #define fin(...) { out(__VA_ARGS__);return; }
 
-    '
+    #define dump(x) cerr << #x << ":" << x << "\n";
+
+    #define vdump(x) rep(idx, size(x)) cerr << idx << ":" << x[idx] << "\n";'
   dependsOn: []
   isVerificationFile: false
   path: template/macro.hpp
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-08 20:40:33+08:00'
+  timestamp: '2022-12-12 22:58:55+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

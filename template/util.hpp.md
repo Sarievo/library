@@ -21,37 +21,21 @@ data:
 
     namespace Nyan {
 
-    using ll = long long;
+    typedef long long ll;
 
-    using ld = long double;
+    typedef long double ld;
 
-    using vi = vector<int>;
+    typedef __int128_t i128;
 
     using vl = vector<ll>;
-
-    using vc = vector<char>;
-
-    using vs = vector<string>;
-
-    using vb = vector<bool>;
-
-    using vd = vector<long double>;
-
-    using vvi= vector<vi>;
-
-    using vvl= vector<vl>;
-
-    using vvc= vector<vc>;
-
-    using pi = pair<int, int>;
 
     using pl = pair<ll, ll>;
 
     using vp = vector<pl>;
 
-    template<typename T> using V = vector<T>;
+    template<typename T> using v = vector<T>;
 
-    template<typename T> using VV = vector<vector<T>>;
+    template<typename T> using vv = vector<vector<T>>;
 
     template<typename T, typename U>
 
@@ -82,17 +66,13 @@ data:
 
     constexpr ll mod = 998244353;
 
-    const int inf = INT_MAX / 2;
+    const int INF32 = INT_MAX / 2;
 
-    const ll infl = 1LL << 60;
+    const ll INF64 = 1LL << 60;
 
     void Yes(bool b = true) { cout << (b ? "Yes" : "No") << "\n"; }
 
     void YES(bool b = true) { cout << (b ? "YES" : "NO") << "\n"; }
-
-    void No(bool b = true) { cout << (b ? "No" : "Yes") << "\n"; }
-
-    void NO(bool b = true) { cout << (b ? "NO" : "YES") << "\n"; }
 
     constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
 
@@ -104,37 +84,21 @@ data:
     '
   code: 'namespace Nyan {
 
-    using ll = long long;
+    typedef long long ll;
 
-    using ld = long double;
+    typedef long double ld;
 
-    using vi = vector<int>;
+    typedef __int128_t i128;
 
     using vl = vector<ll>;
-
-    using vc = vector<char>;
-
-    using vs = vector<string>;
-
-    using vb = vector<bool>;
-
-    using vd = vector<long double>;
-
-    using vvi= vector<vi>;
-
-    using vvl= vector<vl>;
-
-    using vvc= vector<vc>;
-
-    using pi = pair<int, int>;
 
     using pl = pair<ll, ll>;
 
     using vp = vector<pl>;
 
-    template<typename T> using V = vector<T>;
+    template<typename T> using v = vector<T>;
 
-    template<typename T> using VV = vector<vector<T>>;
+    template<typename T> using vv = vector<vector<T>>;
 
     template<typename T, typename U>
 
@@ -165,17 +129,13 @@ data:
 
     constexpr ll mod = 998244353;
 
-    const int inf = INT_MAX / 2;
+    const int INF32 = INT_MAX / 2;
 
-    const ll infl = 1LL << 60;
+    const ll INF64 = 1LL << 60;
 
     void Yes(bool b = true) { cout << (b ? "Yes" : "No") << "\n"; }
 
     void YES(bool b = true) { cout << (b ? "YES" : "NO") << "\n"; }
-
-    void No(bool b = true) { cout << (b ? "No" : "Yes") << "\n"; }
-
-    void NO(bool b = true) { cout << (b ? "NO" : "YES") << "\n"; }
 
     constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
 
@@ -191,7 +151,7 @@ data:
   requiredBy:
   - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-11 20:53:49+08:00'
+  timestamp: '2022-12-12 22:58:55+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

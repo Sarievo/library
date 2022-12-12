@@ -38,33 +38,31 @@ data:
     \ i++) { in(s[i], t[i]); }\n#define in3(s, t, u) for (int i = 0; i < (int)s.size();\
     \ i++) { in(s[i], t[i], u[i]); }\n#define in4(s, t, u, v) for (int i = 0; i <\
     \ (int)s.size(); i++) { in(s[i], t[i], u[i], v[i]); }\n#define fin(...) { out(__VA_ARGS__);return;\
-    \ }\n#line 9 \"template/template.hpp\"\n\n// utilities\n#line 1 \"template/util.hpp\"\
-    \nnamespace Nyan {\nusing ll = long long;\nusing ld = long double;\nusing vi =\
-    \ vector<int>;\nusing vl = vector<ll>;\nusing vc = vector<char>;\nusing vs = vector<string>;\n\
-    using vb = vector<bool>;\nusing vd = vector<long double>;\nusing vvi= vector<vi>;\n\
-    using vvl= vector<vl>;\nusing vvc= vector<vc>;\nusing pi = pair<int, int>;\nusing\
-    \ pl = pair<ll, ll>;\nusing vp = vector<pl>;\ntemplate<typename T> using V = vector<T>;\n\
-    template<typename T> using VV = vector<vector<T>>;\ntemplate<typename T, typename\
-    \ U>\ninline bool chmax(T &a, U b) { return a < b && (a = b, true); }\ntemplate<typename\
-    \ T, typename U>\ninline bool chmin(T &a, U b) { return a > b && (a = b, true);\
-    \ }\ntemplate<typename T>\ninline T Max(const vector<T> &v) { return *max_element(begin(v),\
-    \ end(v)); }\ntemplate<typename T>\ninline T Min(const vector<T> &v) { return\
-    \ *min_element(begin(v), end(v)); }\ntemplate<typename T>\ninline long long Sum(const\
-    \ vector<T> &v) { return accumulate(begin(v), end(v), 0LL); }\ntemplate<class\
-    \ T> using maxheap = priority_queue<T>;\ntemplate<class T> using minheap = priority_queue<T,\
-    \ vector<T>, greater<T>>;\nconstexpr ll MOD = 1000000007;\nconstexpr ll mod =\
-    \ 998244353;\nconst int inf = INT_MAX / 2;\nconst ll infl = 1LL << 60;\nvoid Yes(bool\
-    \ b = true) { cout << (b ? \"Yes\" : \"No\") << \"\\n\"; }\nvoid YES(bool b =\
-    \ true) { cout << (b ? \"YES\" : \"NO\") << \"\\n\"; }\nvoid No(bool b = true)\
-    \ { cout << (b ? \"No\" : \"Yes\") << \"\\n\"; }\nvoid NO(bool b = true) { cout\
-    \ << (b ? \"NO\" : \"YES\") << \"\\n\"; }\nconstexpr int dx[]{+0, +1, +0, -1,\
-    \ +1, +1, -1, -1};\nconstexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};\n\n} \
-    \ // namespace Nyan\n#line 12 \"template/template.hpp\"\n\n// input/output\n#line\
-    \ 1 \"template/io.hpp\"\nnamespace Nyan {\ntemplate<typename T, typename U>\n\
-    ostream &operator<<(ostream &os, pair<T, U> &p) {\n  os << p.first << \" \" <<\
-    \ p.second;\n  return os;\n}\ntemplate<typename T, typename U>\nistream &operator>>(istream\
-    \ &is, pair<T, U> &p) {\n  is >> p.first >> p.second;\n  return is;\n}\ntemplate<typename\
-    \ T>\nostream &operator<<(ostream &os, vector<T> &v) {\n  for (auto it = v.begin();\
+    \ }\n#define dump(x) cerr << #x << \":\" << x << \"\\n\";\n#define vdump(x) rep(idx,\
+    \ size(x)) cerr << idx << \":\" << x[idx] << \"\\n\";\n#line 9 \"template/template.hpp\"\
+    \n\n// utilities\n#line 1 \"template/util.hpp\"\nnamespace Nyan {\ntypedef long\
+    \ long ll;\ntypedef long double ld;\ntypedef __int128_t i128;\nusing vl = vector<ll>;\n\
+    using pl = pair<ll, ll>;\nusing vp = vector<pl>;\ntemplate<typename T> using v\
+    \ = vector<T>;\ntemplate<typename T> using vv = vector<vector<T>>;\ntemplate<typename\
+    \ T, typename U>\ninline bool chmax(T &a, U b) { return a < b && (a = b, true);\
+    \ }\ntemplate<typename T, typename U>\ninline bool chmin(T &a, U b) { return a\
+    \ > b && (a = b, true); }\ntemplate<typename T>\ninline T Max(const vector<T>\
+    \ &v) { return *max_element(begin(v), end(v)); }\ntemplate<typename T>\ninline\
+    \ T Min(const vector<T> &v) { return *min_element(begin(v), end(v)); }\ntemplate<typename\
+    \ T>\ninline long long Sum(const vector<T> &v) { return accumulate(begin(v), end(v),\
+    \ 0LL); }\ntemplate<class T> using maxheap = priority_queue<T>;\ntemplate<class\
+    \ T> using minheap = priority_queue<T, vector<T>, greater<T>>;\nconstexpr ll MOD\
+    \ = 1000000007;\nconstexpr ll mod = 998244353;\nconst int INF32 = INT_MAX / 2;\n\
+    const ll INF64 = 1LL << 60;\nvoid Yes(bool b = true) { cout << (b ? \"Yes\" :\
+    \ \"No\") << \"\\n\"; }\nvoid YES(bool b = true) { cout << (b ? \"YES\" : \"NO\"\
+    ) << \"\\n\"; }\nconstexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};\nconstexpr\
+    \ int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};\n\n}  // namespace Nyan\n#line 12\
+    \ \"template/template.hpp\"\n\n// input/output\n#line 1 \"template/io.hpp\"\n\
+    namespace Nyan {\ntemplate<typename T, typename U>\nostream &operator<<(ostream\
+    \ &os, pair<T, U> &p) {\n  os << p.first << \" \" << p.second;\n  return os;\n\
+    }\ntemplate<typename T, typename U>\nistream &operator>>(istream &is, pair<T,\
+    \ U> &p) {\n  is >> p.first >> p.second;\n  return is;\n}\ntemplate<typename T>\n\
+    ostream &operator<<(ostream &os, vector<T> &v) {\n  for (auto it = v.begin();\
     \ it != v.end();) { os << *it << ((++it) != v.end() ? \" \" : \"\"); }\n  return\
     \ os;\n}\ntemplate<typename T>\nistream &operator>>(istream &is, vector<T> &v)\
     \ {\n  for (T &e : v) is >> e;\n  return is;\n}\nvoid in() {}\ntemplate<class\
@@ -180,7 +178,7 @@ data:
   isVerificationFile: false
   path: magic/astar.hpp
   requiredBy: []
-  timestamp: '2022-12-11 20:53:49+08:00'
+  timestamp: '2022-12-12 22:58:55+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: magic/astar.hpp
