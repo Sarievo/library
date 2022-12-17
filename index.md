@@ -18,7 +18,7 @@ data:
     pages:
     - icon: ':warning:'
       path: math/modint.hpp
-      title: Modular Integer
+      title: modint
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
