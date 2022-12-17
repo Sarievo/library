@@ -22,7 +22,7 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    document_title: "Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
+    document_title: "template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
     links: []
   bundledCode: "#line 2 \"template/template.hpp\"\n#pragma GCC target(\"avx2\")\n\
     #pragma GCC optimize(\"O3\",\"unroll-loops\")\n#include <bits/stdc++.h>\nusing\
@@ -74,13 +74,13 @@ data:
     \  cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
     \    cout << fixed << setprecision(12);\n    cerr << fixed << setprecision(12);\n\
     \  }\n} nyan;\n\n}  // namespace Nyan\n#line 15 \"template/template.hpp\"\nnamespace\
-    \ Nyan { void solve(); }\nsigned main() { Nyan::solve(); }\n/**\n * @brief Template(\u30C6\
+    \ Nyan { void solve(); }\nsigned main() { Nyan::solve(); }\n/**\n * @brief template(\u30C6\
     \u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n"
   code: "#pragma once\n#pragma GCC target(\"avx2\")\n#pragma GCC optimize(\"O3\",\"\
     unroll-loops\")\n#include <bits/stdc++.h>\nusing namespace std;\n\n// macros\n\
     #include \"macro.hpp\"\n\n// utilities\n#include \"util.hpp\"\n\n// input/output\n\
     #include \"io.hpp\"\nnamespace Nyan { void solve(); }\nsigned main() { Nyan::solve();\
-    \ }\n/**\n * @brief Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)\n*/"
+    \ }\n/**\n * @brief template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)\n*/"
   dependsOn:
   - template/macro.hpp
   - template/util.hpp
@@ -89,7 +89,7 @@ data:
   path: template/template.hpp
   requiredBy:
   - magic/astar.hpp
-  timestamp: '2022-12-17 14:51:31+08:00'
+  timestamp: '2022-12-17 14:59:24+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
@@ -98,5 +98,5 @@ layout: document
 redirect_from:
 - /library/template/template.hpp
 - /library/template/template.hpp.html
-title: "Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
+title: "template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
 ---

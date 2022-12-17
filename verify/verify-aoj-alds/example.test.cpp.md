@@ -9,7 +9,7 @@ data:
     title: template/macro.hpp
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
-    title: "Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
+    title: "template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
   - icon: ':heavy_check_mark:'
     path: template/util.hpp
     title: template/util.hpp
@@ -74,7 +74,7 @@ data:
     \  cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
     \    cout << fixed << setprecision(12);\n    cerr << fixed << setprecision(12);\n\
     \  }\n} nyan;\n\n}  // namespace Nyan\n#line 15 \"template/template.hpp\"\nnamespace\
-    \ Nyan { void solve(); }\nsigned main() { Nyan::solve(); }\n/**\n * @brief Template(\u30C6\
+    \ Nyan { void solve(); }\nsigned main() { Nyan::solve(); }\n/**\n * @brief template(\u30C6\
     \u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n#line 3 \"verify/verify-aoj-alds/example.test.cpp\"\
     \n\nvoid Nyan::solve() {\n  ini(n);\n  vl a(n); in(a);\n  ini(q);\n  int cnt =\
     \ 0;\n  rep(_, q) {\n    ini(x);\n    cnt += binary_search(all(a), x);\n  }\n\
@@ -91,7 +91,7 @@ data:
   isVerificationFile: true
   path: verify/verify-aoj-alds/example.test.cpp
   requiredBy: []
-  timestamp: '2022-12-17 14:51:31+08:00'
+  timestamp: '2022-12-17 14:59:24+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/verify-aoj-alds/example.test.cpp

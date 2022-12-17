@@ -29,7 +29,7 @@ data:
       title: template/macro.hpp
     - icon: ':heavy_check_mark:'
       path: template/template.hpp
-      title: "Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
+      title: "template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
     - icon: ':heavy_check_mark:'
       path: template/util.hpp
       title: template/util.hpp
