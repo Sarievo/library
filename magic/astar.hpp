@@ -98,5 +98,5 @@ vector<pair<int, int>> AStar(vector<vector<int>> &grid, int start_x, int start_y
   return {};
 }
 /**
- * @brief A* Pathfinding
+ * @brief a* search
 */
