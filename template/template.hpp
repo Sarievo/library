@@ -15,5 +15,5 @@ using namespace std;
 namespace Nyan { void solve(); }
 signed main() { Nyan::solve(); }
 /**
- * @brief Template(テンプレート)
+ * @brief template(テンプレート)
 */
