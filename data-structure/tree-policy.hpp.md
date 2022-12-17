@@ -7,7 +7,7 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    document_title: Tree Policy
+    document_title: tree-policy set/multiset
     links: []
   bundledCode: '#line 2 "data-structure/tree-policy.hpp"
 
@@ -31,7 +31,7 @@ data:
 
     /**
 
-    * @brief Tree Policy
+    * @brief tree-policy set/multiset
 
     */
 
@@ -58,14 +58,14 @@ data:
 
     /**
 
-    * @brief Tree Policy
+    * @brief tree-policy set/multiset
 
     */'
   dependsOn: []
   isVerificationFile: false
   path: data-structure/tree-policy.hpp
   requiredBy: []
-  timestamp: '2022-12-11 18:01:40+08:00'
+  timestamp: '2022-12-17 14:51:31+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data-structure/tree-policy.hpp
@@ -73,5 +73,5 @@ layout: document
 redirect_from:
 - /library/data-structure/tree-policy.hpp
 - /library/data-structure/tree-policy.hpp.html
-title: Tree Policy
+title: tree-policy set/multiset
 ---

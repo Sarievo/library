@@ -4,16 +4,16 @@ data:
   - name: data-structure
     pages:
     - icon: ':warning:'
-      path: data-structure/anti-hash.hpp
-      title: Anti-hash Hashset/Hashmap
+      path: data-structure/anti-collision.hpp
+      title: anti-collision hashset/hashmap
     - icon: ':warning:'
       path: data-structure/tree-policy.hpp
-      title: Tree Policy
+      title: tree-policy set/multiset
   - name: magic
     pages:
     - icon: ':warning:'
       path: magic/astar.hpp
-      title: A* Pathfinding
+      title: a* search
   - name: math
     pages:
     - icon: ':warning:'

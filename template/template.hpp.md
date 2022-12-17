@@ -13,7 +13,7 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: magic/astar.hpp
-    title: A* Pathfinding
+    title: a* search
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/verify-aoj-alds/example.test.cpp
@@ -24,10 +24,10 @@ data:
   attributes:
     document_title: "Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
     links: []
-  bundledCode: "#line 2 \"template/template.hpp\"\n// #pragma GCC target(\"avx2\"\
-    )\n// #pragma GCC optimize(\"O3\",\"unroll-loops\")\n#include <bits/stdc++.h>\n\
-    using namespace std;\n\n// macros\n#line 1 \"template/macro.hpp\"\n#define fi\
-    \ first\n#define se second\n#define overload4(a, b, c, d, e, ...) e\n#define overload3(a,\
+  bundledCode: "#line 2 \"template/template.hpp\"\n#pragma GCC target(\"avx2\")\n\
+    #pragma GCC optimize(\"O3\",\"unroll-loops\")\n#include <bits/stdc++.h>\nusing\
+    \ namespace std;\n\n// macros\n#line 1 \"template/macro.hpp\"\n#define fi first\n\
+    #define se second\n#define overload4(a, b, c, d, e, ...) e\n#define overload3(a,\
     \ b, c, d, ...) d\n#define rep1(a) for(ll i=0;i<(ll)(a);i++)\n#define rep2(i,\
     \ a) for(ll i=0;i<(ll)(a);i++)\n#define rep3(i, a, b) for(ll i=(ll)(a);i<(ll)(b);i++)\n\
     #define rep4(i, a, b, c) for(ll i=(ll)(a);i<(ll)(b);i+=(ll)(c))\n#define rep(...)\
@@ -41,12 +41,11 @@ data:
     \ i++) { in(s[i], t[i]); }\n#define in3(s, t, u) for (int i = 0; i < (int)s.size();\
     \ i++) { in(s[i], t[i], u[i]); }\n#define in4(s, t, u, v) for (int i = 0; i <\
     \ (int)s.size(); i++) { in(s[i], t[i], u[i], v[i]); }\n#define fin(...) { out(__VA_ARGS__);return;\
-    \ }\n#define dump(x) cerr << #x << \":\" << x << \"\\n\";\n#define vdump(x) rep(idx,\
-    \ size(x)) cerr << idx << \":\" << x[idx] << \"\\n\";\n#line 9 \"template/template.hpp\"\
-    \n\n// utilities\n#line 1 \"template/util.hpp\"\nnamespace Nyan {\ntypedef long\
-    \ long ll;\ntypedef long double ld;\ntypedef __int128_t i128;\nusing vl = vector<ll>;\n\
-    using pl = pair<ll, ll>;\nusing vp = vector<pl>;\ntemplate<typename T> using v\
-    \ = vector<T>;\ntemplate<typename T> using vv = vector<vector<T>>;\ntemplate<typename\
+    \ }\n#line 9 \"template/template.hpp\"\n\n// utilities\n#line 1 \"template/util.hpp\"\
+    \nnamespace Nyan {\ntypedef long long ll;\ntypedef long double ld;\ntypedef __int128_t\
+    \ i128;\nusing vl = vector<ll>;\nusing pl = pair<ll, ll>;\nusing vp = vector<pl>;\n\
+    template<typename T> using v = vector<T>;\ntemplate<typename T> using vv = vector<vector<T>>;\n\
+    template<typename T>\ninline T sqr(const T &x) { return (x * x); }\ntemplate<typename\
     \ T, typename U>\ninline bool chmax(T &a, U b) { return a < b && (a = b, true);\
     \ }\ntemplate<typename T, typename U>\ninline bool chmin(T &a, U b) { return a\
     \ > b && (a = b, true); }\ntemplate<typename T>\ninline T Max(const vector<T>\
@@ -58,28 +57,27 @@ data:
     \ = 1000000007;\nconstexpr ll mod = 998244353;\nconst int INF32 = INT_MAX / 2;\n\
     const ll INF64 = 1LL << 60;\nvoid Yes(bool b = true) { cout << (b ? \"Yes\" :\
     \ \"No\") << \"\\n\"; }\nvoid YES(bool b = true) { cout << (b ? \"YES\" : \"NO\"\
-    ) << \"\\n\"; }\nconstexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};\nconstexpr\
-    \ int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};\n\n}  // namespace Nyan\n#line 12\
-    \ \"template/template.hpp\"\n\n// input/output\n#line 1 \"template/io.hpp\"\n\
-    namespace Nyan {\ntemplate<typename T, typename U>\nostream &operator<<(ostream\
-    \ &os, pair<T, U> &p) {\n  os << p.first << \" \" << p.second;\n  return os;\n\
-    }\ntemplate<typename T, typename U>\nistream &operator>>(istream &is, pair<T,\
-    \ U> &p) {\n  is >> p.first >> p.second;\n  return is;\n}\ntemplate<typename T>\n\
-    ostream &operator<<(ostream &os, vector<T> &v) {\n  for (auto it = v.begin();\
-    \ it != v.end();) { os << *it << ((++it) != v.end() ? \" \" : \"\"); }\n  return\
-    \ os;\n}\ntemplate<typename T>\nistream &operator>>(istream &is, vector<T> &v)\
-    \ {\n  for (T &e : v) is >> e;\n  return is;\n}\nvoid in() {}\ntemplate<class\
-    \ T, class... U>\nvoid in(T &t, U &...u) {\n  cin >> t;\n  in(u...);\n}\nvoid\
-    \ out() { cout << \"\\n\"; }\ntemplate<typename T, class... U, char sep = ' '>\n\
-    void out(const T &t, const U &...u) {\n  cout << t;\n  if (sizeof...(u)) cout\
-    \ << sep;\n  out(u...);\n}\nstruct Nyan {\n  Nyan() {\n    cin.tie(nullptr);\n\
-    \    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n    cout << fixed <<\
-    \ setprecision(12);\n    cerr << fixed << setprecision(12);\n  }\n} nyan;\n\n\
-    }  // namespace Nyan\n#line 15 \"template/template.hpp\"\nnamespace Nyan { void\
-    \ solve(); }\nsigned main() { Nyan::solve(); }\n/**\n * @brief Template(\u30C6\
+    ) << \"\\n\"; }\nvector<int> dx{+0, +1, +0, -1, +1, +1, -1, -1};\nvector<int>\
+    \ dy{+1, +0, -1, +0, +1, -1, -1, +1};\n\n}  // namespace Nyan\n#line 12 \"template/template.hpp\"\
+    \n\n// input/output\n#line 1 \"template/io.hpp\"\nnamespace Nyan {\ntemplate<typename\
+    \ T, typename U>\nostream &operator<<(ostream &os, pair<T, U> &p) {\n  os << p.first\
+    \ << \" \" << p.second;\n  return os;\n}\ntemplate<typename T, typename U>\nistream\
+    \ &operator>>(istream &is, pair<T, U> &p) {\n  is >> p.first >> p.second;\n  return\
+    \ is;\n}\ntemplate<typename T>\nostream &operator<<(ostream &os, vector<T> &v)\
+    \ {\n  for (auto it = v.begin(); it != v.end();) { os << *it << ((++it) != v.end()\
+    \ ? \" \" : \"\"); }\n  return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
+    \ &is, vector<T> &v) {\n  for (T &e : v) is >> e;\n  return is;\n}\nvoid in()\
+    \ {}\ntemplate<class T, class... U>\nvoid in(T &t, U &...u) {\n  cin >> t;\n \
+    \ in(u...);\n}\nvoid out() { cout << \"\\n\"; }\ntemplate<typename T, class...\
+    \ U, char sep = ' '>\nvoid out(const T &t, const U &...u) {\n  cout << t;\n  if\
+    \ (sizeof...(u)) cout << sep;\n  out(u...);\n}\nstruct Nyan {\n  Nyan() {\n  \
+    \  cin.tie(nullptr);\n    ios::sync_with_stdio(false);\n    cout.tie(nullptr);\n\
+    \    cout << fixed << setprecision(12);\n    cerr << fixed << setprecision(12);\n\
+    \  }\n} nyan;\n\n}  // namespace Nyan\n#line 15 \"template/template.hpp\"\nnamespace\
+    \ Nyan { void solve(); }\nsigned main() { Nyan::solve(); }\n/**\n * @brief Template(\u30C6\
     \u30F3\u30D7\u30EC\u30FC\u30C8)\n*/\n"
-  code: "#pragma once\n// #pragma GCC target(\"avx2\")\n// #pragma GCC optimize(\"\
-    O3\",\"unroll-loops\")\n#include <bits/stdc++.h>\nusing namespace std;\n\n// macros\n\
+  code: "#pragma once\n#pragma GCC target(\"avx2\")\n#pragma GCC optimize(\"O3\",\"\
+    unroll-loops\")\n#include <bits/stdc++.h>\nusing namespace std;\n\n// macros\n\
     #include \"macro.hpp\"\n\n// utilities\n#include \"util.hpp\"\n\n// input/output\n\
     #include \"io.hpp\"\nnamespace Nyan { void solve(); }\nsigned main() { Nyan::solve();\
     \ }\n/**\n * @brief Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)\n*/"
@@ -91,7 +89,7 @@ data:
   path: template/template.hpp
   requiredBy:
   - magic/astar.hpp
-  timestamp: '2022-12-12 22:58:55+08:00'
+  timestamp: '2022-12-17 14:51:31+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

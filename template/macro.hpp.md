@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: magic/astar.hpp
-    title: A* Pathfinding
+    title: a* search
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
@@ -67,10 +67,6 @@ data:
 
     #define fin(...) { out(__VA_ARGS__);return; }
 
-    #define dump(x) cerr << #x << ":" << x << "\n";
-
-    #define vdump(x) rep(idx, size(x)) cerr << idx << ":" << x[idx] << "\n";
-
     '
   code: '#define fi first
 
@@ -118,18 +114,14 @@ data:
     #define in4(s, t, u, v) for (int i = 0; i < (int)s.size(); i++) { in(s[i], t[i],
     u[i], v[i]); }
 
-    #define fin(...) { out(__VA_ARGS__);return; }
-
-    #define dump(x) cerr << #x << ":" << x << "\n";
-
-    #define vdump(x) rep(idx, size(x)) cerr << idx << ":" << x[idx] << "\n";'
+    #define fin(...) { out(__VA_ARGS__);return; }'
   dependsOn: []
   isVerificationFile: false
   path: template/macro.hpp
   requiredBy:
-  - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-12 22:58:55+08:00'
+  - magic/astar.hpp
+  timestamp: '2022-12-17 14:51:31+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp

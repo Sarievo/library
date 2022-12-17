@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: magic/astar.hpp
-    title: A* Pathfinding
+    title: a* search
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
@@ -51,8 +51,8 @@ data:
   isVerificationFile: false
   path: template/io.hpp
   requiredBy:
-  - magic/astar.hpp
   - template/template.hpp
+  - magic/astar.hpp
   timestamp: '2022-12-08 18:41:17+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

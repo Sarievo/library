@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: magic/astar.hpp
-    title: A* Pathfinding
+    title: a* search
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "Template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
@@ -37,6 +37,10 @@ data:
 
     template<typename T> using vv = vector<vector<T>>;
 
+    template<typename T>
+
+    inline T sqr(const T &x) { return (x * x); }
+
     template<typename T, typename U>
 
     inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
@@ -74,9 +78,9 @@ data:
 
     void YES(bool b = true) { cout << (b ? "YES" : "NO") << "\n"; }
 
-    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+    vector<int> dx{+0, +1, +0, -1, +1, +1, -1, -1};
 
-    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
+    vector<int> dy{+1, +0, -1, +0, +1, -1, -1, +1};
 
 
     }  // namespace Nyan
@@ -100,6 +104,10 @@ data:
 
     template<typename T> using vv = vector<vector<T>>;
 
+    template<typename T>
+
+    inline T sqr(const T &x) { return (x * x); }
+
     template<typename T, typename U>
 
     inline bool chmax(T &a, U b) { return a < b && (a = b, true); }
@@ -137,9 +145,9 @@ data:
 
     void YES(bool b = true) { cout << (b ? "YES" : "NO") << "\n"; }
 
-    constexpr int dx[]{+0, +1, +0, -1, +1, +1, -1, -1};
+    vector<int> dx{+0, +1, +0, -1, +1, +1, -1, -1};
 
-    constexpr int dy[]{+1, +0, -1, +0, +1, -1, -1, +1};
+    vector<int> dy{+1, +0, -1, +0, +1, -1, -1, +1};
 
 
     }  // namespace Nyan
@@ -149,9 +157,9 @@ data:
   isVerificationFile: false
   path: template/util.hpp
   requiredBy:
-  - magic/astar.hpp
   - template/template.hpp
-  timestamp: '2022-12-12 22:58:55+08:00'
+  - magic/astar.hpp
+  timestamp: '2022-12-17 14:51:31+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/verify-aoj-alds/example.test.cpp
