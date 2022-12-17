@@ -9,11 +9,6 @@ data:
     - icon: ':warning:'
       path: data-structure/tree-policy.hpp
       title: tree-policy set/multiset
-  - name: magic
-    pages:
-    - icon: ':warning:'
-      path: magic/astar.hpp
-      title: a* search
   - name: math
     pages:
     - icon: ':warning:'

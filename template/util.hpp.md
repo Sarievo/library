@@ -2,9 +2,6 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
-    path: magic/astar.hpp
-    title: a* search
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "template(\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
@@ -158,7 +155,6 @@ data:
   path: template/util.hpp
   requiredBy:
   - template/template.hpp
-  - magic/astar.hpp
   timestamp: '2022-12-17 14:51:31+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
